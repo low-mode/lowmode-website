@@ -1,2 +1,3 @@
-# lowmode-website
-LOWMODE apparel, accessories and media website
+# LOWMODE Website
+
+Live LOWMODE storefront and collection assets.
