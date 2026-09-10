@@ -439,6 +439,49 @@
     .p8 { background-position: 75% 100%; } .p9 { background-position: 100% 100%; }
     .category-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 18px; }
 
+    .polo-collection-feature {
+      margin-bottom: 18px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: #101010;
+    }
+    .polo-collection-feature img {
+      width: 100%;
+      aspect-ratio: 3 / 2;
+      object-fit: cover;
+      background: #101010;
+    }
+    .polo-collection-copy {
+      padding: 19px 20px 21px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+      border-top: 1px solid var(--line);
+    }
+    .polo-collection-copy strong {
+      font-size: 1rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .polo-collection-copy span {
+      color: var(--muted);
+      font-size: .72rem;
+      font-weight: 800;
+      letter-spacing: .1em;
+      text-align: right;
+      text-transform: uppercase;
+    }
+    .polo-photo {
+      aspect-ratio: 1 / 1;
+      background: #101010 url('/assets/lowmode-premium-polo-collection.webp') no-repeat;
+      background-size: 300% 200%;
+    }
+    .polo-2 { background-position: 100% 0; }
+    .polo-3 { background-position: 0 100%; }
+    .polo-4 { background-position: 50% 100%; }
+    .polo-5 { background-position: 100% 100%; }
+
     .media-feature {
       min-height: 430px;
       display: grid;
@@ -563,6 +606,8 @@
       .product-grid, .tee-grid, .category-grid { grid-template-columns: 1fr; }
       .product-info { min-height: 102px; }
       .category-head { align-items: flex-start; flex-direction: column; gap: 5px; }
+      .polo-collection-copy { align-items: flex-start; flex-direction: column; gap: 7px; }
+      .polo-collection-copy span { text-align: left; }
       .footer-inner { grid-template-columns: 1fr; }
       .footer-meta { text-align: left; }
     }
@@ -574,7 +619,7 @@
   </style>
 </head>
 <body>
-  <div class="announcement">Original LOWMODE™ artwork · Modern fits · Limited drops</div>
+  <div class="announcement">New · LOWMODE™ Premium Polo Collection · Six tailored styles</div>
   <header>
     <nav class="nav" aria-label="Main navigation">
       <a class="brand" href="#top" aria-label="LOWMODE home"><span class="logo">LOWMODE</span><span class="logo-mark">™</span></a>
@@ -594,34 +639,34 @@
     <section class="hero">
       <div class="hero-grid">
         <div class="hero-copy">
-          <p class="kicker">LOWMODE™ / Signature Drop 01</p>
-          <h1 class="display">Move quiet.<br><span class="outline">Wear loud.</span></h1>
-          <p class="hero-lead">Original ink-led graphics meet crisp, modern fits. Heavyweight tees, brushed fleece and sharp layers made to carry the message.</p>
+          <p class="kicker">LOWMODE™ / Premium Polo Collection</p>
+          <h1 class="display">Sharp fit.<br><span class="outline">LOWMODE edge.</span></h1>
+          <p class="hero-lead">Six tailored polos built around clean structure, rich texture and original LOWMODE artwork—from Shadow Heritage to Tempest.</p>
           <div class="actions">
-            <a class="button" href="#signature">Shop new drop →</a>
-            <a class="button secondary" href="#shop-filters" data-filter-link="tees">See graphic tees</a>
+            <a class="button" href="#shop-filters" data-filter-link="polos">Shop the polos →</a>
+            <a class="button secondary" href="#signature">See signature pieces</a>
           </div>
-          <div class="hero-notes"><span>Premium construction</span><span>Modern sizing · XS–3XL</span></div>
+          <div class="hero-notes"><span>Premium polo knits</span><span>Tailored fit · XS–3XL</span></div>
         </div>
         <figure class="hero-art">
-          <img src="/assets/lowmode-signature-collection-2026.webp" alt="LOWMODE Signature Collection graphic tees, hoodie, jacket and polo" fetchpriority="high">
-          <figcaption><span>Six original pieces</span><span>Built to stand out</span></figcaption>
+          <img src="/assets/lowmode-premium-polo-collection.webp" alt="Six-piece LOWMODE premium polo collection in black, ivory, crimson, blue, olive and charcoal" fetchpriority="high">
+          <figcaption><span>Six premium polos</span><span>Built for day + night</span></figcaption>
         </figure>
       </div>
     </section>
 
     <div class="word-strip" aria-label="LOWMODE collection themes">
-      <div class="word-strip-inner"><span>Purpose</span><span>Dream</span><span>Focus</span><span>Peace</span><span>Rise</span></div>
+      <div class="word-strip-inner"><span>Shadow</span><span>Ivory</span><span>Crimson</span><span>Ocean</span><span>Tempest</span></div>
     </div>
 
     <section class="catalog-filter" id="shop-filters" aria-labelledby="filter-title">
       <div class="filter-shell">
-        <div class="filter-top"><p class="kicker" id="filter-title">Shop by type</p><p class="filter-status" id="filter-status" aria-live="polite">Showing all 18 pieces</p></div>
+        <div class="filter-top"><p class="kicker" id="filter-title">Shop by type</p><p class="filter-status" id="filter-status" aria-live="polite">Showing all 23 pieces</p></div>
         <div class="filter-buttons" role="group" aria-label="Filter LOWMODE products">
-          <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All<span class="filter-count">18</span></button>
+          <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All<span class="filter-count">23</span></button>
           <button class="filter-button" type="button" data-filter="tees" aria-pressed="false">Tee shirts<span class="filter-count">7</span></button>
           <button class="filter-button" type="button" data-filter="layers" aria-pressed="false">Hoodies &amp; layers<span class="filter-count">4</span></button>
-          <button class="filter-button" type="button" data-filter="polos" aria-pressed="false">Polos<span class="filter-count">2</span></button>
+          <button class="filter-button" type="button" data-filter="polos" aria-pressed="false">Polos<span class="filter-count">7</span></button>
           <button class="filter-button" type="button" data-filter="bottoms" aria-pressed="false">Bottoms<span class="filter-count">2</span></button>
           <button class="filter-button" type="button" data-filter="accessories" aria-pressed="false">Accessories<span class="filter-count">3</span></button>
         </div>
@@ -677,9 +722,18 @@
         </div>
 
         <div data-category-block>
-          <div id="polos" class="category-head"><h3>Polos</h3><span>Tailored LOWMODE fits</span></div>
+          <div id="polos" class="category-head"><h3>Polos</h3><span>Six-piece premium capsule · Tailored LOWMODE fits</span></div>
+          <figure class="polo-collection-feature">
+            <img src="/assets/lowmode-premium-polo-collection.webp" alt="LOWMODE premium polo collection: Shadow Heritage, Ivory Contrast, Crimson Wings, Ocean Discipline, Racing Edge and Tempest" loading="lazy">
+            <figcaption class="polo-collection-copy"><strong>Night Lives Higher</strong><span>Six distinct polos · One LOWMODE point of view</span></figcaption>
+          </figure>
           <div class="category-grid">
-            <article class="product-card filter-item" data-category="polos"><span class="product-number">18</span><img class="product-image" src="/assets/lowmode-ivory-contrast-polo.webp" alt="Front and back of the LOWMODE Ivory Contrast Polo" loading="lazy"><div class="product-info"><h3>Ivory Contrast Polo</h3><span class="price">$64</span><p>Mercerized cotton · Front + back</p><span class="tag">Tailored fit · XS–3XL</span></div></article>
+            <article class="product-card filter-item" data-category="polos"><span class="product-number">18</span><img class="product-image" src="/assets/lowmode-shadow-heritage-polo.webp" alt="Front and back of the black LOWMODE Shadow Heritage zip polo with tonal artwork" loading="lazy"><div class="product-info"><h3>Shadow Heritage Polo</h3><span class="price">$64</span><p>Jet black · Tonal heritage artwork</p><span class="tag">Quarter zip · XS–3XL</span></div></article>
+            <article class="product-card filter-item" data-category="polos"><span class="product-number">19</span><img class="product-image" src="/assets/lowmode-ivory-contrast-polo-v2.webp" alt="Front and back of the ivory LOWMODE Contrast Polo with black collar and sleeve trim" loading="lazy"><div class="product-info"><h3>Ivory Contrast Polo</h3><span class="price">$64</span><p>Warm ivory · Black contrast trim</p><span class="tag">Tailored fit · XS–3XL</span></div></article>
+            <article class="product-card filter-item" data-category="polos"><span class="product-number">20</span><div class="polo-photo polo-2" role="img" aria-label="Crimson LOWMODE Wings Polo with tonal wings and lightning artwork"></div><div class="product-info"><h3>Crimson Wings Polo</h3><span class="price">$64</span><p>Deep crimson · Tonal wing artwork</p><span class="tag">Embroidered detail · XS–3XL</span></div></article>
+            <article class="product-card filter-item" data-category="polos"><span class="product-number">21</span><div class="polo-photo polo-3" role="img" aria-label="Blue LOWMODE Ocean Discipline Polo with wave texture"></div><div class="product-info"><h3>Ocean Discipline Polo</h3><span class="price">$64</span><p>Midnight blue · Wave texture</p><span class="tag">Premium knit · XS–3XL</span></div></article>
+            <article class="product-card filter-item" data-category="polos"><span class="product-number">22</span><div class="polo-photo polo-4" role="img" aria-label="Olive LOWMODE Racing Edge zip polo with vertical ivory stripe"></div><div class="product-info"><h3>Racing Edge Polo</h3><span class="price">$64</span><p>Deep olive · Racing stripe</p><span class="tag">Quarter zip · XS–3XL</span></div></article>
+            <article class="product-card filter-item" data-category="polos"><span class="product-number">23</span><div class="polo-photo polo-5" role="img" aria-label="Charcoal LOWMODE Tempest Polo with cloud and lightning artwork"></div><div class="product-info"><h3>Tempest Polo</h3><span class="price">$64</span><p>Charcoal · Storm artwork</p><span class="tag">Contrast piping · XS–3XL</span></div></article>
           </div>
         </div>
 
