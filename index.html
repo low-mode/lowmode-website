@@ -581,6 +581,7 @@
       <div class="nav-links">
         <a href="#signature">Signature</a>
         <a href="#shop-filters" data-filter-link="tees">Tees</a>
+        <a href="#shop-filters" data-filter-link="polos">Polos</a>
         <a href="#layers">Layers</a>
         <a href="#accessories">Accessories</a>
         <a href="#media">Media</a>
@@ -615,12 +616,12 @@
 
     <section class="catalog-filter" id="shop-filters" aria-labelledby="filter-title">
       <div class="filter-shell">
-        <div class="filter-top"><p class="kicker" id="filter-title">Shop by type</p><p class="filter-status" id="filter-status" aria-live="polite">Showing all 17 pieces</p></div>
+        <div class="filter-top"><p class="kicker" id="filter-title">Shop by type</p><p class="filter-status" id="filter-status" aria-live="polite">Showing all 18 pieces</p></div>
         <div class="filter-buttons" role="group" aria-label="Filter LOWMODE products">
-          <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All<span class="filter-count">17</span></button>
+          <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All<span class="filter-count">18</span></button>
           <button class="filter-button" type="button" data-filter="tees" aria-pressed="false">Tee shirts<span class="filter-count">7</span></button>
           <button class="filter-button" type="button" data-filter="layers" aria-pressed="false">Hoodies &amp; layers<span class="filter-count">4</span></button>
-          <button class="filter-button" type="button" data-filter="polos" aria-pressed="false">Polos<span class="filter-count">1</span></button>
+          <button class="filter-button" type="button" data-filter="polos" aria-pressed="false">Polos<span class="filter-count">2</span></button>
           <button class="filter-button" type="button" data-filter="bottoms" aria-pressed="false">Bottoms<span class="filter-count">2</span></button>
           <button class="filter-button" type="button" data-filter="accessories" aria-pressed="false">Accessories<span class="filter-count">3</span></button>
         </div>
@@ -676,6 +677,13 @@
         </div>
 
         <div data-category-block>
+          <div id="polos" class="category-head"><h3>Polos</h3><span>Tailored LOWMODE fits</span></div>
+          <div class="category-grid">
+            <article class="product-card filter-item" data-category="polos"><span class="product-number">18</span><img class="product-image" src="/assets/lowmode-ivory-contrast-polo.webp" alt="Front and back of the LOWMODE Ivory Contrast Polo" loading="lazy"><div class="product-info"><h3>Ivory Contrast Polo</h3><span class="price">$64</span><p>Mercerized cotton · Front + back</p><span class="tag">Tailored fit · XS–3XL</span></div></article>
+          </div>
+        </div>
+
+        <div data-category-block>
           <div class="category-head"><h3>Bottoms</h3><span>Clean everyday fits</span></div>
           <div class="category-grid">
             <article class="product-card filter-item" data-category="bottoms"><span class="product-number">13</span><div class="classic-photo p5" role="img" aria-label="LOWMODE Strong pants"></div><div class="product-info"><h3>Strong Pants</h3><span class="price">$68</span><p>Structured everyday pants</p><span class="tag">Built to move</span></div></article>
@@ -724,7 +732,7 @@
       const sections = [...document.querySelectorAll('[data-filter-section]')];
       const blocks = [...document.querySelectorAll('[data-category-block]')];
       const status = document.getElementById('filter-status');
-      const names = { tees: 'tee shirts', layers: 'hoodies & layers', polos: 'polo', bottoms: 'bottoms', accessories: 'accessories' };
+      const names = { tees: 'tee shirts', layers: 'hoodies & layers', polos: 'polos', bottoms: 'bottoms', accessories: 'accessories' };
 
       function applyFilter(category) {
         buttons.forEach((button) => {
