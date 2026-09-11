@@ -51,13 +51,17 @@
     .trend-banner-copy span { color:var(--muted); font-size:13px; }
     .trend-photo { aspect-ratio:4/5; background:#181818; overflow:hidden; }
     .trend-photo img { width:100%; height:100%; display:block; object-fit:cover; }
+    .trend-group + .trend-group { margin-top:38px; }
+    .group-title { display:flex; align-items:end; justify-content:space-between; gap:18px; margin:0 0 15px; padding-bottom:10px; border-bottom:1px solid var(--line); }
+    .group-title h3 { margin:0; font-size:22px; letter-spacing:1.8px; text-transform:uppercase; }
+    .group-title span { color:var(--muted); font-size:12px; font-weight:800; letter-spacing:1px; text-transform:uppercase; }
     .status { display:inline-block; margin-top:11px; padding:6px 9px; border:1px solid #6e6e6e; border-radius:999px; color:#fff; font-size:11px; font-weight:900; letter-spacing:1.2px; text-transform:uppercase; }
     .classics { margin-top:68px; }
     .classic-grid { grid-template-columns:repeat(5,minmax(0,1fr)); }
     .footer { border-top:1px solid #292929; color:#aaa; text-align:center; padding:30px 16px; font-size:12px; letter-spacing:1px; }
     @media(max-width:1050px) { .classic-grid { grid-template-columns:repeat(3,1fr); } }
     @media(max-width:760px) { .grid { grid-template-columns:repeat(2,1fr); } .nav { align-items:flex-start; gap:12px; flex-direction:column; } }
-    @media(max-width:430px) { .grid,.classic-grid { grid-template-columns:1fr; } .hero h1 { font-size:48px; } }
+    @media(max-width:430px) { .grid,.classic-grid { grid-template-columns:1fr; } .hero h1 { font-size:48px; } .group-title { align-items:flex-start; flex-direction:column; gap:4px; } }
   </style>
 </head>
 <body>
@@ -67,7 +71,7 @@
     <div class="hero-copy"><h1>THE SIGNATURE DROP</h1><p>Bold original tattoo-art linework, premium materials and clean modern fits—available from XS through 3XL.</p></div>
     <div class="collection-shot"><img src="/assets/lowmode-signature-collection-2026.webp" alt="LOWMODE Signature Collection featuring six original apparel pieces"><div class="label"><span>LOWMODE™ COLLECTION</span><span>XS–3XL</span></div></div>
   </header>
-  <div class="categories"><a href="#trending">Trending Essentials</a><a href="#tees">T-Shirts</a><a href="#hoodies">Hoodies</a><a href="#jackets">Jackets</a><a href="#polos">Polos</a><a href="#classics">LOWMODE Classics</a></div>
+  <div class="categories"><a href="#trending">Trending Essentials</a><a href="#tees">Tee Shirts</a><a href="#hoodies">Hoodies &amp; Layers</a><a href="#polos">Polos</a><a href="#signature">Signature</a><a href="#classics">LOWMODE Classics</a></div>
   <main class="wrap">
 
     <section class="trending" id="trending">
@@ -76,26 +80,39 @@
         <img src="/assets/lowmode-trending-capsule.webp" alt="LOWMODE Trending Essentials capsule with seven apparel styles" fetchpriority="high">
         <div class="trend-banner-copy"><strong>THE LOWMODE™ ESSENTIALS CAPSULE</strong><span>Small emblem placement · XS–3XL</span></div>
       </div>
-      <div class="grid">
-        <article class="card"><div class="trend-photo"><img src="/assets/cobalt-pique-polo.webp" alt="LOWMODE Cobalt Pique Polo" loading="lazy"></div><div class="info"><h3>Cobalt Pique Polo</h3><p>Clean-cut cotton pique · cobalt blue</p><span class="status">Coming Soon</span></div></article>
-        <article class="card"><div class="trend-photo"><img src="/assets/ivory-knit-polo.webp" alt="LOWMODE Ivory Knit Polo" loading="lazy"></div><div class="info"><h3>Ivory Knit Polo</h3><p>Textured knit · contrast tipping</p><span class="status">Coming Soon</span></div></article>
-        <article class="card"><div class="trend-photo"><img src="/assets/burgundy-quarter-zip.webp" alt="LOWMODE Burgundy Quarter-Zip" loading="lazy"></div><div class="info"><h3>Burgundy Quarter-Zip</h3><p>Structured midweight layer</p><span class="status">Coming Soon</span></div></article>
-        <article class="card"><div class="trend-photo"><img src="/assets/graphite-set.webp" alt="LOWMODE Graphite Fleece Set" loading="lazy"></div><div class="info"><h3>Graphite Fleece Set</h3><p>Zip hoodie + relaxed sweatpant</p><span class="status">Coming Soon</span></div></article>
-        <article class="card"><div class="trend-photo"><img src="/assets/olive-funnel-jacket.webp" alt="LOWMODE Olive Funnel Jacket" loading="lazy"></div><div class="info"><h3>Olive Funnel Jacket</h3><p>Technical shell · two-way zip</p><span class="status">Coming Soon</span></div></article>
-        <article class="card"><div class="trend-photo"><img src="/assets/red-plaid-overshirt.webp" alt="LOWMODE Red Plaid Overshirt" loading="lazy"></div><div class="info"><h3>Red Plaid Overshirt</h3><p>Brushed heavyweight flannel</p><span class="status">Coming Soon</span></div></article>
-        <article class="card"><div class="trend-photo"><img src="/assets/essential-white-tee.webp" alt="LOWMODE Essential White Tee styled with relaxed dark denim" loading="lazy"></div><div class="info"><h3>Essential White Tee</h3><p>Heavyweight cotton · relaxed fit</p><span class="status">Coming Soon</span></div></article>
+      <div class="trend-group" id="tees">
+        <div class="group-title"><h3>Tee Shirts</h3><span>1 new essential</span></div>
+        <div class="grid">
+          <article class="card"><div class="trend-photo"><img src="/assets/essential-white-tee.webp" alt="LOWMODE Essential White Tee styled with relaxed dark denim" loading="lazy"></div><div class="info"><h3>Essential White Tee</h3><p>Heavyweight cotton · relaxed fit</p><span class="status">Coming Soon</span></div></article>
+        </div>
+      </div>
+      <div class="trend-group" id="hoodies">
+        <div class="group-title"><h3>Hoodies &amp; Layers</h3><span>4 new layers</span></div>
+        <div class="grid">
+          <article class="card"><div class="trend-photo"><img src="/assets/burgundy-quarter-zip.webp" alt="LOWMODE Burgundy Quarter-Zip" loading="lazy"></div><div class="info"><h3>Burgundy Quarter-Zip</h3><p>Structured midweight layer</p><span class="status">Coming Soon</span></div></article>
+          <article class="card"><div class="trend-photo"><img src="/assets/graphite-set.webp" alt="LOWMODE Graphite Fleece Set" loading="lazy"></div><div class="info"><h3>Graphite Fleece Set</h3><p>Zip hoodie + relaxed sweatpant</p><span class="status">Coming Soon</span></div></article>
+          <article class="card"><div class="trend-photo"><img src="/assets/olive-funnel-jacket.webp" alt="LOWMODE Olive Funnel Jacket" loading="lazy"></div><div class="info"><h3>Olive Funnel Jacket</h3><p>Technical shell · two-way zip</p><span class="status">Coming Soon</span></div></article>
+          <article class="card"><div class="trend-photo"><img src="/assets/red-plaid-overshirt.webp" alt="LOWMODE Red Plaid Overshirt" loading="lazy"></div><div class="info"><h3>Red Plaid Overshirt</h3><p>Brushed heavyweight flannel</p><span class="status">Coming Soon</span></div></article>
+        </div>
+      </div>
+      <div class="trend-group" id="polos">
+        <div class="group-title"><h3>Polos</h3><span>2 new polos</span></div>
+        <div class="grid">
+          <article class="card"><div class="trend-photo"><img src="/assets/cobalt-pique-polo.webp" alt="LOWMODE Cobalt Pique Polo" loading="lazy"></div><div class="info"><h3>Cobalt Pique Polo</h3><p>Clean-cut cotton pique · cobalt blue</p><span class="status">Coming Soon</span></div></article>
+          <article class="card"><div class="trend-photo"><img src="/assets/ivory-knit-polo.webp" alt="LOWMODE Ivory Knit Polo" loading="lazy"></div><div class="info"><h3>Ivory Knit Polo</h3><p>Textured knit · contrast tipping</p><span class="status">Coming Soon</span></div></article>
+        </div>
       </div>
     </section>
 
     <section id="signature">
       <div class="section-title"><h2>Six New Signature Pieces</h2><p>Strong graphics. Refined silhouettes. Original LOWMODE™ identity.</p></div>
       <div class="grid">
-        <article class="card" id="tees"><div class="photo signature-photo s0" role="img" aria-label="Black Eagle Rise Tee"></div><div class="info"><h3>Eagle Rise Tee</h3><p>Black heavyweight cotton</p><span class="size">XS–3XL</span></div></article>
+        <article class="card"><div class="photo signature-photo s0" role="img" aria-label="Black Eagle Rise Tee"></div><div class="info"><h3>Eagle Rise Tee</h3><p>Black heavyweight cotton</p><span class="size">XS–3XL</span></div></article>
         <article class="card"><div class="photo signature-photo s1" role="img" aria-label="Washed red Stay True Rose Tee"></div><div class="info"><h3>Stay True Rose Tee</h3><p>Washed red heavyweight cotton</p><span class="size">XS–3XL</span></div></article>
         <article class="card"><div class="photo signature-photo s2" role="img" aria-label="Baby blue Rise Above Wave Tee"></div><div class="info"><h3>Rise Above Wave Tee</h3><p>Baby blue heavyweight cotton</p><span class="size">XS–3XL</span></div></article>
-        <article class="card" id="hoodies"><div class="photo signature-photo s3" role="img" aria-label="Black Silver Rose Zip Hoodie"></div><div class="info"><h3>Silver Rose Zip Hoodie</h3><p>Black brushed fleece</p><span class="size">XS–3XL</span></div></article>
-        <article class="card" id="jackets"><div class="photo signature-photo s4" role="img" aria-label="Charcoal Crest Track Jacket"></div><div class="info"><h3>Crest Track Jacket</h3><p>Charcoal structured fit</p><span class="size">XS–3XL</span></div></article>
-        <article class="card" id="polos"><div class="photo signature-photo s5" role="img" aria-label="Black Rose Crest Polo"></div><div class="info"><h3>Rose Crest Polo</h3><p>Black knit polo with embroidery</p><span class="size">XS–3XL</span></div></article>
+        <article class="card"><div class="photo signature-photo s3" role="img" aria-label="Black Silver Rose Zip Hoodie"></div><div class="info"><h3>Silver Rose Zip Hoodie</h3><p>Black brushed fleece</p><span class="size">XS–3XL</span></div></article>
+        <article class="card"><div class="photo signature-photo s4" role="img" aria-label="Charcoal Crest Track Jacket"></div><div class="info"><h3>Crest Track Jacket</h3><p>Charcoal structured fit</p><span class="size">XS–3XL</span></div></article>
+        <article class="card"><div class="photo signature-photo s5" role="img" aria-label="Black Rose Crest Polo"></div><div class="info"><h3>Rose Crest Polo</h3><p>Black knit polo with embroidery</p><span class="size">XS–3XL</span></div></article>
       </div>
     </section>
 
