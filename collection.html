@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Shop the LOWMODE Signature Collection and original apparel lineup in sizes XS through 3XL.">
+  <meta name="description" content="Shop LOWMODE Trending Essentials, the Signature Collection and original apparel in sizes XS through 3XL.">
   <title>LOWMODE™ Collection</title>
   <style>
     :root { --bg:#0d0d0d; --panel:#171717; --line:#2b2b2b; --text:#fff; --muted:#aaa; }
@@ -42,6 +42,16 @@
     .info h3 { font-size:18px; margin:0; }
     .info p { font-size:14px; color:var(--muted); margin:5px 0 0; }
     .size { display:inline-block; margin-top:11px; padding:6px 9px; border:1px solid #4a4a4a; border-radius:999px; color:#eee; font-size:12px; font-weight:800; letter-spacing:1px; }
+
+    .trending { margin-bottom:72px; }
+    .trend-banner { margin:0 0 24px; background:#141414; border:1px solid var(--line); border-radius:20px; overflow:hidden; }
+    .trend-banner img { width:100%; display:block; }
+    .trend-banner-copy { display:flex; justify-content:space-between; gap:18px; align-items:center; padding:16px 18px; }
+    .trend-banner-copy strong { letter-spacing:1px; }
+    .trend-banner-copy span { color:var(--muted); font-size:13px; }
+    .trend-photo { aspect-ratio:4/5; background:#181818; overflow:hidden; }
+    .trend-photo img { width:100%; height:100%; display:block; object-fit:cover; }
+    .status { display:inline-block; margin-top:11px; padding:6px 9px; border:1px solid #6e6e6e; border-radius:999px; color:#fff; font-size:11px; font-weight:900; letter-spacing:1.2px; text-transform:uppercase; }
     .classics { margin-top:68px; }
     .classic-grid { grid-template-columns:repeat(5,minmax(0,1fr)); }
     .footer { border-top:1px solid #292929; color:#aaa; text-align:center; padding:30px 16px; font-size:12px; letter-spacing:1px; }
@@ -51,14 +61,32 @@
   </style>
 </head>
 <body>
-  <div class="top">LOWMODE™ — ORIGINAL APPAREL</div>
-  <nav class="nav" aria-label="Collection navigation"><a class="logo" href="/">LOWMODE™</a><div class="navlinks"><a href="#signature">SIGNATURE</a><a href="#classics">CLASSICS</a><a href="/">HOME</a></div></nav>
+  <div class="top">NEW — LOWMODE™ TRENDING ESSENTIALS · SEVEN NEW STYLES</div>
+  <nav class="nav" aria-label="Collection navigation"><a class="logo" href="/">LOWMODE™</a><div class="navlinks"><a href="#trending">TRENDING</a><a href="#signature">SIGNATURE</a><a href="#classics">CLASSICS</a><a href="/">HOME</a></div></nav>
   <header class="hero" id="top">
     <div class="hero-copy"><h1>THE SIGNATURE DROP</h1><p>Bold original tattoo-art linework, premium materials and clean modern fits—available from XS through 3XL.</p></div>
     <div class="collection-shot"><img src="/assets/lowmode-signature-collection-2026.webp" alt="LOWMODE Signature Collection featuring six original apparel pieces"><div class="label"><span>LOWMODE™ COLLECTION</span><span>XS–3XL</span></div></div>
   </header>
-  <div class="categories"><a href="#tees">T-Shirts</a><a href="#hoodies">Hoodies</a><a href="#jackets">Jackets</a><a href="#polos">Polos</a><a href="#classics">LOWMODE Classics</a></div>
+  <div class="categories"><a href="#trending">Trending Essentials</a><a href="#tees">T-Shirts</a><a href="#hoodies">Hoodies</a><a href="#jackets">Jackets</a><a href="#polos">Polos</a><a href="#classics">LOWMODE Classics</a></div>
   <main class="wrap">
+
+    <section class="trending" id="trending">
+      <div class="section-title"><h2>Trending Essentials</h2><p>Seven of today’s strongest menswear silhouettes, rebuilt with clean LOWMODE™ identity.</p></div>
+      <div class="trend-banner">
+        <img src="/assets/lowmode-trending-capsule.webp" alt="LOWMODE Trending Essentials capsule with seven apparel styles" fetchpriority="high">
+        <div class="trend-banner-copy"><strong>THE LOWMODE™ ESSENTIALS CAPSULE</strong><span>Small emblem placement · XS–3XL</span></div>
+      </div>
+      <div class="grid">
+        <article class="card"><div class="trend-photo"><img src="/assets/cobalt-pique-polo.webp" alt="LOWMODE Cobalt Pique Polo" loading="lazy"></div><div class="info"><h3>Cobalt Pique Polo</h3><p>Clean-cut cotton pique · cobalt blue</p><span class="status">Coming Soon</span></div></article>
+        <article class="card"><div class="trend-photo"><img src="/assets/ivory-knit-polo.webp" alt="LOWMODE Ivory Knit Polo" loading="lazy"></div><div class="info"><h3>Ivory Knit Polo</h3><p>Textured knit · contrast tipping</p><span class="status">Coming Soon</span></div></article>
+        <article class="card"><div class="trend-photo"><img src="/assets/burgundy-quarter-zip.webp" alt="LOWMODE Burgundy Quarter-Zip" loading="lazy"></div><div class="info"><h3>Burgundy Quarter-Zip</h3><p>Structured midweight layer</p><span class="status">Coming Soon</span></div></article>
+        <article class="card"><div class="trend-photo"><img src="/assets/graphite-set.webp" alt="LOWMODE Graphite Fleece Set" loading="lazy"></div><div class="info"><h3>Graphite Fleece Set</h3><p>Zip hoodie + relaxed sweatpant</p><span class="status">Coming Soon</span></div></article>
+        <article class="card"><div class="trend-photo"><img src="/assets/olive-funnel-jacket.webp" alt="LOWMODE Olive Funnel Jacket" loading="lazy"></div><div class="info"><h3>Olive Funnel Jacket</h3><p>Technical shell · two-way zip</p><span class="status">Coming Soon</span></div></article>
+        <article class="card"><div class="trend-photo"><img src="/assets/red-plaid-overshirt.webp" alt="LOWMODE Red Plaid Overshirt" loading="lazy"></div><div class="info"><h3>Red Plaid Overshirt</h3><p>Brushed heavyweight flannel</p><span class="status">Coming Soon</span></div></article>
+        <article class="card"><div class="trend-photo"><img src="/assets/essential-white-tee.webp" alt="LOWMODE Essential White Tee styled with relaxed dark denim" loading="lazy"></div><div class="info"><h3>Essential White Tee</h3><p>Heavyweight cotton · relaxed fit</p><span class="status">Coming Soon</span></div></article>
+      </div>
+    </section>
+
     <section id="signature">
       <div class="section-title"><h2>Six New Signature Pieces</h2><p>Strong graphics. Refined silhouettes. Original LOWMODE™ identity.</p></div>
       <div class="grid">
