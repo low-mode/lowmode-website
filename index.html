@@ -427,6 +427,7 @@
       object-fit: contain;
       background: #ededeb;
     }
+    .trend-product-image { background: #181818; }
     .classic-photo {
       aspect-ratio: 1 / 1;
       background: #ededeb url('/assets/lowmode-final10-sprite-live.jpg') no-repeat;
@@ -627,8 +628,8 @@
         <a href="#signature">Signature</a>
         <a href="#shop-filters" data-filter-link="tees">Tees</a>
         <a href="#shop-filters" data-filter-link="polos">Polos</a>
-        <a href="#layers">Layers</a>
-        <a href="#accessories">Accessories</a>
+        <a href="#shop-filters" data-filter-link="layers">Layers</a>
+        <a href="#shop-filters" data-filter-link="accessories">Accessories</a>
         <a href="#media">Media</a>
       </div>
       <a class="nav-cta" href="/collection.html#trending">Shop the new capsule</a>
@@ -661,12 +662,12 @@
 
     <section class="catalog-filter" id="shop-filters" aria-labelledby="filter-title">
       <div class="filter-shell">
-        <div class="filter-top"><p class="kicker" id="filter-title">Shop by type</p><p class="filter-status" id="filter-status" aria-live="polite">Showing all 23 pieces</p></div>
+        <div class="filter-top"><p class="kicker" id="filter-title">Shop by type</p><p class="filter-status" id="filter-status" aria-live="polite">Showing all 30 pieces</p></div>
         <div class="filter-buttons" role="group" aria-label="Filter LOWMODE products">
-          <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All<span class="filter-count">23</span></button>
-          <button class="filter-button" type="button" data-filter="tees" aria-pressed="false">Tee shirts<span class="filter-count">7</span></button>
-          <button class="filter-button" type="button" data-filter="layers" aria-pressed="false">Hoodies &amp; layers<span class="filter-count">4</span></button>
-          <button class="filter-button" type="button" data-filter="polos" aria-pressed="false">Polos<span class="filter-count">7</span></button>
+          <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All<span class="filter-count">30</span></button>
+          <button class="filter-button" type="button" data-filter="tees" aria-pressed="false">Tee shirts<span class="filter-count">8</span></button>
+          <button class="filter-button" type="button" data-filter="layers" aria-pressed="false">Hoodies &amp; layers<span class="filter-count">8</span></button>
+          <button class="filter-button" type="button" data-filter="polos" aria-pressed="false">Polos<span class="filter-count">9</span></button>
           <button class="filter-button" type="button" data-filter="bottoms" aria-pressed="false">Bottoms<span class="filter-count">2</span></button>
           <button class="filter-button" type="button" data-filter="accessories" aria-pressed="false">Accessories<span class="filter-count">3</span></button>
         </div>
@@ -704,8 +705,9 @@
         </div>
 
         <div data-category-block>
-          <div id="tee-shirts" class="category-head"><h3>Tee shirts</h3><span>All 7 tee shirts · Signature + graphic tees</span></div>
+          <div id="tee-shirts" class="category-head"><h3>Tee shirts</h3><span>All 8 tee shirts · Signature + essentials + graphic tees</span></div>
           <div class="product-grid tee-grid">
+            <article class="product-card filter-item" data-category="tees"><span class="product-number">24</span><img class="product-image trend-product-image" src="/assets/essential-white-tee.webp" alt="LOWMODE Essential White Tee styled with relaxed dark denim" loading="lazy"><div class="product-info"><h3>Essential White Tee</h3><p>Heavyweight cotton · Relaxed fit</p><span class="tag">New · Coming soon · XS–3XL</span></div></article>
             <article class="product-card filter-item" data-category="tees"><span class="product-number">07</span><img class="product-image" src="/assets/rise-tee-front-back-v2.jpg" alt="Front and back of the LOWMODE Rise Tee with Above All artwork" loading="lazy"><div class="product-info"><h3>Rise Tee</h3><span class="price">$42</span><p>Front + back graphic</p><span class="tag">Above all</span></div></article>
             <article class="product-card filter-item" data-category="tees"><span class="product-number">08</span><img class="product-image" src="/assets/believe-tee-front-back-v6.jpg" alt="Front and back of the LOWMODE Believe Tee reading Believe and In Yourself" loading="lazy"><div class="product-info"><h3>Believe Tee</h3><span class="price">$42</span><p>Front + back graphic</p><span class="tag">In yourself</span></div></article>
             <article class="product-card filter-item" data-category="tees"><span class="product-number">09</span><div class="classic-photo p2" role="img" aria-label="LOWMODE Create graphic tee"></div><div class="product-info"><h3>Create Tee</h3><span class="price">$42</span><p>Original graphic tee</p><span class="tag">Create your lane</span></div></article>
@@ -714,20 +716,26 @@
         </div>
 
         <div data-category-block>
-          <div id="layers" class="category-head"><h3>Hoodies &amp; crewnecks</h3><span>Heavy layers</span></div>
+          <div id="layers" class="category-head"><h3>Hoodies &amp; layers</h3><span>All 8 layers · Hoodies, jackets, overshirts + quarter-zips</span></div>
           <div class="category-grid">
+            <article class="product-card filter-item" data-category="layers"><span class="product-number">25</span><img class="product-image trend-product-image" src="/assets/burgundy-quarter-zip.webp" alt="LOWMODE Burgundy Quarter-Zip" loading="lazy"><div class="product-info"><h3>Burgundy Quarter-Zip</h3><p>Structured midweight layer</p><span class="tag">New · Coming soon · XS–3XL</span></div></article>
+            <article class="product-card filter-item" data-category="layers"><span class="product-number">26</span><img class="product-image trend-product-image" src="/assets/graphite-set.webp" alt="LOWMODE Graphite Fleece Set with zip hoodie and relaxed sweatpant" loading="lazy"><div class="product-info"><h3>Graphite Fleece Set</h3><p>Zip hoodie + relaxed sweatpant</p><span class="tag">New · Coming soon · XS–3XL</span></div></article>
+            <article class="product-card filter-item" data-category="layers"><span class="product-number">27</span><img class="product-image trend-product-image" src="/assets/olive-funnel-jacket.webp" alt="LOWMODE Olive Funnel Jacket" loading="lazy"><div class="product-info"><h3>Olive Funnel Jacket</h3><p>Technical shell · Two-way zip</p><span class="tag">New · Coming soon · XS–3XL</span></div></article>
+            <article class="product-card filter-item" data-category="layers"><span class="product-number">28</span><img class="product-image trend-product-image" src="/assets/red-plaid-overshirt.webp" alt="LOWMODE Red Plaid Overshirt" loading="lazy"><div class="product-info"><h3>Red Plaid Overshirt</h3><p>Brushed heavyweight flannel</p><span class="tag">New · Coming soon · XS–3XL</span></div></article>
             <article class="product-card filter-item" data-category="layers"><span class="product-number">11</span><div class="classic-photo p3" role="img" aria-label="LOWMODE Courage hoodie"></div><div class="product-info"><h3>Courage Hoodie</h3><span class="price">$68</span><p>Brushed fleece hoodie</p><span class="tag">LOWMODE™ graphic</span></div></article>
             <article class="product-card filter-item" data-category="layers"><span class="product-number">12</span><div class="classic-photo p4" role="img" aria-label="LOWMODE Purpose crewneck"></div><div class="product-info"><h3>Purpose Crewneck</h3><span class="price">$58</span><p>Structured crewneck</p><span class="tag">Purpose over noise</span></div></article>
           </div>
         </div>
 
         <div data-category-block>
-          <div id="polos" class="category-head"><h3>Polos</h3><span>Six-piece premium capsule · Tailored LOWMODE fits</span></div>
+          <div id="polos" class="category-head"><h3>Polos</h3><span>All 9 polos · Essentials + tailored premium capsule</span></div>
           <figure class="polo-collection-feature">
             <img src="/assets/lowmode-premium-polo-collection.webp" alt="LOWMODE premium polo collection: Shadow Heritage, Ivory Contrast, Crimson Wings, Ocean Discipline, Racing Edge and Tempest" loading="lazy">
             <figcaption class="polo-collection-copy"><strong>Night Lives Higher</strong><span>Six distinct polos · One LOWMODE point of view</span></figcaption>
           </figure>
           <div class="category-grid">
+            <article class="product-card filter-item" data-category="polos"><span class="product-number">29</span><img class="product-image trend-product-image" src="/assets/cobalt-pique-polo.webp" alt="LOWMODE Cobalt Pique Polo" loading="lazy"><div class="product-info"><h3>Cobalt Pique Polo</h3><p>Clean-cut cotton pique · Cobalt blue</p><span class="tag">New · Coming soon · XS–3XL</span></div></article>
+            <article class="product-card filter-item" data-category="polos"><span class="product-number">30</span><img class="product-image trend-product-image" src="/assets/ivory-knit-polo.webp" alt="LOWMODE Ivory Knit Polo with contrast tipping" loading="lazy"><div class="product-info"><h3>Ivory Knit Polo</h3><p>Textured knit · Contrast tipping</p><span class="tag">New · Coming soon · XS–3XL</span></div></article>
             <article class="product-card filter-item" data-category="polos"><span class="product-number">18</span><img class="product-image" src="/assets/lowmode-shadow-heritage-polo.webp" alt="Front and back of the black LOWMODE Shadow Heritage zip polo with tonal artwork" loading="lazy"><div class="product-info"><h3>Shadow Heritage Polo</h3><span class="price">$64</span><p>Jet black · Tonal heritage artwork</p><span class="tag">Quarter zip · XS–3XL</span></div></article>
             <article class="product-card filter-item" data-category="polos"><span class="product-number">19</span><img class="product-image" src="/assets/lowmode-ivory-contrast-polo-v2.webp" alt="Front and back of the ivory LOWMODE Contrast Polo with black collar and sleeve trim" loading="lazy"><div class="product-info"><h3>Ivory Contrast Polo</h3><span class="price">$64</span><p>Warm ivory · Black contrast trim</p><span class="tag">Tailored fit · XS–3XL</span></div></article>
             <article class="product-card filter-item" data-category="polos"><span class="product-number">20</span><div class="polo-photo polo-2" role="img" aria-label="Crimson LOWMODE Wings Polo with tonal wings and lightning artwork"></div><div class="product-info"><h3>Crimson Wings Polo</h3><span class="price">$64</span><p>Deep crimson · Tonal wing artwork</p><span class="tag">Embroidered detail · XS–3XL</span></div></article>
@@ -787,6 +795,13 @@
       const blocks = [...document.querySelectorAll('[data-category-block]')];
       const status = document.getElementById('filter-status');
       const names = { tees: 'tee shirts', layers: 'hoodies & layers', polos: 'polos', bottoms: 'bottoms', accessories: 'accessories' };
+
+      buttons.forEach((button) => {
+        const category = button.dataset.filter;
+        const count = category === 'all' ? items.length : items.filter((item) => item.dataset.category === category).length;
+        const countLabel = button.querySelector('.filter-count');
+        if (countLabel) countLabel.textContent = count;
+      });
 
       function applyFilter(category) {
         buttons.forEach((button) => {
