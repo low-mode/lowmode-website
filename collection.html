@@ -3,118 +3,873 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Shop LOWMODE Trending Essentials, the Signature Collection and original apparel in sizes XS through 3XL.">
-  <title>LOWMODE™ Collection</title>
+  <meta name="description" content="LOWMODE apparel, accessories and media. Original graphic artwork, modern fits and limited drops.">
+  <meta name="theme-color" content="#080808">
+  <title>LOWMODE™ — Full Collection</title>
   <style>
-    :root { --bg:#0d0d0d; --panel:#171717; --line:#2b2b2b; --text:#fff; --muted:#aaa; }
-    * { box-sizing:border-box; }
-    html { scroll-behavior:smooth; }
-    body { margin:0; background:var(--bg); color:var(--text); font-family:Arial,Helvetica,sans-serif; line-height:1.5; }
-    a { color:inherit; text-decoration:none; }
-    .top { background:#ededed; color:#111; text-align:center; padding:10px 16px; font-size:12px; font-weight:800; letter-spacing:2px; }
-    .nav { position:sticky; top:0; z-index:10; background:rgba(13,13,13,.96); backdrop-filter:blur(10px); border-bottom:1px solid #292929; display:flex; align-items:center; justify-content:space-between; padding:16px 24px; }
-    .logo { font-size:28px; font-weight:900; letter-spacing:3px; }
-    .navlinks { display:flex; gap:18px; flex-wrap:wrap; font-size:13px; font-weight:800; }
-    .hero { max-width:1250px; margin:auto; padding:44px 20px 24px; }
-    .hero-copy { text-align:center; margin-bottom:26px; }
-    .hero h1 { font-size:clamp(46px,8vw,84px); line-height:.95; margin:0 0 12px; letter-spacing:-3px; }
-    .hero p { margin:0 auto; color:#bbb; font-size:16px; max-width:680px; }
-    .collection-shot { background:#141414; border:1px solid var(--line); border-radius:20px; padding:10px; }
-    .collection-shot img { display:block; width:100%; height:auto; border-radius:13px; }
-    .label { display:flex; justify-content:space-between; gap:10px; align-items:center; padding:14px 5px 3px; font-size:12px; font-weight:800; letter-spacing:1px; }
-    .categories { display:flex; flex-wrap:wrap; justify-content:center; gap:9px; padding:16px 18px 36px; }
-    .categories a { background:#1a1a1a; border:1px solid #3a3a3a; border-radius:999px; padding:10px 16px; font-size:13px; font-weight:800; }
-    .wrap { max-width:1250px; margin:auto; padding:0 20px 66px; }
-    .section-title { text-align:center; margin:18px 0 24px; }
-    .section-title h2 { font-size:36px; margin:0 0 6px; }
-    .section-title p { margin:0; color:var(--muted); }
-    .grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; }
-    .card { background:var(--panel); border:1px solid var(--line); overflow:hidden; border-radius:14px; }
-    .photo { background-repeat:no-repeat; background-color:#181818; }
-    .signature-photo { aspect-ratio:437/600; background-image:url('/assets/lowmode-signature-collection-2026.webp'); background-size:300% 200%; }
-    .s0 { background-position:0% 0%; } .s1 { background-position:50% 0%; } .s2 { background-position:100% 0%; }
-    .s3 { background-position:0% 100%; } .s4 { background-position:50% 100%; } .s5 { background-position:100% 100%; }
-    .classic-photo { background-image:url('/assets/lowmode-final10-sprite-live.jpg'); background-size:500% 200%; aspect-ratio:1/1; }
-    .p0 { background-position:0% 0%; } .p1 { background-position:25% 0%; } .p2 { background-position:50% 0%; }
-    .p3 { background-position:75% 0%; } .p4 { background-position:100% 0%; } .p5 { background-position:0% 100%; }
-    .p6 { background-position:25% 100%; } .p7 { background-position:50% 100%; } .p8 { background-position:75% 100%; } .p9 { background-position:100% 100%; }
-    .info { padding:15px 14px 18px; }
-    .info h3 { font-size:18px; margin:0; }
-    .info p { font-size:14px; color:var(--muted); margin:5px 0 0; }
-    .size { display:inline-block; margin-top:11px; padding:6px 9px; border:1px solid #4a4a4a; border-radius:999px; color:#eee; font-size:12px; font-weight:800; letter-spacing:1px; }
+    :root {
+      --black: #080808;
+      --ink: #101010;
+      --panel: #151515;
+      --line: #303030;
+      --white: #f7f7f4;
+      --soft: #c8c8c3;
+      --muted: #94948f;
+      --ice: #b9dcff;
+      --max: 1320px;
+    }
 
-    .trending { margin-bottom:72px; }
-    .trend-banner { margin:0 0 24px; background:#141414; border:1px solid var(--line); border-radius:20px; overflow:hidden; }
-    .trend-banner img { width:100%; display:block; }
-    .trend-banner-copy { display:flex; justify-content:space-between; gap:18px; align-items:center; padding:16px 18px; }
-    .trend-banner-copy strong { letter-spacing:1px; }
-    .trend-banner-copy span { color:var(--muted); font-size:13px; }
-    .trend-photo { aspect-ratio:4/5; background:#181818; overflow:hidden; }
-    .trend-photo img { width:100%; height:100%; display:block; object-fit:cover; }
-    .status { display:inline-block; margin-top:11px; padding:6px 9px; border:1px solid #6e6e6e; border-radius:999px; color:#fff; font-size:11px; font-weight:900; letter-spacing:1.2px; text-transform:uppercase; }
-    .classics { margin-top:68px; }
-    .classic-grid { grid-template-columns:repeat(5,minmax(0,1fr)); }
-    .footer { border-top:1px solid #292929; color:#aaa; text-align:center; padding:30px 16px; font-size:12px; letter-spacing:1px; }
-    @media(max-width:1050px) { .classic-grid { grid-template-columns:repeat(3,1fr); } }
-    @media(max-width:760px) { .grid { grid-template-columns:repeat(2,1fr); } .nav { align-items:flex-start; gap:12px; flex-direction:column; } }
-    @media(max-width:430px) { .grid,.classic-grid { grid-template-columns:1fr; } .hero h1 { font-size:48px; } }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 108px; }
+    body {
+      min-width: 320px;
+      overflow-x: hidden;
+      background: var(--black);
+      color: var(--white);
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: geometricPrecision;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+    a:focus-visible { outline: 2px solid var(--ice); outline-offset: 4px; }
+    [hidden] { display: none !important; }
+
+    .announcement {
+      padding: 10px 20px;
+      overflow: hidden;
+      background: var(--ice);
+      color: #050505;
+      text-align: center;
+      font-size: .72rem;
+      font-weight: 900;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 1px solid rgba(255,255,255,.14);
+      background: rgba(8,8,8,.94);
+      backdrop-filter: blur(16px);
+    }
+    .nav {
+      width: min(100%, var(--max));
+      min-height: 72px;
+      margin: auto;
+      padding: 0 28px;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 32px;
+    }
+    .brand { display: flex; align-items: center; gap: 12px; white-space: nowrap; }
+    .brand-word { display: flex; align-items: baseline; gap: 7px; }
+    .logo {
+      font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      font-size: 2rem;
+      line-height: 1;
+      letter-spacing: .08em;
+    }
+    .logo-mark { color: var(--ice); font-size: .68rem; font-weight: 900; }
+    .site-domain {
+      padding-left: 12px;
+      border-left: 1px solid #454545;
+      color: var(--muted);
+      font-size: .69rem;
+      font-weight: 800;
+      letter-spacing: .11em;
+      text-transform: uppercase;
+    }
+    .nav-links {
+      justify-self: center;
+      display: flex;
+      align-items: center;
+      gap: clamp(18px, 2.8vw, 40px);
+      font-size: .76rem;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+    .nav-links a { position: relative; padding: 26px 0 23px; }
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 18px;
+      left: 0;
+      height: 2px;
+      background: var(--ice);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .2s ease;
+    }
+    .nav-links a:hover::after { transform: scaleX(1); }
+    .nav-tools { display: flex; align-items: center; justify-content: flex-end; gap: 8px; }
+    .nav-tool {
+      min-height: 38px;
+      border: 1px solid #444;
+      border-radius: 999px;
+      padding: 9px 13px;
+      background: transparent;
+      color: var(--white);
+      font-family: inherit;
+      font-size: .72rem;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      transition: border-color .2s ease, background .2s ease, color .2s ease;
+    }
+    a.nav-tool:hover { border-color: var(--white); background: var(--white); color: var(--black); }
+    .nav-tools > span.nav-tool { cursor: default; }
+
+    main { overflow: hidden; }
+    .wrap { width: min(100%, var(--max)); margin: auto; padding-inline: 28px; }
+    .kicker {
+      color: var(--ice);
+      font-size: .73rem;
+      font-weight: 900;
+      letter-spacing: .24em;
+      text-transform: uppercase;
+    }
+    .display {
+      font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .hero { border-bottom: 1px solid var(--line); }
+    .hero-grid {
+      width: min(100%, var(--max));
+      min-height: 670px;
+      margin: auto;
+      padding: 52px 28px;
+      display: grid;
+      grid-template-columns: minmax(0,.86fr) minmax(470px,1.14fr);
+      align-items: stretch;
+      gap: clamp(32px, 5vw, 78px);
+    }
+    .hero-copy { display: flex; flex-direction: column; justify-content: center; }
+    .hero-copy .kicker { margin-bottom: 22px; }
+    h1 {
+      max-width: 690px;
+      font-size: clamp(4.5rem, 8.6vw, 8.9rem);
+      line-height: .78;
+      letter-spacing: -.045em;
+    }
+    h1 .outline {
+      color: transparent;
+      -webkit-text-stroke: 1.5px var(--white);
+      text-stroke: 1.5px var(--white);
+    }
+    .hero-lead {
+      max-width: 580px;
+      margin-top: 30px;
+      color: var(--soft);
+      font-size: clamp(1rem, 1.4vw, 1.14rem);
+    }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+    .button {
+      min-height: 50px;
+      padding: 14px 20px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--white);
+      background: var(--white);
+      color: var(--black);
+      font-size: .76rem;
+      font-weight: 900;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+      transition: transform .2s ease, background .2s ease, color .2s ease;
+    }
+    .button:hover { transform: translateY(-2px); background: var(--ice); }
+    .button.secondary { background: transparent; color: var(--white); }
+    .button.secondary:hover { background: var(--white); color: var(--black); }
+    .hero-notes {
+      margin-top: 42px;
+      padding-top: 18px;
+      display: grid;
+      grid-template-columns: repeat(3,minmax(0,1fr));
+      gap: 16px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: .74rem;
+      font-weight: 800;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+    .hero-notes a { transition: color .2s ease; }
+    .hero-notes a:hover { color: var(--white); }
+
+    .hero-art {
+      position: relative;
+      min-height: 540px;
+      overflow: hidden;
+      border: 1px solid #383838;
+      background: #111;
+      isolation: isolate;
+    }
+    .hero-art::before {
+      content: "FEATURED DROP / 26";
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 2;
+      padding: 11px 14px;
+      background: var(--ice);
+      color: #060606;
+      font-size: .7rem;
+      font-weight: 900;
+      letter-spacing: .16em;
+    }
+    .hero-art img { width: 100%; height: 100%; object-fit: contain; object-position: center; }
+    .hero-art figcaption {
+      position: absolute;
+      right: 16px;
+      bottom: 15px;
+      left: 16px;
+      z-index: 2;
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      border-top: 1px solid rgba(255,255,255,.55);
+      padding-top: 10px;
+      color: #fff;
+      font-size: .7rem;
+      font-weight: 900;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+      text-shadow: 0 1px 8px #000;
+    }
+
+    .word-strip {
+      border-bottom: 1px solid var(--line);
+      background: var(--white);
+      color: var(--black);
+    }
+    .word-strip-inner {
+      width: min(100%, 1600px);
+      margin: auto;
+      padding: 17px 28px;
+      display: flex;
+      justify-content: center;
+      gap: clamp(20px, 4vw, 64px);
+      white-space: nowrap;
+      font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      font-size: clamp(1rem, 2vw, 1.5rem);
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .word-strip span::after { content: "✦"; margin-left: clamp(20px, 4vw, 64px); color: #7b9fc3; }
+    .word-strip span:last-child::after { display: none; }
+
+    .catalog-filter {
+      border-bottom: 1px solid var(--line);
+      background: #0d0d0d;
+    }
+    .filter-shell {
+      width: min(100%, var(--max));
+      margin: auto;
+      padding: 26px 28px 28px;
+    }
+    .filter-top {
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .filter-status {
+      color: var(--muted);
+      font-size: .76rem;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .filter-buttons { display: flex; flex-wrap: wrap; gap: 9px; }
+    .filter-button {
+      min-height: 46px;
+      padding: 11px 15px;
+      border: 1px solid #444;
+      border-radius: 0;
+      background: transparent;
+      color: var(--white);
+      cursor: pointer;
+      font: inherit;
+      font-size: .74rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      transition: border-color .2s ease, background .2s ease, color .2s ease;
+    }
+    .filter-button:hover { border-color: var(--white); }
+    .filter-button.is-active {
+      border-color: var(--ice);
+      background: var(--ice);
+      color: var(--black);
+    }
+    .filter-button:focus-visible { outline: 2px solid var(--ice); outline-offset: 3px; }
+    .filter-count { margin-left: 8px; opacity: .65; }
+
+    .section { padding-block: clamp(72px, 9vw, 118px); }
+    .section + .section { border-top: 1px solid var(--line); }
+    .section-head {
+      margin-bottom: 32px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: end;
+      gap: 24px;
+    }
+    .section-head .kicker { margin-bottom: 13px; }
+    .section-head h2 {
+      font-size: clamp(2.8rem, 6vw, 5.8rem);
+      line-height: .86;
+      letter-spacing: -.025em;
+    }
+    .section-index {
+      padding-bottom: 5px;
+      color: var(--muted);
+      font-size: .74rem;
+      font-weight: 900;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+
+    .signature-intro {
+      margin-bottom: 28px;
+      display: grid;
+      grid-template-columns: minmax(0,1.35fr) minmax(280px,.65fr);
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+    }
+    .signature-intro > div { background: var(--ink); padding: clamp(28px, 5vw, 58px); }
+    .signature-intro h3 {
+      max-width: 760px;
+      margin-top: 12px;
+      font-size: clamp(2rem, 4.4vw, 4.8rem);
+      line-height: .93;
+      letter-spacing: -.03em;
+    }
+    .signature-intro p { max-width: 470px; color: var(--soft); font-size: 1rem; }
+    .fit-list { display: grid; align-content: center; gap: 0; }
+    .fit-list span {
+      padding: 13px 0;
+      border-bottom: 1px solid var(--line);
+      font-size: .8rem;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .fit-list span:last-child { border-bottom: 0; }
+
+    .product-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 18px; }
+    .product-card {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      transition: border-color .2s ease, transform .2s ease;
+    }
+    .product-card:hover { transform: translateY(-4px); border-color: #666; }
+    .product-number {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      z-index: 2;
+      min-width: 34px;
+      padding: 7px 8px;
+      background: rgba(8,8,8,.92);
+      color: var(--white);
+      text-align: center;
+      font-size: .67rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+    }
+    .signature-photo {
+      aspect-ratio: 437 / 600;
+      background: #171717 url('/assets/lowmode-signature-collection-2026.webp') no-repeat;
+      background-size: 300% 200%;
+    }
+    .s0 { background-position: 0 0; }
+    .s1 { background-position: 50% 0; }
+    .s2 { background-position: 100% 0; }
+    .s3 { background-position: 0 100%; }
+    .s4 { background-position: 50% 100%; }
+    .s5 { background-position: 100% 100%; }
+    .product-info {
+      min-height: 112px;
+      padding: 17px 18px 18px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-content: start;
+      gap: 5px 16px;
+      border-top: 1px solid var(--line);
+    }
+    .product-info h3 { font-size: 1rem; line-height: 1.25; letter-spacing: .01em; text-transform: uppercase; }
+    .product-info .price { font-size: .93rem; font-weight: 900; }
+    .product-info p { grid-column: 1 / -1; color: var(--muted); font-size: .78rem; }
+    .tag {
+      grid-column: 1 / -1;
+      margin-top: 4px;
+      color: var(--ice);
+      font-size: .66rem;
+      font-weight: 900;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+
+    .shop-section { background: #0b0b0b; }
+    [data-category-block] { margin-top: 52px; }
+    [data-category-block].is-first-visible { margin-top: 0; }
+    .category-head {
+      margin: 0 0 17px;
+      padding-bottom: 12px;
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 20px;
+      border-bottom: 1px solid var(--line);
+    }
+    .category-head h3 { font-size: 1.15rem; letter-spacing: .14em; text-transform: uppercase; }
+    .category-head span { color: var(--muted); font-size: .72rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+    .tee-grid { grid-template-columns: repeat(4,minmax(0,1fr)); }
+    .product-image {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: contain;
+      background: #ededeb;
+    }
+    .trend-product-image {
+      object-fit: cover;
+      object-position: center 24%;
+      background: #171717;
+    }
+    .coming-soon { color: var(--ice); font-size: .72rem !important; letter-spacing: .06em; text-transform: uppercase; }
+    .classic-photo {
+      aspect-ratio: 1 / 1;
+      background: #ededeb url('/assets/lowmode-final10-sprite-live.jpg') no-repeat;
+      background-size: 500% 200%;
+    }
+    .p0 { background-position: 0 0; } .p1 { background-position: 25% 0; }
+    .p2 { background-position: 50% 0; } .p3 { background-position: 75% 0; }
+    .p4 { background-position: 100% 0; } .p5 { background-position: 0 100%; }
+    .p6 { background-position: 25% 100%; } .p7 { background-position: 50% 100%; }
+    .p8 { background-position: 75% 100%; } .p9 { background-position: 100% 100%; }
+    .category-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 18px; }
+
+    .polo-collection-feature {
+      margin-bottom: 18px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: #101010;
+    }
+    .polo-collection-feature img {
+      width: 100%;
+      aspect-ratio: 3 / 2;
+      object-fit: cover;
+      background: #101010;
+    }
+    .polo-collection-copy {
+      padding: 19px 20px 21px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+      border-top: 1px solid var(--line);
+    }
+    .polo-collection-copy strong {
+      font-size: 1rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .polo-collection-copy span {
+      color: var(--muted);
+      font-size: .72rem;
+      font-weight: 800;
+      letter-spacing: .1em;
+      text-align: right;
+      text-transform: uppercase;
+    }
+    .polo-photo {
+      aspect-ratio: 1 / 1;
+      background: #101010 url('/assets/lowmode-premium-polo-collection.webp') no-repeat;
+      background-size: 300% 200%;
+    }
+    .polo-2 { background-position: 100% 0; }
+    .polo-3 { background-position: 0 100%; }
+    .polo-4 { background-position: 50% 100%; }
+    .polo-5 { background-position: 100% 100%; }
+
+    .media-feature {
+      min-height: 430px;
+      display: grid;
+      grid-template-columns: minmax(0,1.1fr) minmax(320px,.9fr);
+      border: 1px solid var(--line);
+      background: var(--panel);
+    }
+    .media-title {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(35px, 6vw, 78px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: var(--ice);
+      color: var(--black);
+    }
+    .media-title::after {
+      content: "LM";
+      position: absolute;
+      right: -18px;
+      bottom: -57px;
+      color: rgba(0,0,0,.08);
+      font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      font-size: clamp(13rem, 27vw, 27rem);
+      line-height: .72;
+      letter-spacing: -.08em;
+    }
+    .media-title h2 { position: relative; z-index: 1; max-width: 720px; font-size: clamp(4rem, 8vw, 8.4rem); line-height: .78; letter-spacing: -.04em; }
+    .media-title .kicker { position: relative; z-index: 1; color: #202020; }
+    .media-copy { padding: clamp(35px, 5vw, 66px); display: flex; flex-direction: column; justify-content: center; }
+    .media-copy h3 { margin-bottom: 16px; font-size: clamp(1.9rem, 3vw, 3rem); line-height: 1; text-transform: uppercase; }
+    .media-copy p { max-width: 470px; color: var(--soft); }
+    .media-copy .button { align-self: flex-start; margin-top: 28px; }
+
+    .about-panel {
+      padding: clamp(38px, 6vw, 80px);
+      display: grid;
+      grid-template-columns: minmax(0,1fr) minmax(260px,.55fr);
+      align-items: end;
+      gap: 38px;
+      border: 1px solid #d9d9d4;
+      background: var(--white);
+      color: var(--black);
+    }
+    .about-panel h2 { margin-top: 12px; max-width: 900px; font-size: clamp(3rem, 7vw, 7rem); line-height: .82; letter-spacing: -.04em; }
+    .about-panel .kicker { color: #53799f; }
+    .about-panel p { color: #333; font-size: 1rem; }
+
+    footer { border-top: 1px solid var(--line); }
+    .footer-inner {
+      width: min(100%, var(--max));
+      margin: auto;
+      padding: 38px 28px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: end;
+      gap: 26px;
+    }
+    .footer-logo { font-size: clamp(2rem, 5vw, 4rem); letter-spacing: .07em; }
+    .footer-meta { color: var(--muted); text-align: right; font-size: .74rem; line-height: 1.8; letter-spacing: .08em; text-transform: uppercase; }
+
+    @media (max-width: 1050px) {
+      .nav { grid-template-columns: auto 1fr auto; gap: 20px; }
+      .site-domain { display: none; }
+      .nav-links { justify-self: end; }
+      .hero-grid { min-height: auto; grid-template-columns: 1fr; }
+      .hero-copy { padding-block: 30px 10px; }
+      .hero-art { min-height: 560px; }
+      .tee-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+    }
+
+    @media (max-width: 760px) {
+      html { scroll-padding-top: 136px; }
+      .announcement { padding-inline: 12px; font-size: .63rem; letter-spacing: .14em; }
+      .nav { min-height: auto; padding: 14px 20px 0; display: grid; grid-template-columns: 1fr auto; gap: 12px; }
+      .brand { width: auto; }
+      .logo { font-size: 1.75rem; }
+      .nav-tools { grid-column: 2; grid-row: 1; }
+      .nav-tool { min-height: 34px; padding: 7px 10px; font-size: .65rem; }
+      .nav-links {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        width: calc(100% + 40px);
+        margin-inline: -20px;
+        padding-inline: 20px;
+        justify-content: flex-start;
+        gap: 24px;
+        overflow-x: auto;
+        scrollbar-width: none;
+      }
+      .nav-links::-webkit-scrollbar { display: none; }
+      .nav-links a { padding: 8px 0 14px; white-space: nowrap; }
+      .nav-links a::after { bottom: 8px; }
+      .wrap, .hero-grid { padding-inline: 20px; }
+      .hero-grid { padding-block: 38px; gap: 34px; }
+      h1 { font-size: clamp(3.6rem, 18vw, 7rem); }
+      .hero-notes { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 8px; }
+      .hero-art { min-height: 420px; }
+      .word-strip-inner { justify-content: flex-start; overflow: hidden; }
+      .word-strip span:nth-child(n+4) { display: none; }
+      .word-strip span:nth-child(3)::after { display: none; }
+      .filter-shell { padding-inline: 20px; }
+      .filter-top { align-items: flex-start; flex-direction: column; gap: 5px; }
+      .filter-buttons {
+        width: calc(100% + 20px);
+        padding-right: 20px;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scrollbar-width: none;
+      }
+      .filter-buttons::-webkit-scrollbar { display: none; }
+      .filter-button { flex: 0 0 auto; }
+      .section-head { grid-template-columns: 1fr; }
+      .section-index { display: none; }
+      .signature-intro, .media-feature, .about-panel { grid-template-columns: 1fr; }
+      .product-grid, .category-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+      .media-title { min-height: 330px; }
+    }
+
+    @media (max-width: 480px) {
+      .nav-tool:first-child { display: none; }
+      .hero-art { min-height: 340px; }
+      .hero-art figcaption span:last-child { display: none; }
+      .actions { display: grid; }
+      .button { width: 100%; }
+      .product-grid, .tee-grid, .category-grid { grid-template-columns: 1fr; }
+      .product-info { min-height: 102px; }
+      .category-head { align-items: flex-start; flex-direction: column; gap: 5px; }
+      .polo-collection-copy { align-items: flex-start; flex-direction: column; gap: 7px; }
+      .polo-collection-copy span { text-align: left; }
+      .footer-inner { grid-template-columns: 1fr; }
+      .footer-meta { text-align: left; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; }
+    }
   </style>
 </head>
 <body>
-  <div class="top">NEW — LOWMODE™ TRENDING ESSENTIALS · SEVEN NEW STYLES</div>
-  <nav class="nav" aria-label="Collection navigation"><a class="logo" href="/">LOWMODE™</a><div class="navlinks"><a href="#trending">TRENDING</a><a href="#signature">SIGNATURE</a><a href="#classics">CLASSICS</a><a href="/">HOME</a></div></nav>
-  <header class="hero" id="top">
-    <div class="hero-copy"><h1>THE SIGNATURE DROP</h1><p>Bold original tattoo-art linework, premium materials and clean modern fits—available from XS through 3XL.</p></div>
-    <div class="collection-shot"><img src="/assets/lowmode-signature-collection-2026.webp" alt="LOWMODE Signature Collection featuring six original apparel pieces"><div class="label"><span>LOWMODE™ COLLECTION</span><span>XS–3XL</span></div></div>
+  <div class="announcement">New · LOWMODE™ Trending Essentials · Seven new styles</div>
+  <header>
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="/" aria-label="LOWMODE home">
+        <span class="brand-word"><span class="logo">LOWMODE</span><span class="logo-mark">™</span></span>
+        <span class="site-domain">LOWMODE.ai</span>
+      </a>
+      <div class="nav-links">
+        <a href="#signature">New</a>
+        <a href="#shop-filters" data-filter-link="all">Shop</a>
+        <a href="/">Home</a>
+        <a href="#about">About</a>
+      </div>
+      <div class="nav-tools">
+        <a class="nav-tool" href="#shop-filters" data-filter-link="all">Search</a>
+        <span class="nav-tool" aria-label="Shopping bag, empty" title="Your bag is empty">Bag (0)</span>
+      </div>
+    </nav>
   </header>
-  <div class="categories"><a href="#trending">Trending Essentials</a><a href="#tees">T-Shirts</a><a href="#hoodies">Hoodies</a><a href="#jackets">Jackets</a><a href="#polos">Polos</a><a href="#classics">LOWMODE Classics</a></div>
-  <main class="wrap">
 
-    <section class="trending" id="trending">
-      <div class="section-title"><h2>Trending Essentials</h2><p>Seven of today’s strongest menswear silhouettes, rebuilt with clean LOWMODE™ identity.</p></div>
-      <div class="trend-banner">
-        <img src="/assets/lowmode-trending-capsule.webp" alt="LOWMODE Trending Essentials capsule with seven apparel styles" fetchpriority="high">
-        <div class="trend-banner-copy"><strong>THE LOWMODE™ ESSENTIALS CAPSULE</strong><span>Small emblem placement · XS–3XL</span></div>
-      </div>
-      <div class="grid">
-        <article class="card"><div class="trend-photo"><img src="/assets/cobalt-pique-polo.webp" alt="LOWMODE Cobalt Pique Polo" loading="lazy"></div><div class="info"><h3>Cobalt Pique Polo</h3><p>Clean-cut cotton pique · cobalt blue</p><span class="status">Coming Soon</span></div></article>
-        <article class="card"><div class="trend-photo"><img src="/assets/ivory-knit-polo.webp" alt="LOWMODE Ivory Knit Polo" loading="lazy"></div><div class="info"><h3>Ivory Knit Polo</h3><p>Textured knit · contrast tipping</p><span class="status">Coming Soon</span></div></article>
-        <article class="card"><div class="trend-photo"><img src="/assets/burgundy-quarter-zip.webp" alt="LOWMODE Burgundy Quarter-Zip" loading="lazy"></div><div class="info"><h3>Burgundy Quarter-Zip</h3><p>Structured midweight layer</p><span class="status">Coming Soon</span></div></article>
-        <article class="card"><div class="trend-photo"><img src="/assets/graphite-set.webp" alt="LOWMODE Graphite Fleece Set" loading="lazy"></div><div class="info"><h3>Graphite Fleece Set</h3><p>Zip hoodie + relaxed sweatpant</p><span class="status">Coming Soon</span></div></article>
-        <article class="card"><div class="trend-photo"><img src="/assets/olive-funnel-jacket.webp" alt="LOWMODE Olive Funnel Jacket" loading="lazy"></div><div class="info"><h3>Olive Funnel Jacket</h3><p>Technical shell · two-way zip</p><span class="status">Coming Soon</span></div></article>
-        <article class="card"><div class="trend-photo"><img src="/assets/red-plaid-overshirt.webp" alt="LOWMODE Red Plaid Overshirt" loading="lazy"></div><div class="info"><h3>Red Plaid Overshirt</h3><p>Brushed heavyweight flannel</p><span class="status">Coming Soon</span></div></article>
-        <article class="card"><div class="trend-photo"><img src="/assets/essential-white-tee.webp" alt="LOWMODE Essential White Tee styled with relaxed dark denim" loading="lazy"></div><div class="info"><h3>Essential White Tee</h3><p>Heavyweight cotton · relaxed fit</p><span class="status">Coming Soon</span></div></article>
-      </div>
-    </section>
-
-    <section id="signature">
-      <div class="section-title"><h2>Six New Signature Pieces</h2><p>Strong graphics. Refined silhouettes. Original LOWMODE™ identity.</p></div>
-      <div class="grid">
-        <article class="card" id="tees"><div class="photo signature-photo s0" role="img" aria-label="Black Eagle Rise Tee"></div><div class="info"><h3>Eagle Rise Tee</h3><p>Black heavyweight cotton</p><span class="size">XS–3XL</span></div></article>
-        <article class="card"><div class="photo signature-photo s1" role="img" aria-label="Washed red Stay True Rose Tee"></div><div class="info"><h3>Stay True Rose Tee</h3><p>Washed red heavyweight cotton</p><span class="size">XS–3XL</span></div></article>
-        <article class="card"><div class="photo signature-photo s2" role="img" aria-label="Baby blue Rise Above Wave Tee"></div><div class="info"><h3>Rise Above Wave Tee</h3><p>Baby blue heavyweight cotton</p><span class="size">XS–3XL</span></div></article>
-        <article class="card" id="hoodies"><div class="photo signature-photo s3" role="img" aria-label="Black Silver Rose Zip Hoodie"></div><div class="info"><h3>Silver Rose Zip Hoodie</h3><p>Black brushed fleece</p><span class="size">XS–3XL</span></div></article>
-        <article class="card" id="jackets"><div class="photo signature-photo s4" role="img" aria-label="Charcoal Crest Track Jacket"></div><div class="info"><h3>Crest Track Jacket</h3><p>Charcoal structured fit</p><span class="size">XS–3XL</span></div></article>
-        <article class="card" id="polos"><div class="photo signature-photo s5" role="img" aria-label="Black Rose Crest Polo"></div><div class="info"><h3>Rose Crest Polo</h3><p>Black knit polo with embroidery</p><span class="size">XS–3XL</span></div></article>
+  <main id="top">
+    <section class="hero">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="kicker">Independent streetwear · New collection</p>
+          <h1 class="display">Move quiet.<br><span class="outline">Wear loud.</span></h1>
+          <p class="hero-lead">Original graphics, current silhouettes and premium everyday fits—finished with the clean LOWMODE™ identity.</p>
+          <div class="actions">
+            <a class="button" href="#shop-filters">Shop new drop →</a>
+            <a class="button secondary" href="/">Back to home →</a>
+          </div>
+          <div class="hero-notes"><a href="#shop-filters" data-filter-link="all">Apparel</a><a href="#shop-filters" data-filter-link="accessories">Accessories</a><a href="#media">Media</a></div>
+        </div>
+        <figure class="hero-art">
+          <img src="/assets/lowmode-trending-capsule.webp" alt="Seven-piece LOWMODE Trending Essentials capsule" fetchpriority="high">
+          <figcaption><span>LOWMODE Essentials</span><span>Clean silhouettes · Limited drop</span></figcaption>
+        </figure>
       </div>
     </section>
 
-    <section class="classics" id="classics">
-      <div class="section-title"><h2>LOWMODE™ Classics</h2><p>Original apparel from the current lineup.</p></div>
-      <div class="grid classic-grid">
-        <article class="card"><div class="photo classic-photo p0" role="img" aria-label="Rise Tee"></div><div class="info"><h3>Rise Tee</h3><p>Graphic Tee</p></div></article>
-        <article class="card"><div class="photo classic-photo p1" role="img" aria-label="Believe Tee"></div><div class="info"><h3>Believe Tee</h3><p>Graphic Tee</p></div></article>
-        <article class="card"><div class="photo classic-photo p2" role="img" aria-label="Create Tee"></div><div class="info"><h3>Create Tee</h3><p>Graphic Tee</p></div></article>
-        <article class="card"><div class="photo classic-photo p3" role="img" aria-label="Courage Hoodie"></div><div class="info"><h3>Courage Hoodie</h3><p>Hoodie</p></div></article>
-        <article class="card"><div class="photo classic-photo p4" role="img" aria-label="Purpose Crewneck"></div><div class="info"><h3>Purpose Crewneck</h3><p>Crewneck</p></div></article>
-        <article class="card"><div class="photo classic-photo p5" role="img" aria-label="Strong Pants"></div><div class="info"><h3>Strong Pants</h3><p>Pants</p></div></article>
-        <article class="card"><div class="photo classic-photo p6" role="img" aria-label="Focus Shorts"></div><div class="info"><h3>Focus Shorts</h3><p>Shorts</p></div></article>
-        <article class="card"><div class="photo classic-photo p7" role="img" aria-label="Dream Cap"></div><div class="info"><h3>Dream Cap</h3><p>Hat</p></div></article>
-        <article class="card"><div class="photo classic-photo p8" role="img" aria-label="Peace Beanie"></div><div class="info"><h3>Peace Beanie</h3><p>Beanie</p></div></article>
-        <article class="card"><div class="photo classic-photo p9" role="img" aria-label="Grow Socks"></div><div class="info"><h3>Grow Socks</h3><p>Socks</p></div></article>
+    <div class="word-strip" aria-label="LOWMODE collection themes">
+      <div class="word-strip-inner"><span>Tee shirts</span><span>Layers</span><span>Polos</span><span>Bottoms</span><span>Accessories</span></div>
+    </div>
+
+    <section class="catalog-filter" id="shop-filters" aria-labelledby="filter-title">
+      <div class="filter-shell">
+        <div class="filter-top"><p class="kicker" id="filter-title">Shop by type</p><p class="filter-status" id="filter-status" aria-live="polite">Showing all 30 pieces</p></div>
+        <div class="filter-buttons" role="group" aria-label="Filter LOWMODE products">
+          <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All<span class="filter-count">30</span></button>
+          <button class="filter-button" type="button" data-filter="tees" aria-pressed="false">Tee shirts<span class="filter-count">8</span></button>
+          <button class="filter-button" type="button" data-filter="layers" aria-pressed="false">Hoodies &amp; layers<span class="filter-count">8</span></button>
+          <button class="filter-button" type="button" data-filter="polos" aria-pressed="false">Polos<span class="filter-count">9</span></button>
+          <button class="filter-button" type="button" data-filter="bottoms" aria-pressed="false">Bottoms<span class="filter-count">2</span></button>
+          <button class="filter-button" type="button" data-filter="accessories" aria-pressed="false">Accessories<span class="filter-count">3</span></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="signature" data-filter-section>
+      <div class="wrap">
+        <div class="section-head">
+          <div><p class="kicker">The new signature collection</p><h2 class="display">Tattoo art.<br>Refined fit.</h2></div>
+          <p class="section-index">01 / Signature</p>
+        </div>
+
+        <div class="signature-intro">
+          <div><p class="kicker">Designed by LOWMODE™</p><h3 class="display">Bold linework. Clean structure. No wasted details.</h3></div>
+          <div class="fit-list"><span>Heavyweight cotton</span><span>Brushed fleece</span><span>Tailored layers</span><span>Sizes XS–3XL</span></div>
+        </div>
+
+        <div class="product-grid">
+          <article class="product-card filter-item" data-category="tees"><span class="product-number">01</span><div class="signature-photo s0" role="img" aria-label="Black LOWMODE Eagle Rise heavyweight tee"></div><div class="product-info"><h3>Eagle Rise Tee</h3><p>Black heavyweight cotton</p><span class="tag">Graphic front · XS–3XL</span></div></article>
+          <article class="product-card filter-item" data-category="tees"><span class="product-number">02</span><div class="signature-photo s1" role="img" aria-label="Washed red LOWMODE Stay True rose tee"></div><div class="product-info"><h3>Stay True Rose Tee</h3><p>Washed red heavyweight cotton</p><span class="tag">Original artwork · XS–3XL</span></div></article>
+          <article class="product-card filter-item" data-category="tees"><span class="product-number">03</span><div class="signature-photo s2" role="img" aria-label="Baby blue LOWMODE Rise Above wave tee"></div><div class="product-info"><h3>Rise Above Wave Tee</h3><p>Baby blue heavyweight cotton</p><span class="tag">Graphic front · XS–3XL</span></div></article>
+          <article class="product-card filter-item" data-category="layers"><span class="product-number">04</span><div class="signature-photo s3" role="img" aria-label="Black LOWMODE Silver Rose zip hoodie"></div><div class="product-info"><h3>Silver Rose Zip Hoodie</h3><p>Black brushed fleece</p><span class="tag">Sleeve artwork · XS–3XL</span></div></article>
+          <article class="product-card filter-item" data-category="layers"><span class="product-number">05</span><div class="signature-photo s4" role="img" aria-label="Charcoal LOWMODE Crest track jacket"></div><div class="product-info"><h3>Crest Track Jacket</h3><p>Charcoal structured fit</p><span class="tag">Silver trim · XS–3XL</span></div></article>
+          <article class="product-card filter-item" data-category="polos"><span class="product-number">06</span><div class="signature-photo s5" role="img" aria-label="Black LOWMODE Rose Crest polo"></div><div class="product-info"><h3>Rose Crest Polo</h3><p>Black knit polo</p><span class="tag">Embroidered detail · XS–3XL</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shop-section" id="shop" data-filter-section>
+      <div class="wrap">
+        <div class="section-head">
+          <div><p class="kicker">LOWMODE™ originals</p><h2 class="display">Shop the line.</h2></div>
+          <p class="section-index">02 / Apparel</p>
+        </div>
+
+        <div data-category-block>
+          <div id="tee-shirts" class="category-head"><h3>Tee shirts</h3><span>All 8 tee shirts · Essentials + signature + graphics</span></div>
+          <div class="product-grid tee-grid">
+            <article class="product-card filter-item" data-category="tees"><span class="product-number">07</span><img class="product-image trend-product-image" src="/assets/essential-white-tee.webp" alt="LOWMODE Essential White Tee with a small LM chest emblem" loading="lazy"><div class="product-info"><h3>Essential White Tee</h3><span class="price coming-soon">Coming soon</span><p>Heavyweight cotton · Relaxed fit</p><span class="tag">Small LM emblem · XS–3XL</span></div></article>
+            <article class="product-card filter-item" data-category="tees"><span class="product-number">08</span><img class="product-image" src="/assets/rise-tee-front-back-v2.jpg" alt="Front and back of the LOWMODE Rise Tee with Above All artwork" loading="lazy"><div class="product-info"><h3>Rise Tee</h3><span class="price">$42</span><p>Front + back graphic</p><span class="tag">Above all</span></div></article>
+            <article class="product-card filter-item" data-category="tees"><span class="product-number">09</span><img class="product-image" src="/assets/believe-tee-front-back-v6.jpg" alt="Front and back of the LOWMODE Believe Tee reading Believe and In Yourself" loading="lazy"><div class="product-info"><h3>Believe Tee</h3><span class="price">$42</span><p>Front + back graphic</p><span class="tag">In yourself</span></div></article>
+            <article class="product-card filter-item" data-category="tees"><span class="product-number">10</span><div class="classic-photo p2" role="img" aria-label="LOWMODE Create graphic tee"></div><div class="product-info"><h3>Create Tee</h3><span class="price">$42</span><p>Original graphic tee</p><span class="tag">Create your lane</span></div></article>
+            <article class="product-card filter-item" data-category="tees"><span class="product-number">11</span><img class="product-image" src="/assets/proof-of-the-grind-tee.jpg" alt="Front and back of the black Proof of the Grind Tee" loading="lazy"><div class="product-info"><h3>Proof of the Grind Tee</h3><span class="price">$59</span><p>Black · Front + back</p><span class="tag">Limited graphic</span></div></article>
+          </div>
+        </div>
+
+        <div data-category-block>
+          <div id="layers" class="category-head"><h3>Hoodies, jackets &amp; layers</h3><span>8 pieces · Fleece + utility + overshirts</span></div>
+          <div class="category-grid">
+            <article class="product-card filter-item" data-category="layers"><span class="product-number">12</span><img class="product-image trend-product-image" src="/assets/burgundy-quarter-zip.webp" alt="LOWMODE Burgundy Quarter-Zip with a small LM chest emblem" loading="lazy"><div class="product-info"><h3>Burgundy Quarter-Zip</h3><span class="price coming-soon">Coming soon</span><p>Structured midweight layer</p><span class="tag">Small LM emblem · XS–3XL</span></div></article>
+            <article class="product-card filter-item" data-category="layers"><span class="product-number">13</span><img class="product-image trend-product-image" src="/assets/graphite-set.webp" alt="LOWMODE Graphite Fleece Set with zip hoodie and relaxed sweatpants" loading="lazy"><div class="product-info"><h3>Graphite Fleece Set</h3><span class="price coming-soon">Coming soon</span><p>Zip hoodie + relaxed sweatpant</p><span class="tag">Two-piece set · XS–3XL</span></div></article>
+            <article class="product-card filter-item" data-category="layers"><span class="product-number">14</span><img class="product-image trend-product-image" src="/assets/olive-funnel-jacket.webp" alt="LOWMODE Olive Funnel Jacket with a small LM chest emblem" loading="lazy"><div class="product-info"><h3>Olive Funnel Jacket</h3><span class="price coming-soon">Coming soon</span><p>Technical shell · Two-way zip</p><span class="tag">Utility layer · XS–3XL</span></div></article>
+            <article class="product-card filter-item" data-category="layers"><span class="product-number">15</span><img class="product-image trend-product-image" src="/assets/red-plaid-overshirt.webp" alt="LOWMODE Red Plaid Overshirt with a small LM chest emblem" loading="lazy"><div class="product-info"><h3>Red Plaid Overshirt</h3><span class="price coming-soon">Coming soon</span><p>Brushed heavyweight flannel</p><span class="tag">Everyday layer · XS–3XL</span></div></article>
+            <article class="product-card filter-item" data-category="layers"><span class="product-number">16</span><div class="classic-photo p3" role="img" aria-label="LOWMODE Courage hoodie"></div><div class="product-info"><h3>Courage Hoodie</h3><span class="price">$68</span><p>Brushed fleece hoodie</p><span class="tag">LOWMODE™ graphic</span></div></article>
+            <article class="product-card filter-item" data-category="layers"><span class="product-number">17</span><div class="classic-photo p4" role="img" aria-label="LOWMODE Purpose crewneck"></div><div class="product-info"><h3>Purpose Crewneck</h3><span class="price">$58</span><p>Structured crewneck</p><span class="tag">Purpose over noise</span></div></article>
+          </div>
+        </div>
+
+        <div data-category-block>
+          <div id="polos" class="category-head"><h3>Polos</h3><span>9 polos · Essentials + signature + premium capsule</span></div>
+          <figure class="polo-collection-feature">
+            <img src="/assets/lowmode-premium-polo-collection.webp" alt="LOWMODE premium polo collection: Shadow Heritage, Ivory Contrast, Crimson Wings, Ocean Discipline, Racing Edge and Tempest" loading="lazy">
+            <figcaption class="polo-collection-copy"><strong>Night Lives Higher</strong><span>Six distinct polos · One LOWMODE point of view</span></figcaption>
+          </figure>
+          <div class="category-grid">
+            <article class="product-card filter-item" data-category="polos"><span class="product-number">18</span><img class="product-image trend-product-image" src="/assets/cobalt-pique-polo.webp" alt="LOWMODE Cobalt Pique Polo with a small LM chest emblem" loading="lazy"><div class="product-info"><h3>Cobalt Pique Polo</h3><span class="price coming-soon">Coming soon</span><p>Cotton pique · Cobalt blue</p><span class="tag">Clean-cut fit · XS–3XL</span></div></article>
+            <article class="product-card filter-item" data-category="polos"><span class="product-number">19</span><img class="product-image trend-product-image" src="/assets/ivory-knit-polo.webp" alt="LOWMODE Ivory Knit Polo with contrast tipping and small LM chest emblem" loading="lazy"><div class="product-info"><h3>Ivory Knit Polo</h3><span class="price coming-soon">Coming soon</span><p>Textured knit · Contrast tipping</p><span class="tag">Refined fit · XS–3XL</span></div></article>
+            <article class="product-card filter-item" data-category="polos"><span class="product-number">20</span><img class="product-image" src="/assets/lowmode-shadow-heritage-polo.webp" alt="Front and back of the black LOWMODE Shadow Heritage zip polo with tonal artwork" loading="lazy"><div class="product-info"><h3>Shadow Heritage Polo</h3><span class="price">$64</span><p>Jet black · Tonal heritage artwork</p><span class="tag">Quarter zip · XS–3XL</span></div></article>
+            <article class="product-card filter-item" data-category="polos"><span class="product-number">21</span><img class="product-image" src="/assets/lowmode-ivory-contrast-polo-v2.webp" alt="Front and back of the ivory LOWMODE Contrast Polo with black collar and sleeve trim" loading="lazy"><div class="product-info"><h3>Ivory Contrast Polo</h3><span class="price">$64</span><p>Warm ivory · Black contrast trim</p><span class="tag">Tailored fit · XS–3XL</span></div></article>
+            <article class="product-card filter-item" data-category="polos"><span class="product-number">22</span><div class="polo-photo polo-2" role="img" aria-label="Crimson LOWMODE Wings Polo with tonal wings and lightning artwork"></div><div class="product-info"><h3>Crimson Wings Polo</h3><span class="price">$64</span><p>Deep crimson · Tonal wing artwork</p><span class="tag">Embroidered detail · XS–3XL</span></div></article>
+            <article class="product-card filter-item" data-category="polos"><span class="product-number">23</span><div class="polo-photo polo-3" role="img" aria-label="Blue LOWMODE Ocean Discipline Polo with wave texture"></div><div class="product-info"><h3>Ocean Discipline Polo</h3><span class="price">$64</span><p>Midnight blue · Wave texture</p><span class="tag">Premium knit · XS–3XL</span></div></article>
+            <article class="product-card filter-item" data-category="polos"><span class="product-number">24</span><div class="polo-photo polo-4" role="img" aria-label="Olive LOWMODE Racing Edge zip polo with vertical ivory stripe"></div><div class="product-info"><h3>Racing Edge Polo</h3><span class="price">$64</span><p>Deep olive · Racing stripe</p><span class="tag">Quarter zip · XS–3XL</span></div></article>
+            <article class="product-card filter-item" data-category="polos"><span class="product-number">25</span><div class="polo-photo polo-5" role="img" aria-label="Charcoal LOWMODE Tempest Polo with cloud and lightning artwork"></div><div class="product-info"><h3>Tempest Polo</h3><span class="price">$64</span><p>Charcoal · Storm artwork</p><span class="tag">Contrast piping · XS–3XL</span></div></article>
+          </div>
+        </div>
+
+        <div data-category-block>
+          <div id="bottoms" class="category-head"><h3>Bottoms</h3><span>Clean everyday fits</span></div>
+          <div class="category-grid">
+            <article class="product-card filter-item" data-category="bottoms"><span class="product-number">26</span><div class="classic-photo p5" role="img" aria-label="LOWMODE Strong pants"></div><div class="product-info"><h3>Strong Pants</h3><span class="price">$68</span><p>Structured everyday pants</p><span class="tag">Built to move</span></div></article>
+            <article class="product-card filter-item" data-category="bottoms"><span class="product-number">27</span><div class="classic-photo p6" role="img" aria-label="LOWMODE Focus shorts"></div><div class="product-info"><h3>Focus Shorts</h3><span class="price">$48</span><p>Everyday shorts</p><span class="tag">Keep your focus</span></div></article>
+          </div>
+        </div>
+
+        <div data-category-block>
+          <div id="accessories" class="category-head"><h3>Accessories</h3><span>Finish the fit</span></div>
+          <div class="category-grid">
+            <article class="product-card filter-item" data-category="accessories"><span class="product-number">28</span><div class="classic-photo p7" role="img" aria-label="LOWMODE Dream cap"></div><div class="product-info"><h3>Dream Cap</h3><span class="price">$32</span><p>Structured cap</p><span class="tag">Embroidered graphic</span></div></article>
+            <article class="product-card filter-item" data-category="accessories"><span class="product-number">29</span><div class="classic-photo p8" role="img" aria-label="LOWMODE Peace beanie"></div><div class="product-info"><h3>Peace Beanie</h3><span class="price">$28</span><p>Soft rib knit</p><span class="tag">LOWMODE™ mark</span></div></article>
+            <article class="product-card filter-item" data-category="accessories"><span class="product-number">30</span><div class="classic-photo p9" role="img" aria-label="LOWMODE Grow socks"></div><div class="product-info"><h3>Grow Socks</h3><span class="price">$16</span><p>Everyday crew socks</p><span class="tag">Positive detail</span></div></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="media">
+      <div class="wrap">
+        <div class="media-feature">
+          <div class="media-title"><p class="kicker">LOWMODE™ beyond apparel</p><h2 class="display">Media.</h2></div>
+          <div class="media-copy"><p class="kicker">Stories · Campaigns · Film</p><h3>More than what you wear.</h3><p>Campaigns, lookbooks, videos and original LOWMODE stories—all from the same point of view.</p><a class="button secondary" href="#about">Inside LOWMODE →</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="wrap">
+        <div class="about-panel">
+          <div><p class="kicker">Independent by design</p><h2 class="display">Quiet moves.<br>Real results.</h2></div>
+          <p>LOWMODE™ makes original apparel for people who let the work speak. Strong graphics. Premium weight. A clean fit that keeps every piece wearable.</p>
+        </div>
       </div>
     </section>
   </main>
-  <footer class="footer">© 2026 LOWMODE™</footer>
+
+  <footer>
+    <div class="footer-inner"><strong class="footer-logo display">LOWMODE™</strong><div class="footer-meta"><p>Apparel · Accessories · Media</p><p>© 2026 LOWMODE. All rights reserved.</p></div></div>
+  </footer>
+  <script>
+    (() => {
+      const filterBar = document.getElementById('shop-filters');
+      const buttons = [...document.querySelectorAll('.filter-button')];
+      const items = [...document.querySelectorAll('.filter-item')];
+      const sections = [...document.querySelectorAll('[data-filter-section]')];
+      const blocks = [...document.querySelectorAll('[data-category-block]')];
+      const status = document.getElementById('filter-status');
+      const names = { tees: 'tee shirts', layers: 'hoodies & layers', polos: 'polos', bottoms: 'bottoms', accessories: 'accessories' };
+
+      buttons.forEach((button) => {
+        const category = button.dataset.filter;
+        const count = category === 'all' ? items.length : items.filter((item) => item.dataset.category === category).length;
+        const countNode = button.querySelector('.filter-count');
+        if (countNode) countNode.textContent = count;
+      });
+
+      function applyFilter(category) {
+        buttons.forEach((button) => {
+          const active = button.dataset.filter === category;
+          button.classList.toggle('is-active', active);
+          button.setAttribute('aria-pressed', String(active));
+        });
+
+        items.forEach((item) => {
+          item.hidden = category !== 'all' && item.dataset.category !== category;
+        });
+        blocks.forEach((block) => {
+          block.hidden = ![...block.querySelectorAll('.filter-item')].some((item) => !item.hidden);
+        });
+        const visibleBlocks = blocks.filter((block) => !block.hidden);
+        blocks.forEach((block) => block.classList.toggle('is-first-visible', block === visibleBlocks[0]));
+        sections.forEach((section) => {
+          section.hidden = ![...section.querySelectorAll('.filter-item')].some((item) => !item.hidden);
+        });
+
+        const count = items.filter((item) => !item.hidden).length;
+        status.textContent = category === 'all' ? `Showing all ${count} pieces` : `Showing ${count} ${names[category]}`;
+      }
+
+      buttons.forEach((button) => button.addEventListener('click', () => applyFilter(button.dataset.filter)));
+      document.querySelectorAll('[data-filter-link]').forEach((link) => {
+        link.addEventListener('click', (event) => {
+          event.preventDefault();
+          applyFilter(link.dataset.filterLink);
+          filterBar.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      });
+      applyFilter('all');
+    })();
+  </script>
 </body>
 </html>
