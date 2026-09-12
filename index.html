@@ -3,338 +3,122 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="LOWMODE is a modern design company creating original apparel, accessories and media. Shop tees, polos, hoodies, outerwear and more.">
-  <meta name="theme-color" content="#070707">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23070707'/%3E%3Cpath d='M12 15v34h19v-8H21V15zm25 0-7 18 7 16h9l-7-16 7-18z' fill='%23b9dcff'/%3E%3C/svg%3E">
+  <meta name="description" content="LOWMODE is a modern design company creating original apparel, accessories and media.">
+  <meta name="theme-color" content="#050505">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23050505'/%3E%3Cpath d='M12 15v34h19v-8H21V15zm25 0-7 18 7 16h9l-7-16 7-18z' fill='%23b9dcff'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/styles.css">
   <title>LOWMODE™ — Modern Design Company</title>
-  <style>
-    :root {
-      --black: #070707;
-      --panel: #111;
-      --line: #2d2d2d;
-      --white: #f7f7f4;
-      --soft: #b8b8b3;
-      --ice: #b9dcff;
-      --max: 1280px;
-    }
-
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      min-width: 320px;
-      margin: 0;
-      overflow-x: hidden;
-      background: var(--black);
-      color: var(--white);
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      font-size: 16px;
-      line-height: 1.45;
-      -webkit-font-smoothing: antialiased;
-    }
-    a { color: inherit; text-decoration: none; }
-    img { display: block; width: 100%; }
-    a:focus-visible { outline: 3px solid var(--ice); outline-offset: 4px; }
-
-    .announcement {
-      padding: 9px 18px;
-      background: var(--ice);
-      color: #050505;
-      text-align: center;
-      font-size: .72rem;
-      font-weight: 900;
-      letter-spacing: .15em;
-      text-transform: uppercase;
-    }
-
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      border-bottom: 1px solid rgba(255,255,255,.15);
-      background: rgba(7,7,7,.94);
-      backdrop-filter: blur(14px);
-    }
-    .nav {
-      width: min(100%, var(--max));
-      min-height: 68px;
-      margin: auto;
-      padding: 0 24px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-    }
-    .logo {
-      font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-      font-size: clamp(1.8rem, 4vw, 2.25rem);
-      line-height: 1;
-      letter-spacing: .08em;
-    }
-    .logo sup { color: var(--ice); font-family: Arial, sans-serif; font-size: .38em; }
-    .nav-links { display: flex; align-items: center; gap: clamp(18px, 4vw, 38px); }
-    .nav-links a {
-      padding: 23px 0 20px;
-      border-bottom: 3px solid transparent;
-      font-size: .76rem;
-      font-weight: 900;
-      letter-spacing: .11em;
-      text-transform: uppercase;
-    }
-    .nav-links a:hover { border-color: var(--ice); }
-
-    main { width: min(100%, var(--max)); margin: auto; padding: clamp(36px, 6vw, 70px) 24px 80px; }
-    .intro {
-      margin-bottom: clamp(30px, 5vw, 50px);
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) auto;
-      align-items: end;
-      gap: 28px;
-    }
-    .eyebrow {
-      margin: 0 0 10px;
-      color: var(--ice);
-      font-size: .72rem;
-      font-weight: 900;
-      letter-spacing: .2em;
-      text-transform: uppercase;
-    }
-    h1, h2, p { margin-top: 0; }
-    h1 {
-      margin-bottom: 12px;
-      font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-      font-size: clamp(3.5rem, 9vw, 7rem);
-      font-weight: 900;
-      line-height: .82;
-      letter-spacing: -.025em;
-      text-transform: uppercase;
-    }
-    .intro-copy { max-width: 590px; margin-bottom: 0; color: var(--soft); font-size: clamp(1rem, 1.5vw, 1.12rem); }
-    .view-all {
-      min-height: 48px;
-      padding: 14px 18px;
-      border: 1px solid var(--white);
-      background: var(--white);
-      color: var(--black);
-      font-size: .74rem;
-      font-weight: 900;
-      letter-spacing: .12em;
-      text-align: center;
-      text-transform: uppercase;
-      white-space: nowrap;
-      transition: background .2s ease, border-color .2s ease, transform .2s ease;
-    }
-    .view-all:hover { border-color: var(--ice); background: var(--ice); transform: translateY(-2px); }
-
-    .category-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
-    .category-card {
-      position: relative;
-      min-height: 330px;
-      overflow: hidden;
-      border: 1px solid var(--line);
-      background: var(--panel);
-      isolation: isolate;
-    }
-    .category-card::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      z-index: 1;
-      background: linear-gradient(180deg, transparent 35%, rgba(0,0,0,.88) 100%);
-      pointer-events: none;
-    }
-    .category-card img,
-    .sprite-image {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform .35s ease, filter .35s ease;
-    }
-    .category-card:hover img,
-    .category-card:hover .sprite-image { transform: scale(1.035); filter: contrast(1.04); }
-    .contain { object-fit: contain !important; background: #ededeb; }
-    .polo-image { object-position: center 46%; }
-    .outerwear-image { object-position: center 24%; }
-    .sprite-image {
-      background: #ededeb url('/assets/lowmode-final10-sprite-live.jpg') no-repeat;
-      background-size: 500% 200%;
-    }
-    .bottoms-image { background-position: 0 100%; }
-    .accessories-image { background-position: 50% 100%; }
-    .category-number {
-      position: absolute;
-      top: 15px;
-      left: 15px;
-      z-index: 2;
-      min-width: 37px;
-      padding: 8px;
-      background: rgba(7,7,7,.9);
-      color: var(--ice);
-      text-align: center;
-      font-size: .69rem;
-      font-weight: 900;
-      letter-spacing: .1em;
-    }
-    .category-label {
-      position: absolute;
-      right: 20px;
-      bottom: 19px;
-      left: 20px;
-      z-index: 2;
-      display: flex;
-      align-items: end;
-      justify-content: space-between;
-      gap: 16px;
-    }
-    .category-label h2 {
-      margin-bottom: 3px;
-      font-size: clamp(1.25rem, 2.4vw, 2rem);
-      line-height: 1;
-      letter-spacing: -.02em;
-      text-transform: uppercase;
-    }
-    .category-label p { margin-bottom: 0; color: #d7d7d2; font-size: .78rem; }
-    .arrow { color: var(--ice); font-size: 1.55rem; line-height: 1; transition: transform .2s ease; }
-    .category-card:hover .arrow { transform: translateX(5px); }
-
-    .quick-links {
-      margin-top: 16px;
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      gap: 16px;
-    }
-    .quick-link {
-      min-height: 76px;
-      padding: 20px 22px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      border: 1px solid var(--line);
-      background: #101010;
-      font-size: .82rem;
-      font-weight: 900;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      transition: border-color .2s ease, background .2s ease, color .2s ease;
-    }
-    .quick-link:hover { border-color: var(--ice); background: var(--ice); color: var(--black); }
-
-    footer { border-top: 1px solid var(--line); }
-    .footer-inner {
-      width: min(100%, var(--max));
-      margin: auto;
-      padding: 28px 24px;
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      color: #8d8d89;
-      font-size: .72rem;
-      font-weight: 800;
-      letter-spacing: .1em;
-      text-transform: uppercase;
-    }
-
-    @media (max-width: 900px) {
-      .category-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .intro { grid-template-columns: 1fr; align-items: start; }
-      .view-all { justify-self: start; }
-    }
-
-    @media (max-width: 560px) {
-      .announcement { font-size: .63rem; letter-spacing: .11em; }
-      .nav { min-height: 62px; padding-inline: 18px; }
-      .nav-links { gap: 16px; }
-      .nav-links a { padding-block: 20px 17px; font-size: .68rem; }
-      .nav-links a:first-child { display: none; }
-      main { padding: 34px 16px 56px; }
-      .intro { gap: 20px; }
-      .category-grid { gap: 10px; }
-      .category-card { min-height: 245px; }
-      .category-label { right: 14px; bottom: 14px; left: 14px; }
-      .category-label p { display: none; }
-      .category-label h2 { font-size: 1.1rem; }
-      .category-number { top: 10px; left: 10px; }
-      .quick-links { grid-template-columns: 1fr; gap: 10px; }
-      .footer-inner { padding-inline: 16px; flex-direction: column; }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      *, *::before, *::after { transition-duration: .01ms !important; }
-    }
-  </style>
 </head>
 <body>
-  <div class="announcement">LOWMODE™ · Move Quiet. Wear Loud.</div>
+  <div class="announcement">LOWMODE™ / Independent Design / 2026</div>
   <header class="site-header">
     <nav class="nav" aria-label="Main navigation">
-      <a class="logo" href="/" aria-label="LOWMODE home">LOWMODE<sup>™</sup></a>
+      <a class="wordmark" href="/" aria-label="LOWMODE home">LOWMODE<sup>™</sup></a>
       <div class="nav-links">
-        <a href="#categories">Categories</a>
-        <a href="/collection.html">Shop All</a>
-        <a href="/collection.html#media">Media</a>
+        <a href="#categories">Apparel</a>
+        <a href="#about">About</a>
+        <a href="#media">Media</a>
       </div>
+      <a class="nav-cta" href="/collection.html">Shop all</a>
     </nav>
   </header>
 
   <main>
-    <section class="intro" aria-labelledby="shop-heading">
+    <section class="home-hero shell" aria-labelledby="home-title">
       <div>
-        <p class="eyebrow">Modern Design Company</p>
-        <h1 id="shop-heading">Shop Your Style.</h1>
-        <p class="intro-copy">LOWMODE is a modern design company creating original apparel, accessories and media. Choose a category and get straight to the pieces you want.</p>
+        <p class="eyebrow">Modern design company</p>
+        <h1 class="display" id="home-title">Built to move.</h1>
       </div>
-      <a class="view-all" href="/collection.html">View all apparel →</a>
+      <div class="hero-side">
+        <p>Original apparel, accessories and media shaped by a clean point of view. Quiet confidence. Strong identity.</p>
+        <div class="hero-actions">
+          <a class="button" href="#categories">Choose a category <span aria-hidden="true">↓</span></a>
+          <a class="button ghost" href="/collection.html">Full collection</a>
+        </div>
+      </div>
     </section>
 
-    <section class="category-grid" id="categories" aria-label="Shop apparel by category">
-      <a class="category-card" href="/collection.html#tee-shirts">
-        <img class="contain" src="/assets/rise-tee-front-back-v2.jpg" alt="LOWMODE graphic T-shirt" fetchpriority="high">
-        <span class="category-number">01</span>
-        <div class="category-label"><div><h2>T-Shirts</h2><p>Graphic and signature tees</p></div><span class="arrow" aria-hidden="true">→</span></div>
-      </a>
+    <section class="category-section shell" id="categories" aria-labelledby="category-title">
+      <div class="section-heading">
+        <h2 id="category-title">Shop by category</h2>
+        <p>30 original pieces / Full collection</p>
+      </div>
 
-      <a class="category-card" href="/collection.html#polos">
-        <img class="polo-image" src="/assets/lowmode-premium-polo-collection.webp" alt="LOWMODE premium polos" fetchpriority="high">
-        <span class="category-number">02</span>
-        <div class="category-label"><div><h2>Polos</h2><p>Clean premium fits</p></div><span class="arrow" aria-hidden="true">→</span></div>
-      </a>
+      <div class="category-grid">
+        <a class="category-card" href="/collection.html#tee-shirts">
+          <div class="category-media">
+            <img class="contain" src="/assets/rise-tee-front-back-v2.jpg" alt="LOWMODE Rise graphic T-shirt" fetchpriority="high">
+            <span class="category-index">01</span>
+          </div>
+          <div class="category-meta"><div><h3>T-Shirts</h3><p>Graphic and signature tees</p></div><span class="arrow" aria-hidden="true">→</span></div>
+        </a>
 
-      <a class="category-card" href="/collection.html#layers">
-        <img src="/assets/graphite-set.webp" alt="LOWMODE hoodie and fleece set" loading="lazy">
-        <span class="category-number">03</span>
-        <div class="category-label"><div><h2>Hoodies</h2><p>Fleece, crews and sets</p></div><span class="arrow" aria-hidden="true">→</span></div>
-      </a>
+        <a class="category-card" href="/collection.html#polos">
+          <div class="category-media">
+            <img src="/assets/lowmode-premium-polo-collection.webp" alt="LOWMODE premium polo collection" fetchpriority="high">
+            <span class="category-index">02</span>
+          </div>
+          <div class="category-meta"><div><h3>Polos</h3><p>Modern premium fits</p></div><span class="arrow" aria-hidden="true">→</span></div>
+        </a>
 
-      <a class="category-card" href="/collection.html#layers">
-        <img class="outerwear-image" src="/assets/olive-funnel-jacket.webp" alt="LOWMODE outerwear jacket" loading="lazy">
-        <span class="category-number">04</span>
-        <div class="category-label"><div><h2>Outerwear</h2><p>Jackets and layers</p></div><span class="arrow" aria-hidden="true">→</span></div>
-      </a>
+        <a class="category-card" href="/collection.html#layers">
+          <div class="category-media">
+            <img class="top-crop" src="/assets/graphite-set.webp" alt="LOWMODE Graphite hoodie and fleece set" loading="lazy">
+            <span class="category-index">03</span>
+          </div>
+          <div class="category-meta"><div><h3>Hoodies</h3><p>Fleece, crews and sets</p></div><span class="arrow" aria-hidden="true">→</span></div>
+        </a>
 
-      <a class="category-card" href="/collection.html#bottoms">
-        <span class="sprite-image bottoms-image" role="img" aria-label="LOWMODE pants"></span>
-        <span class="category-number">05</span>
-        <div class="category-label"><div><h2>Bottoms</h2><p>Pants and shorts</p></div><span class="arrow" aria-hidden="true">→</span></div>
-      </a>
+        <a class="category-card" href="/collection.html#layers">
+          <div class="category-media">
+            <img class="top-crop" src="/assets/olive-funnel-jacket.webp" alt="LOWMODE Olive Funnel outerwear jacket" loading="lazy">
+            <span class="category-index">04</span>
+          </div>
+          <div class="category-meta"><div><h3>Outerwear</h3><p>Jackets and layers</p></div><span class="arrow" aria-hidden="true">→</span></div>
+        </a>
 
-      <a class="category-card" href="/collection.html#accessories">
-        <span class="sprite-image accessories-image" role="img" aria-label="LOWMODE cap and accessories"></span>
-        <span class="category-number">06</span>
-        <div class="category-label"><div><h2>Accessories</h2><p>Hats, beanies and more</p></div><span class="arrow" aria-hidden="true">→</span></div>
-      </a>
+        <a class="category-card" href="/collection.html#bottoms">
+          <div class="category-media">
+            <span class="category-sprite bottoms" role="img" aria-label="LOWMODE Strong pants"></span>
+            <span class="category-index">05</span>
+          </div>
+          <div class="category-meta"><div><h3>Bottoms</h3><p>Pants and shorts</p></div><span class="arrow" aria-hidden="true">→</span></div>
+        </a>
+
+        <a class="category-card" href="/collection.html#accessories">
+          <div class="category-media">
+            <span class="category-sprite accessories" role="img" aria-label="LOWMODE Dream cap and accessories"></span>
+            <span class="category-index">06</span>
+          </div>
+          <div class="category-meta"><div><h3>Accessories</h3><p>Hats, beanies and more</p></div><span class="arrow" aria-hidden="true">→</span></div>
+        </a>
+      </div>
     </section>
 
-    <section class="quick-links" aria-label="More LOWMODE options">
-      <a class="quick-link" href="/collection.html"><span>Full LOWMODE Collection</span><span aria-hidden="true">→</span></a>
-      <a class="quick-link" href="/collection.html#media"><span>Media</span><span aria-hidden="true">→</span></a>
+    <section class="brand-grid shell" aria-label="About LOWMODE">
+      <article class="brand-panel" id="about">
+        <p class="eyebrow">About LOWMODE</p>
+        <div>
+          <h2>Quiet moves.<br>Clear vision.</h2>
+          <p>LOWMODE creates modern pieces for people who let their work speak. Strong graphics, considered details and clean everyday fits.</p>
+        </div>
+      </article>
+      <article class="brand-panel accent" id="media">
+        <p class="eyebrow">Beyond apparel</p>
+        <div>
+          <h2>Media.</h2>
+          <p>Campaigns, lookbooks, film and original LOWMODE stories.</p>
+          <a class="panel-link" href="/collection.html#media">Explore the vision</a>
+        </div>
+      </article>
     </section>
   </main>
 
-  <footer>
-    <div class="footer-inner"><span>© 2026 LOWMODE™</span><span>LOWMODE.ai</span></div>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <strong class="footer-brand">LOWMODE™</strong>
+      <div class="footer-meta"><p>Modern design company</p><p>© 2026 LOWMODE. All rights reserved.</p></div>
+    </div>
   </footer>
 </body>
 </html>
