@@ -2848,3 +2848,7 @@ img {
     font-size: 1rem;
   }
 }
+
+
+/* Modern men campaign — September 2026 */
+.gender-men img { object-position: center 42% !important; }
