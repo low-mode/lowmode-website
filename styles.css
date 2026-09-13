@@ -2886,3 +2886,7 @@ img {
   .nav-links a { display: block !important; font-size: .68rem; letter-spacing: .09em; }
   .nav-cta { display: inline-flex; min-height: 36px; padding: 9px 12px; font-size: .62rem; }
 }
+
+
+/* LOWMODE-EAGLE-EMBLEM-STYLES */
+.wordmark{display:inline-flex;align-items:center;gap:10px}.brand-emblem{width:48px;height:36px;object-fit:contain;flex:0 0 auto}.product-media,.women-card .media{position:relative}.product-card .product-media::after,.women-card .media::after{content:"";position:absolute;right:10px;bottom:10px;width:58px;height:44px;background:url('/assets/lowmode-eagle-lm-emblem.webp') center/contain no-repeat;filter:drop-shadow(0 2px 6px rgba(0,0,0,.75));pointer-events:none;z-index:5}.footer-brand{display:inline-flex;align-items:center;gap:10px}.footer-brand::before{content:"";display:inline-block;width:54px;height:40px;background:url('/assets/lowmode-eagle-lm-emblem.webp') center/contain no-repeat}
