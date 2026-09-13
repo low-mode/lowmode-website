@@ -2317,3 +2317,144 @@ p {
     font-size: .78rem;
   }
 }
+
+
+/* Women’s clean storefront — September 2026 */
+.womens-catalog {
+  position: relative;
+  isolation: isolate;
+  padding-top: clamp(46px, 6vw, 72px);
+}
+
+.womens-catalog .catalog-head {
+  margin-bottom: 20px;
+  padding-bottom: 18px;
+  align-items: center;
+}
+
+.womens-catalog .catalog-head h2 {
+  font-size: clamp(2.4rem, 4.4vw, 4.2rem);
+  letter-spacing: -.05em;
+}
+
+.womens-catalog .catalog-head p {
+  color: #b4b4af;
+}
+
+.womens-campaign-strip {
+  min-height: 230px;
+  margin-bottom: 18px;
+  border-radius: 4px;
+  border-color: rgba(255, 255, 255, .2);
+}
+
+.womens-campaign-strip img {
+  height: 230px;
+  filter: contrast(1.045) saturate(.96);
+}
+
+.womens-campaign-strip::after {
+  background:
+    linear-gradient(90deg, rgba(5, 5, 6, .08) 25%, rgba(5, 5, 6, .9) 100%),
+    linear-gradient(180deg, transparent 55%, rgba(5, 5, 6, .52) 100%);
+}
+
+.womens-campaign-strip div {
+  max-width: 560px;
+}
+
+.womens-campaign-strip strong {
+  font-size: clamp(1.45rem, 2.5vw, 2.35rem);
+  letter-spacing: -.025em;
+}
+
+.womens-catalog .product-grid {
+  gap: clamp(12px, 1.25vw, 18px);
+}
+
+.womens-catalog .product-card,
+.womens-catalog .featured-product {
+  border-radius: 4px;
+  border-color: rgba(255, 255, 255, .2);
+  background: #0a0b0d;
+  box-shadow: none;
+}
+
+.womens-catalog .featured-product {
+  background: #0a0b0d;
+}
+
+.womens-catalog .product-card:hover,
+.womens-catalog .featured-product:hover {
+  border-color: rgba(185, 220, 255, .58);
+}
+
+.womens-catalog .product-media {
+  border-bottom-color: rgba(255, 255, 255, .18);
+}
+
+.womens-catalog .product-meta {
+  min-height: 136px;
+  padding: 16px 16px 18px;
+  background: #0a0b0d;
+}
+
+.womens-catalog .product-meta h3 {
+  font-size: .94rem;
+  line-height: 1.18;
+}
+
+.womens-catalog .featured-product .coming-soon {
+  color: var(--ice);
+}
+
+@media (max-width: 760px) {
+  .womens-catalog {
+    padding-top: 40px;
+  }
+
+  .womens-catalog .catalog-head {
+    align-items: flex-start;
+    margin-bottom: 16px;
+  }
+
+  .womens-campaign-strip {
+    min-height: 210px;
+    margin-bottom: 14px;
+  }
+
+  .womens-campaign-strip img {
+    height: 210px;
+  }
+
+  .womens-campaign-strip strong {
+    font-size: 1.55rem;
+  }
+
+  .womens-catalog .product-grid {
+    gap: 12px;
+  }
+
+  .womens-catalog .product-meta {
+    min-height: 0;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 520px) {
+  .womens-catalog .catalog-head h2 {
+    font-size: clamp(2.25rem, 12vw, 3.2rem);
+  }
+
+  .womens-campaign-strip {
+    min-height: 190px;
+  }
+
+  .womens-campaign-strip img {
+    height: 190px;
+  }
+
+  .womens-catalog .product-media {
+    aspect-ratio: 4 / 4.6;
+  }
+}
