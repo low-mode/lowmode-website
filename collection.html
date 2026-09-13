@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Shop LOWMODE premium men’s and women’s apparel with heavyweight tees, structured layers, polos, headwear and clear size pricing.">
   <meta name="theme-color" content="#050505">
-  <link rel="stylesheet" href="/styles.css?v=20260913-9">
+  <link rel="stylesheet" href="/styles.css?v=20260913-10">
   <title>LOWMODE™ — Men + Women</title>
   <style>
     :root{--gold:#d6b06c;--ink:#050505;--soft:#aaa59b}
@@ -23,9 +23,16 @@
     .mens-banner-copy p{max-width:580px;color:#d0cdc6;font-size:clamp(.92rem,1.3vw,1.08rem)}
     .mens-pill-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
     .mens-pill{border:1px solid rgba(255,255,255,.2);background:rgba(0,0,0,.38);padding:8px 11px;font-size:.66rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#eee9df}
-    .product-card{position:relative;border:1px solid rgba(255,255,255,.1);background:#0b0b0b;transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
+    .positive-banner{max-width:1360px;margin:0 auto 34px;padding:clamp(32px,5vw,64px);border-top:1px solid rgba(255,255,255,.14);border-bottom:1px solid rgba(255,255,255,.14);text-align:center;background:linear-gradient(180deg,#0a0a0a,#070707)}
+    .positive-banner .eyebrow{color:var(--gold)}
+    .positive-banner h2{margin:.2em auto .2em;max-width:1000px;font-size:clamp(2.7rem,6vw,6.6rem);line-height:.88;letter-spacing:-.06em;text-transform:uppercase}
+    .positive-banner p{margin:0 auto;max-width:720px;color:#c8c4bc;font-size:clamp(.94rem,1.3vw,1.08rem)}
+    .product-card{position:relative;border:1px solid rgba(255,255,255,.1);background:#0b0b0b;transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease;overflow:hidden}
     .product-card:hover{transform:translateY(-4px);border-color:rgba(214,176,108,.45);box-shadow:0 18px 44px rgba(0,0,0,.28)}
     .product-card.mens-card{background:linear-gradient(180deg,#0b0b0b,#070707)}
+    .product-media{aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#0a0a0a}
+    .product-media img{display:block;width:100%;height:100%;max-width:100%;max-height:100%;object-fit:contain!important;object-position:center!important;background:#0a0a0a}
+    .product-media img.cover,.product-media img.womens-crop,.product-media img.head-games-shot,.product-media img.cap-shot{object-fit:contain!important;object-position:center!important}
     .product-card.mens-card .product-media{background-color:#0a0a0a}
     .product-meta{padding-bottom:20px}
     .product-meta h3{margin-bottom:6px}
@@ -38,11 +45,7 @@
     .shop-chip{display:inline-block;margin-top:12px;padding-bottom:2px;border-bottom:1px solid var(--gold);font-size:.7rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#f0d6a4}
     .catalog-head h2{text-transform:uppercase;letter-spacing:-.035em}
     .catalog-head p{color:#9d998f}
-    .pricing-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin:0 auto 30px;max-width:1360px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.08)}
-    .pricing-strip div{background:#0a0a0a;padding:22px 24px}
-    .pricing-strip span{display:block;color:#8f8b84;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase}
-    .pricing-strip strong{display:block;margin-top:8px;font-size:1.2rem;letter-spacing:-.02em}
-    @media(max-width:760px){.pricing-strip{grid-template-columns:1fr 1fr;margin-inline:18px}.pricing-strip div{padding:16px}.variant{font-size:.62rem}.collection-summary{margin-top:18px}.mens-banner{margin-inline:18px;min-height:480px}.mens-banner-copy{min-height:480px;padding:26px}.mens-banner img{object-position:58% 20%}.mens-banner::after{background:linear-gradient(180deg,rgba(0,0,0,.12),rgba(0,0,0,.92) 78%)}}
+    @media(max-width:760px){.variant{font-size:.62rem}.collection-summary{margin-top:18px}.mens-banner{margin-inline:18px;min-height:480px}.mens-banner-copy{min-height:480px;padding:26px}.mens-banner img{object-position:58% 20%}.mens-banner::after{background:linear-gradient(180deg,rgba(0,0,0,.12),rgba(0,0,0,.92) 78%)}.positive-banner{margin-inline:18px;padding:36px 20px}.product-media{aspect-ratio:1/1}}
   </style>
 </head>
 <body>
@@ -66,11 +69,10 @@
       <div class="mens-banner-copy"><p class="eyebrow">LOWMODE / Men</p><h2>Strong fits.<br>Zero noise.</h2><p>Heavy tees. Structured hoodies. Utility outerwear. Clean polos. Dark neutrals, deep red, olive and steel-blue accents with the LM eagle used as the signature mark.</p><div class="mens-pill-row"><span class="mens-pill">Heavyweight</span><span class="mens-pill">Structured fit</span><span class="mens-pill">Utility</span><span class="mens-pill">Eagle LM</span></div></div>
     </section>
 
-    <section class="pricing-strip" aria-label="LOWMODE men’s starting prices">
-      <div><span>Men’s heavyweight tees</span><strong>From $36</strong></div>
-      <div><span>Men’s hoodies + layers</span><strong>From $62</strong></div>
-      <div><span>Men’s premium polos</span><strong>From $52</strong></div>
-      <div><span>Men’s headwear</span><strong>From $30</strong></div>
+    <section class="positive-banner" aria-label="LOWMODE positive message">
+      <p class="eyebrow">LOWMODE / Wear the mindset</p>
+      <h2>Better clothes.<br>Brighter days.</h2>
+      <p>Built with purpose. Worn with confidence. Keep moving forward and let the work speak.</p>
     </section>
 
     <section class="filter-bar" aria-label="Filter products"><div class="filter-inner"><div class="filter-buttons" id="filter-buttons" role="group" aria-label="Apparel categories"></div><p class="filter-status" id="filter-status" aria-live="polite"></p></div></section>
