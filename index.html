@@ -3,230 +3,75 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="LOWMODE makes premium apparel for men and women—strong graphics, clean fits and better everyday pieces.">
+  <meta name="description" content="LOWMODE™ — modern apparel for men and women. Better clothes. Brighter days.">
   <meta name="theme-color" content="#050505">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23050505'/%3E%3Cpath d='M12 15v34h19v-8H21V15zm25 0-7 18 7 16h9l-7-16 7-18z' fill='%23b9dcff'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="/styles.css?v=20260913-6">
-  <title>LOWMODE™ — Modern Apparel for Men + Women</title>
+  <title>LOWMODE™ — Better Clothes. Brighter Days.</title>
   <style>
-    .signature-header{border-bottom:1px solid rgba(255,255,255,.13);background:rgba(5,5,5,.94);backdrop-filter:blur(18px)}
-    .signature-header-inner{min-height:82px}
-    .signature-wordmark{letter-spacing:.18em}
-    .signature-nav{gap:clamp(18px,3vw,38px)}
-    .signature-nav a{opacity:.78;transition:opacity .2s ease,color .2s ease}
-    .signature-nav a:hover{opacity:1}
-    .signature-hero{min-height:560px;padding-top:clamp(50px,7vw,92px);padding-bottom:clamp(48px,7vw,86px)}
-    .signature-hero h1{max-width:1100px}
-    .signature-lead{max-width:720px;font-size:clamp(1rem,1.35vw,1.2rem)}
-    .signature-proof{margin-top:auto;padding-top:34px}
-    .gender-shop{gap:16px;padding-top:10px;padding-bottom:clamp(64px,8vw,104px)}
-    .gender-card{min-height:clamp(440px,52vw,660px);border:1px solid rgba(255,255,255,.16);background:#111;isolation:isolate}
-    .gender-card img{width:100%;height:100%;object-fit:cover;filter:saturate(.94) contrast(1.03);transition:transform .6s cubic-bezier(.2,.75,.2,1),filter .35s ease}
-    .gender-men img{object-position:center 18%}
-    .gender-women img{object-position:center 20%}
-    .gender-card:hover img{transform:scale(1.025);filter:saturate(1) contrast(1.06)}
-    .gender-shade{background:linear-gradient(180deg,rgba(0,0,0,.02) 38%,rgba(0,0,0,.78) 100%)}
-    .gender-copy{padding:clamp(24px,3.5vw,46px)}
-    .gender-copy p{letter-spacing:.18em}
-    .gender-copy h2{font-size:clamp(2.7rem,5vw,5.7rem);line-height:.86;letter-spacing:-.045em}
-    .gender-copy>span:last-child{display:inline-block;margin-top:13px;padding-bottom:3px;border-bottom:1px solid rgba(255,255,255,.5)}
-    .home-intro{padding:0 28px 34px;max-width:1360px;margin:0 auto;display:flex;justify-content:space-between;gap:24px;align-items:end}
-    .home-intro h2{margin:0;font-size:clamp(1.8rem,3.4vw,3.8rem);letter-spacing:-.045em;line-height:.95;text-transform:uppercase}
-    .home-intro p{max-width:480px;margin:0;color:#9b9b96;font-size:.88rem}
-    @media(max-width:760px){
-      .signature-header-inner{min-height:68px}
-      .signature-nav{overflow-x:auto;white-space:nowrap;justify-content:flex-start;padding-bottom:2px}
-      .signature-hero{padding-top:34px;min-height:0}
-      .signature-hero h1{font-size:clamp(4.65rem,21vw,6.6rem)}
-      .signature-proof{margin-top:28px;padding-top:20px}
-      .home-intro{padding:0 18px 22px;display:block}
-      .home-intro p{margin-top:12px}
-      .gender-shop{grid-template-columns:1fr;padding-inline:18px;gap:12px}
-      .gender-card{min-height:470px}
-      .gender-men img{object-position:center 16%}
-      .gender-women img{object-position:center 16%}
-      .gender-copy{padding:24px}
-    }
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#050505;color:#f7f6f1;font-family:Inter,Arial,sans-serif;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}img{display:block;width:100%}.shell{width:min(1440px,100%);margin:auto;padding:0 28px}
+    header{position:sticky;top:0;z-index:20;background:rgba(5,5,5,.91);backdrop-filter:blur(18px);border-bottom:1px solid #ffffff18}.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:28px}.brand{font-size:clamp(1.35rem,2.2vw,2rem);font-weight:800;letter-spacing:.18em}.brand sup{font-size:.38em;vertical-align:top}.links{display:flex;gap:clamp(16px,2.7vw,38px);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:#d8d6d0}.links a:hover{color:white}
+    .hero{min-height:76vh;display:grid;grid-template-columns:.92fr 1.5fr;background:#090909;border-bottom:1px solid #ffffff14}.hero-copy{padding:clamp(50px,7vw,100px) clamp(28px,5vw,76px);display:flex;flex-direction:column;justify-content:center}.eyebrow{font-size:.69rem;letter-spacing:.34em;text-transform:uppercase;color:#bcb9b1}.hero h1{margin:20px 0 22px;font-size:clamp(3.8rem,7vw,7.9rem);line-height:.84;letter-spacing:-.055em;text-transform:uppercase}.hero h1 span{display:block}.gold{color:#d8b16a}.hero p{max-width:520px;color:#aaa79f;line-height:1.7;font-size:1rem}.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border:1px solid #ffffff38;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase}.btn.primary{background:#f4f0e8;color:#090909;border-color:#f4f0e8}.btn:hover{transform:translateY(-1px)}
+    .hero-media{min-height:620px;position:relative;overflow:hidden;background:#111}.hero-media img{height:100%;object-fit:cover;object-position:center 20%;filter:saturate(.9) contrast(1.04)}.hero-media:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#05050550 0%,transparent 30%,transparent 75%,#05050520)}.hero-note{position:absolute;z-index:2;right:30px;bottom:28px;text-align:right;font-size:.68rem;letter-spacing:.26em;text-transform:uppercase;color:#dedbd3}
+    .strip{border-bottom:1px solid #ffffff12}.strip-inner{display:flex;justify-content:center;gap:clamp(24px,5vw,76px);padding:22px 28px;font-size:.68rem;letter-spacing:.26em;text-transform:uppercase;color:#c9c6be;overflow-x:auto;white-space:nowrap}
+    .section{padding:78px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:28px;margin-bottom:30px}.section-head h2{margin:0;font-size:clamp(2.3rem,5vw,5rem);line-height:.9;letter-spacing:-.045em;text-transform:uppercase}.section-head p{margin:0;max-width:440px;color:#918e87;line-height:1.6}
+    .category-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}.card{background:#0d0d0d;border:1px solid #ffffff12;overflow:hidden;transition:.2s}.card:hover{transform:translateY(-3px);border-color:#ffffff2e}.card-media{aspect-ratio:4/5;overflow:hidden;background:#151515}.card-media img{height:100%;object-fit:cover}.card-media.contain img{object-fit:contain;padding:8%;background:#efede7}.card-copy{padding:17px 16px 19px}.card-copy h3{margin:0 0 6px;font-size:1rem;letter-spacing:.13em;text-transform:uppercase}.card-copy p{margin:0;color:#8e8b85;font-size:.78rem}
+    .statement{display:grid;grid-template-columns:1.2fr .8fr;min-height:560px;background:#e8e2d8;color:#080808}.statement img{height:100%;object-fit:cover}.statement-copy{padding:clamp(40px,6vw,90px);display:flex;flex-direction:column;justify-content:center}.statement-copy .eyebrow{color:#6b655c}.statement-copy h2{margin:18px 0;font-size:clamp(3.2rem,6vw,6.6rem);line-height:.85;letter-spacing:-.055em;text-transform:uppercase}.statement-copy p{max-width:520px;line-height:1.65;color:#504b44}.statement-copy .btn{border-color:#111;background:#111;color:white;width:max-content}
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:14px}.feature{position:relative;min-height:600px;overflow:hidden;background:#111}.feature img{height:100%;object-fit:cover}.feature:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 44%,rgba(0,0,0,.82))}.feature-copy{position:absolute;z-index:2;left:28px;right:28px;bottom:28px}.feature-copy .eyebrow{color:#ddd}.feature-copy h3{margin:10px 0 12px;font-size:clamp(2.5rem,4.3vw,4.8rem);line-height:.88;text-transform:uppercase;letter-spacing:-.045em}.feature-copy p{margin:0;color:#d0cdc5;max-width:500px}
+    footer{border-top:1px solid #ffffff17;padding:44px 0 56px}.foot{display:flex;justify-content:space-between;align-items:end;gap:30px}.foot strong{font-size:1.6rem;letter-spacing:.19em}.foot p{margin:0;color:#77736d;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase}
+    @media(max-width:1000px){.hero{grid-template-columns:1fr}.hero-media{min-height:560px}.category-grid{grid-template-columns:repeat(2,1fr)}.statement{grid-template-columns:1fr}.statement img{max-height:580px}.split{grid-template-columns:1fr}.feature{min-height:520px}}
+    @media(max-width:720px){.shell{padding:0 16px}.nav{min-height:66px;align-items:flex-start;padding-top:16px;padding-bottom:10px}.links{max-width:62vw;overflow-x:auto;padding-bottom:8px}.hero-copy{padding:44px 20px 48px}.hero-media{min-height:470px}.hero h1{font-size:clamp(3.65rem,18vw,5.2rem)}.section{padding:54px 0}.section-head{display:block}.section-head p{margin-top:14px}.category-grid{grid-template-columns:1fr 1fr;gap:9px}.card-copy{padding:13px 11px}.statement-copy{padding:42px 22px}.feature{min-height:460px}.foot{display:block}.foot p{margin-top:16px}}
   </style>
 </head>
 <body>
-  <header class="signature-header">
-    <div class="signature-header-inner">
-      <a class="signature-wordmark" href="/" aria-label="LOWMODE home">LOWMODE<sup>™</sup></a>
-      <nav class="signature-nav" aria-label="Shop LOWMODE categories">
-        <a href="/collection.html">Shop</a>
-        <a href="/collection.html#tee-shirts">Men</a>
-        <a href="/collection.html#womens">Women</a>
-        <a href="/collection.html#polos">Polos</a>
-        <a href="/collection.html#accessories">Headwear</a>
-        <a href="/lookbook.html">Media</a>
+  <header>
+    <div class="nav shell">
+      <a class="brand" href="/">LOWMODE<sup>™</sup></a>
+      <nav class="links" aria-label="Main navigation">
+        <a href="/collection.html#tee-shirts">Men</a><a href="/collection.html#womens">Women</a><a href="/collection.html#layers">Hoodies</a><a href="/collection.html#tee-shirts">Tees</a><a href="/collection.html#polos">Polos</a><a href="/collection.html#accessories">Hats</a><a href="/lookbook.html">Media</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="signature-hero shell" aria-labelledby="signature-title">
-      <p class="signature-kicker">LOWMODE™ / Modern Design Company</p>
-      <h1 id="signature-title"><span>Move quiet.</span><span>Wear loud.</span></h1>
-      <p class="signature-lead">Premium apparel for men and women built around original graphics, clean fits and confident everyday pieces.</p>
-      <div class="signature-actions">
-        <a class="button signature-primary" href="/collection.html">Shop LOWMODE <span aria-hidden="true">→</span></a>
-        <a class="button signature-secondary" href="/collection.html#tee-shirts">Explore tees</a>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow">LOWMODE™ / A higher state of low</div>
+        <h1><span>Better clothes.</span><span class="gold">Brighter days.</span></h1>
+        <p>Clean modern apparel for men and women. Original graphics, elevated everyday fits, and a LOWMODE identity that stays sharp without trying too hard.</p>
+        <div class="cta"><a class="btn primary" href="/collection.html">Explore the collection →</a><a class="btn" href="/collection.html#womens">Shop women</a></div>
       </div>
-      <div class="signature-proof" aria-label="Collection details">
-        <span>Original LOWMODE designs</span>
-        <span>Men + Women · XS–3XL</span>
-      </div>
-    </section>
-
-    <section class="home-intro" aria-labelledby="shop-by-fit-title">
-      <h2 id="shop-by-fit-title">Choose your side.</h2>
-      <p>Two clean entrances into LOWMODE—modern men’s apparel and a refined women’s collection, with the same graphic identity throughout.</p>
-    </section>
-
-    <section class="gender-shop shell" aria-label="Shop LOWMODE apparel for men and women">
-      <a class="gender-card gender-men" href="/collection.html#tee-shirts">
-        <img src="/assets/lowmode-mens-modern.webp" alt="Men wearing modern LOWMODE hoodies, tees and layers" fetchpriority="high">
-        <span class="gender-shade"></span>
-        <div class="gender-copy"><p>LOWMODE / Men</p><h2>Men</h2><span>Tees, polos, layers + headwear →</span></div>
-      </a>
-      <a class="gender-card gender-women" href="/collection.html#womens">
-        <img src="/assets/lowmode-womens-modern.webp" alt="Women wearing modern premium LOWMODE apparel" fetchpriority="high">
-        <span class="gender-shade"></span>
-        <div class="gender-copy"><p>LOWMODE / Women</p><h2>Women</h2><span>Hoodies, tees, jackets + sets →</span></div>
-      </a>
-    </section>
-
-    <section class="head-games-wrap shell" aria-labelledby="head-games-title">
-      <div class="head-games-feature">
-        <div class="head-games-media">
-          <img src="/assets/lowmode-tattoo-art-collection.webp" alt="LOWMODE tattoo-art apparel campaign featuring women and men in coordinated outfits">
-          <span class="head-games-badge">New collection / Men + Women</span>
-        </div>
-        <div class="head-games-copy">
-          <div>
-            <p class="eyebrow">LOWMODE Tattoo Art / 2026</p>
-            <h2 id="head-games-title">TATTOO<br>ART.</h2>
-          </div>
-          <div class="head-games-details">
-            <p>Original roses, wings, waves, lightning, compass and snake artwork across a complete LOWMODE collection for women and men.</p>
-            <a class="button" href="/collection.html#accessories">Shop the collection <span aria-hidden="true">→</span></a>
-          </div>
-        </div>
+      <div class="hero-media">
+        <img src="/assets/lowmode-mens-modern.webp" alt="LOWMODE modern menswear campaign">
+        <div class="hero-note">More than clothes<br>LOWMODE / 2026</div>
       </div>
     </section>
 
-    <section class="womens-feature-wrap shell" aria-labelledby="womens-home-title">
-      <div class="womens-feature">
-        <div class="womens-feature-media">
-          <img src="/assets/lowmode-womens-modern.webp" alt="Women wearing refined LOWMODE hoodies, a graphic tee, quarter-zip and track jacket">
-          <span class="womens-badge">Women’s LOWMODE / New</span>
-        </div>
-        <div class="womens-feature-copy">
-          <p class="eyebrow">Built for her / 2026</p>
-          <h2 id="womens-home-title">Women’s<br>LOWMODE.</h2>
-          <p>Statement graphics and strong everyday fits—designed across hoodies, tees and complete looks.</p>
-          <a class="button" href="/collection.html#womens">Shop women’s apparel <span aria-hidden="true">→</span></a>
-        </div>
-      </div>
-    </section>
+    <div class="strip"><div class="strip-inner"><span>Men</span><span>Women</span><span>Hoodies</span><span>Tees</span><span>Polos</span><span>Headwear</span><span>Accessories</span><span>Media</span></div></div>
 
-    <section class="featured-drop-wrap shell" aria-labelledby="featured-cap-title">
-      <div class="featured-drop">
-        <div class="featured-drop-media">
-          <img src="/assets/lowmode-sunset-cap.webp" alt="Two steel-blue LOWMODE trucker caps with orange embroidery at sunset">
-          <span class="drop-badge">Just added</span>
-        </div>
-        <div class="featured-drop-copy">
-          <p class="eyebrow">LOWMODE Headwear / 2026</p>
-          <h2 id="featured-cap-title">Sunset<br>Trucker Cap.</h2>
-          <p>Steel blue front. White mesh back. Raised sunset-orange LOWMODE embroidery.</p>
-          <a class="button" href="/collection.html#accessories">View headwear <span aria-hidden="true">→</span></a>
-        </div>
-      </div>
-    </section>
-
-    <section class="category-section shell" id="categories" aria-labelledby="category-title">
-      <div class="section-heading">
-        <h2 id="category-title">Shop every collection</h2>
-        <p>Men + Women</p>
-      </div>
-
+    <section class="section shell">
+      <div class="section-head"><h2>Shop LOWMODE.</h2><p>Simple categories. Strong product presentation. Every piece gets room to look premium.</p></div>
       <div class="category-grid">
-        <a class="category-card" href="/collection.html#tee-shirts">
-          <div class="category-media">
-            <img class="contain" src="/assets/rise-tee-front-back-v2.jpg" alt="LOWMODE Rise graphic T-shirt" fetchpriority="high">
-            <span class="category-index">01</span>
-          </div>
-          <div class="category-meta"><div><h3>T-Shirts</h3><p>Graphic and signature tees</p></div><span class="arrow" aria-hidden="true">→</span></div>
-        </a>
-
-        <a class="category-card" href="/collection.html#polos">
-          <div class="category-media">
-            <img src="/assets/lowmode-premium-polo-collection.webp" alt="LOWMODE premium polo collection" fetchpriority="high">
-            <span class="category-index">02</span>
-          </div>
-          <div class="category-meta"><div><h3>Polos</h3><p>Modern premium fits</p></div><span class="arrow" aria-hidden="true">→</span></div>
-        </a>
-
-        <a class="category-card" href="/collection.html#layers">
-          <div class="category-media">
-            <img class="top-crop" src="/assets/graphite-set.webp" alt="LOWMODE Graphite hoodie and fleece set" loading="lazy">
-            <span class="category-index">03</span>
-          </div>
-          <div class="category-meta"><div><h3>Hoodies</h3><p>Fleece, crews and sets</p></div><span class="arrow" aria-hidden="true">→</span></div>
-        </a>
-
-        <a class="category-card" href="/collection.html#layers">
-          <div class="category-media">
-            <img class="top-crop" src="/assets/olive-funnel-jacket.webp" alt="LOWMODE Olive Funnel outerwear jacket" loading="lazy">
-            <span class="category-index">04</span>
-          </div>
-          <div class="category-meta"><div><h3>Outerwear</h3><p>Jackets and layers</p></div><span class="arrow" aria-hidden="true">→</span></div>
-        </a>
-
-        <a class="category-card" href="/collection.html#bottoms">
-          <div class="category-media">
-            <span class="category-sprite bottoms" role="img" aria-label="LOWMODE Strong pants"></span>
-            <span class="category-index">05</span>
-          </div>
-          <div class="category-meta"><div><h3>Bottoms</h3><p>Pants and shorts</p></div><span class="arrow" aria-hidden="true">→</span></div>
-        </a>
-
-        <a class="category-card" href="/collection.html#accessories">
-          <div class="category-media">
-            <img class="cover" src="/assets/lowmode-sunset-cap.webp" alt="LOWMODE Sunset Trucker Cap" loading="lazy">
-            <span class="category-index">06</span>
-          </div>
-          <div class="category-meta"><div><h3>Headwear</h3><p>Hats, beanies and more</p></div><span class="arrow" aria-hidden="true">→</span></div>
-        </a>
+        <a class="card" href="/collection.html#tee-shirts"><div class="card-media contain"><img src="/assets/rise-tee-front-back-v2.jpg" alt="LOWMODE signature tee"></div><div class="card-copy"><h3>Signature Tees</h3><p>Classic fit. Bold statement.</p></div></a>
+        <a class="card" href="/collection.html#layers"><div class="card-media"><img src="/assets/graphite-set.webp" alt="LOWMODE hoodie"></div><div class="card-copy"><h3>Hoodies</h3><p>Comfort hits different.</p></div></a>
+        <a class="card" href="/collection.html#polos"><div class="card-media"><img src="/assets/lowmode-premium-polo-collection.webp" alt="LOWMODE premium polo"></div><div class="card-copy"><h3>Polos</h3><p>Clean look. Same mindset.</p></div></a>
+        <a class="card" href="/collection.html#accessories"><div class="card-media"><img src="/assets/lowmode-sunset-cap.webp" alt="LOWMODE hat"></div><div class="card-copy"><h3>Hats</h3><p>Finish the look.</p></div></a>
+        <a class="card" href="/collection.html#womens"><div class="card-media"><img src="/assets/lowmode-womens-modern.webp" alt="LOWMODE women's apparel"></div><div class="card-copy"><h3>Women’s</h3><p>Confidence looks good on you.</p></div></a>
       </div>
     </section>
 
-    <section class="brand-grid shell" aria-label="About LOWMODE">
-      <article class="brand-panel" id="about">
-        <p class="eyebrow">About LOWMODE</p>
-        <div>
-          <h2>Quiet moves.<br>Clear vision.</h2>
-          <p>LOWMODE creates modern pieces for people who let their work speak. Strong graphics, considered details and clean everyday fits.</p>
-        </div>
-      </article>
-      <article class="brand-panel accent" id="media">
-        <p class="eyebrow">Beyond apparel</p>
-        <div>
-          <h2>Media.</h2>
-          <p>Campaigns, lookbooks, film and original LOWMODE stories.</p>
-          <a class="panel-link" href="/lookbook.html">Explore the vision</a>
-        </div>
-      </article>
+    <section class="statement">
+      <img src="/assets/lowmode-womens-modern.webp" alt="LOWMODE women modern apparel campaign">
+      <div class="statement-copy"><div class="eyebrow">Women’s LOWMODE / Modern by design</div><h2>Clean.<br>Strong.<br>Current.</h2><p>A sharper women’s presentation built around modern silhouettes, clean branding, and pieces that can stand on their own.</p><a class="btn" href="/collection.html#womens">Shop women’s apparel →</a></div>
+    </section>
+
+    <section class="section shell">
+      <div class="section-head"><h2>More than clothes.</h2><p>LOWMODE brings the same identity into graphics, headwear, campaigns and media.</p></div>
+      <div class="split">
+        <a class="feature" href="/collection.html#accessories"><img src="/assets/lowmode-tattoo-art-collection.webp" alt="LOWMODE tattoo art collection"><div class="feature-copy"><div class="eyebrow">Original art / Men + Women</div><h3>Tattoo Art.</h3><p>Roses, wings, waves, lightning and original LOWMODE artwork.</p></div></a>
+        <a class="feature" href="/lookbook.html"><img src="/assets/lowmode-mens-modern.webp" alt="LOWMODE lifestyle campaign"><div class="feature-copy"><div class="eyebrow">LOWMODE Media</div><h3>The vision.</h3><p>Campaigns, lookbooks, lifestyle and the story behind the brand.</p></div></a>
+      </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <strong class="footer-brand">LOWMODE™</strong>
-      <div class="footer-meta"><p>Modern design company</p><p>© 2026 LOWMODE. All rights reserved.</p></div>
-    </div>
-  </footer>
+  <footer><div class="foot shell"><strong>LOWMODE™</strong><p>Apparel for a brighter tomorrow · © 2026 LOWMODE</p></div></footer>
 </body>
 </html>
