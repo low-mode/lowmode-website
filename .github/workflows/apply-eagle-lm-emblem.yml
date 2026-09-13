@@ -11,39 +11,41 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Replace site emblem references
+      - name: Make eagle LM emblem visible on every product
         run: |
           python - <<'PY'
           from pathlib import Path
           import re
 
           asset='/assets/lowmode-eagle-lm-emblem.webp'
-          files=['collection.html','women.html','lookbook.html']
-          for name in files:
+
+          for name in ['collection.html','women.html','lookbook.html']:
               p=Path(name)
               s=p.read_text()
-              s=re.sub(r'(<a class="wordmark"[^>]*>)LOWMODE<sup>™</sup>(</a>)', r'\1<img class="brand-emblem" src="'+asset+r'" alt="LOWMODE eagle LM emblem"><span>LOWMODE<sup>™</sup></span>\2', s)
-              s=s.replace('Small LM emblem','Eagle-LM emblem').replace('Clean chest emblem','Eagle-LM emblem').replace('Eagle-LM embroidery','Eagle-LM emblem embroidery')
+              s=re.sub(r'/styles\.css\?v=[^\"]+', '/styles.css?v=20260913-eagle2', s)
+              if 'class="wordmark"' in s and 'brand-emblem' not in s:
+                  s=re.sub(r'(<a class="wordmark"[^>]*>)LOWMODE<sup>™</sup>(</a>)', r'\1<img class="brand-emblem" src="'+asset+r'" alt="LOWMODE eagle LM emblem"><span>LOWMODE<sup>™</sup></span>\2', s)
               p.write_text(s)
 
           p=Path('index.html')
           s=p.read_text()
-          s=s.replace('<a class="brand" href="/">LOWMODE<sup>™</sup></a>','<a class="brand" href="/"><img class="brand-emblem" src="'+asset+'" alt="LOWMODE eagle LM emblem"><span>LOWMODE<sup>™</sup></span></a>')
-          if 'LOWMODE-EAGLE-EMBLEM-STYLES' not in s:
-              s=s.replace('</style>','''/* LOWMODE-EAGLE-EMBLEM-STYLES */\n.brand{display:flex;align-items:center;gap:10px}.brand-emblem{width:48px!important;height:36px!important;object-fit:contain!important;flex:0 0 auto}.card-media{position:relative}.card-media:after{content:"";position:absolute;right:10px;bottom:10px;width:58px;height:44px;background:url('/assets/lowmode-eagle-lm-emblem.webp') center/contain no-repeat;filter:drop-shadow(0 2px 6px #000);pointer-events:none}\n</style>''',1)
+          if 'brand-emblem' not in s:
+              s=s.replace('<a class="brand" href="/">LOWMODE<sup>™</sup></a>','<a class="brand" href="/"><img class="brand-emblem" src="'+asset+'" alt="LOWMODE eagle LM emblem"><span>LOWMODE<sup>™</sup></span></a>')
+          if 'LOWMODE-EAGLE-VISIBLE-V2' not in s:
+              s=s.replace('</style>','''/* LOWMODE-EAGLE-VISIBLE-V2 */\n.brand-emblem{width:52px!important;height:40px!important;object-fit:contain!important;flex:0 0 auto}.card-media{position:relative}.card-media:after{content:""!important;position:absolute!important;left:50%!important;top:34%!important;right:auto!important;bottom:auto!important;transform:translate(-50%,-50%)!important;width:72px!important;height:56px!important;background:url('/assets/lowmode-eagle-lm-emblem.webp') center/contain no-repeat!important;filter:drop-shadow(0 3px 7px rgba(0,0,0,.8))!important;pointer-events:none!important;z-index:9!important;opacity:.98!important}\n</style>''',1)
           p.write_text(s)
 
           p=Path('styles.css')
           s=p.read_text()
-          if 'LOWMODE-EAGLE-EMBLEM-STYLES' not in s:
-              s += '''\n\n/* LOWMODE-EAGLE-EMBLEM-STYLES */\n.wordmark{display:inline-flex;align-items:center;gap:10px}.brand-emblem{width:48px;height:36px;object-fit:contain;flex:0 0 auto}.product-media,.women-card .media{position:relative}.product-card .product-media::after,.women-card .media::after{content:"";position:absolute;right:10px;bottom:10px;width:58px;height:44px;background:url('/assets/lowmode-eagle-lm-emblem.webp') center/contain no-repeat;filter:drop-shadow(0 2px 6px rgba(0,0,0,.75));pointer-events:none;z-index:5}.footer-brand{display:inline-flex;align-items:center;gap:10px}.footer-brand::before{content:"";display:inline-block;width:54px;height:40px;background:url('/assets/lowmode-eagle-lm-emblem.webp') center/contain no-repeat}\n'''
+          if 'LOWMODE-EAGLE-VISIBLE-V2' not in s:
+              s += '''\n\n/* LOWMODE-EAGLE-VISIBLE-V2 */\n.wordmark{display:inline-flex;align-items:center;gap:10px}.brand-emblem{width:52px!important;height:40px!important;object-fit:contain!important;flex:0 0 auto}.product-media,.women-card .media{position:relative!important}.product-card .product-media::after,.women-card .media::after{content:""!important;position:absolute!important;left:50%!important;top:34%!important;right:auto!important;bottom:auto!important;transform:translate(-50%,-50%)!important;width:72px!important;height:56px!important;background:url('/assets/lowmode-eagle-lm-emblem.webp') center/contain no-repeat!important;filter:drop-shadow(0 3px 7px rgba(0,0,0,.82))!important;pointer-events:none!important;z-index:20!important;opacity:.98!important}.footer-brand{display:inline-flex;align-items:center;gap:10px}.footer-brand::before{content:"";display:inline-block;width:58px;height:44px;background:url('/assets/lowmode-eagle-lm-emblem.webp') center/contain no-repeat}@media(max-width:760px){.product-card .product-media::after,.women-card .media::after{width:58px!important;height:44px!important;top:33%!important}}\n'''
           p.write_text(s)
           PY
-      - name: Commit emblem update
+      - name: Commit visible emblem update
         run: |
           git config user.name "low-mode"
           git config user.email "lowmode@lowmode.ai"
           git add index.html collection.html women.html lookbook.html styles.css
           git diff --cached --quiet && exit 0
-          git commit -m "Switch LOWMODE site to eagle LM emblem"
+          git commit -m "Show eagle LM emblem on every LOWMODE product image"
           git push
