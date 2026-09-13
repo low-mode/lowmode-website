@@ -1808,3 +1808,246 @@ body {
   .gender-card { min-height: 410px; }
   .gender-copy h2 { font-size: 3rem; }
 }
+
+
+/* Premium top section */
+.announcement {
+  min-height: 30px;
+  padding: 8px 18px 7px;
+  background: #c4e1ff;
+  font-size: .67rem;
+  letter-spacing: .17em;
+}
+
+.site-header {
+  background: rgba(5, 5, 6, .97);
+  backdrop-filter: blur(20px) saturate(130%);
+}
+
+.nav {
+  min-height: 70px;
+}
+
+.wordmark {
+  font-size: 1.32rem;
+  letter-spacing: .2em;
+}
+
+.nav-cta {
+  min-height: 40px;
+  padding-inline: 18px;
+}
+
+.home-hero.home-hero-v2 {
+  min-height: 0;
+  padding-block: clamp(20px, 2.5vw, 34px) 0;
+  display: block;
+  border-bottom: 0;
+}
+
+.home-hero-v2::before {
+  display: none;
+}
+
+.home-hero-frame {
+  position: relative;
+  min-height: clamp(560px, 62vw, 760px);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, .2);
+  border-radius: 8px;
+  background: #111;
+}
+
+.home-hero-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  object-position: center 38%;
+  filter: contrast(1.06) saturate(.96);
+}
+
+.home-hero-shade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(3, 3, 4, .9) 0%, rgba(3, 3, 4, .6) 42%, rgba(3, 3, 4, .1) 72%),
+    linear-gradient(180deg, transparent 45%, rgba(3, 3, 4, .82) 100%);
+}
+
+.home-hero-content {
+  position: absolute;
+  z-index: 2;
+  left: clamp(28px, 5vw, 72px);
+  bottom: clamp(72px, 8vw, 108px);
+  max-width: 760px;
+}
+
+.home-hero-v2 .display {
+  max-width: 800px;
+  font-size: clamp(4.1rem, 8.4vw, 8rem);
+  line-height: .82;
+  text-shadow: 0 3px 28px rgba(0, 0, 0, .38);
+}
+
+.home-hero-lead {
+  max-width: 600px;
+  margin: 24px 0 0;
+  color: #dededa;
+  font-size: clamp(1rem, 1.3vw, 1.12rem);
+}
+
+.home-hero-v2 .hero-actions {
+  margin-top: 28px;
+}
+
+.home-hero-v2 .button.ghost {
+  border-color: rgba(255, 255, 255, .72);
+  background: rgba(5, 5, 6, .48);
+  backdrop-filter: blur(10px);
+}
+
+.home-hero-proof {
+  position: absolute;
+  z-index: 2;
+  right: clamp(24px, 4vw, 52px);
+  bottom: 28px;
+  display: flex;
+  gap: 22px;
+  color: #d6d6d1;
+  font-size: .68rem;
+  font-weight: 900;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.home-hero-proof span + span {
+  padding-left: 22px;
+  border-left: 1px solid rgba(255, 255, 255, .3);
+}
+
+.gender-shop {
+  padding-top: clamp(14px, 1.5vw, 20px);
+}
+
+.gender-card {
+  min-height: clamp(340px, 36vw, 500px);
+}
+
+.gender-copy h2 {
+  text-shadow: 0 2px 18px rgba(0, 0, 0, .45);
+}
+
+@media (max-width: 760px) {
+  .announcement {
+    min-height: 27px;
+    padding-block: 7px 6px;
+    font-size: .58rem;
+    letter-spacing: .105em;
+  }
+
+  .nav {
+    min-height: 62px;
+    grid-template-columns: auto 1fr auto;
+    gap: 14px;
+  }
+
+  .wordmark {
+    font-size: 1.02rem;
+    letter-spacing: .15em;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: flex-end;
+    gap: 14px;
+  }
+
+  .nav-links a {
+    padding: 22px 0 19px;
+    font-size: .62rem;
+    letter-spacing: .08em;
+  }
+
+  .nav-links a[href="/lookbook.html"] {
+    display: none;
+  }
+
+  .nav-cta {
+    display: none;
+  }
+
+  .home-hero.home-hero-v2 {
+    padding-top: 14px;
+  }
+
+  .home-hero-frame {
+    min-height: 640px;
+  }
+
+  .home-hero-image {
+    object-position: 57% center;
+  }
+
+  .home-hero-shade {
+    background:
+      linear-gradient(180deg, rgba(3, 3, 4, .08) 18%, rgba(3, 3, 4, .92) 78%),
+      linear-gradient(90deg, rgba(3, 3, 4, .25), transparent 80%);
+  }
+
+  .home-hero-content {
+    right: 22px;
+    bottom: 92px;
+    left: 22px;
+  }
+
+  .home-hero-v2 .display {
+    font-size: clamp(3.2rem, 15vw, 5rem);
+  }
+
+  .home-hero-lead {
+    max-width: 470px;
+    margin-top: 18px;
+    font-size: .98rem;
+  }
+
+  .home-hero-v2 .hero-actions {
+    margin-top: 22px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .home-hero-proof {
+    right: 22px;
+    bottom: 23px;
+    left: 22px;
+    justify-content: space-between;
+    gap: 8px;
+    font-size: .58rem;
+    letter-spacing: .055em;
+  }
+
+  .home-hero-proof span + span {
+    padding-left: 8px;
+  }
+}
+
+@media (max-width: 430px) {
+  .home-hero-frame {
+    min-height: 590px;
+  }
+
+  .home-hero-v2 .hero-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .home-hero-proof span:nth-child(2) {
+    display: none;
+  }
+
+  .home-hero-proof span + span {
+    border-left: 0;
+  }
+}
