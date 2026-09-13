@@ -2051,3 +2051,63 @@ body {
     border-left: 0;
   }
 }
+
+
+/* Women’s collection product polish */
+.womens-catalog .product-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.womens-catalog .product-card {
+  background: #0b0c0e;
+}
+
+.womens-catalog .product-media {
+  aspect-ratio: 4 / 5;
+}
+
+.womens-catalog .product-meta {
+  min-height: 142px;
+}
+
+.womens-catalog .featured-product {
+  border-color: rgba(255, 145, 54, .62);
+  background:
+    linear-gradient(145deg, rgba(255, 145, 54, .07), transparent 42%),
+    #0b0c0e;
+}
+
+.womens-catalog .featured-product .product-index {
+  border-color: #ff9136;
+  background: #ff9136;
+  color: #050506;
+}
+
+.womens-catalog .featured-product .product-media {
+  background: #e9e7e3;
+}
+
+.womens-catalog .featured-product .product-media img {
+  object-fit: contain;
+  padding: 4px;
+}
+
+.womens-catalog .featured-product .coming-soon {
+  color: #ff9c4d;
+}
+
+@media (max-width: 1050px) {
+  .womens-catalog .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .womens-catalog .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .womens-catalog .product-media {
+    aspect-ratio: 1 / 1;
+  }
+}
