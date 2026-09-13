@@ -3,20 +3,21 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Shop the complete LOWMODE collection: T-shirts, hoodies, outerwear, polos, bottoms and accessories.">
+  <meta name="description" content="Shop LOWMODE women’s and men’s apparel: T-shirts, hoodies, outerwear, polos, bottoms and accessories.">
   <meta name="theme-color" content="#050505">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23050505'/%3E%3Cpath d='M12 15v34h19v-8H21V15zm25 0-7 18 7 16h9l-7-16 7-18z' fill='%23b9dcff'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="/styles.css">
   <title>LOWMODE™ — Full Collection</title>
 </head>
 <body>
-  <div class="announcement">LOWMODE™ / Full Collection / 32 Pieces</div>
+  <div class="announcement">LOWMODE™ / Full Collection / 35 Pieces</div>
   <header class="site-header">
     <nav class="nav" aria-label="Main navigation">
       <a class="wordmark" href="/" aria-label="LOWMODE home">LOWMODE<sup>™</sup></a>
       <div class="nav-links">
         <a href="/">Home</a>
         <a href="#catalog" aria-current="page">Apparel</a>
+        <a href="#womens">Women</a>
         <a href="/lookbook.html">Media</a>
       </div>
       <a class="nav-cta" href="#catalog">Browse pieces</a>
@@ -31,25 +32,48 @@
       </div>
       <div class="collection-summary">
         <p>Original graphics, refined essentials and clean modern fits—all in one place.</p>
-        <span class="collection-count">32 pieces / Apparel + accessories</span>
+        <span class="collection-count">35 pieces / Women’s + men’s apparel</span>
       </div>
     </section>
 
     <section class="filter-bar" aria-label="Filter products">
       <div class="filter-inner">
         <div class="filter-buttons" role="group" aria-label="Apparel categories">
-          <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All 32</button>
+          <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All 35</button>
+          <button class="filter-button" type="button" data-filter="womens" aria-pressed="false">Women 3</button>
           <button class="filter-button" type="button" data-filter="tees" aria-pressed="false">T-Shirts 8</button>
           <button class="filter-button" type="button" data-filter="layers" aria-pressed="false">Hoodies + Layers 8</button>
           <button class="filter-button" type="button" data-filter="polos" aria-pressed="false">Polos 9</button>
           <button class="filter-button" type="button" data-filter="bottoms" aria-pressed="false">Bottoms 2</button>
           <button class="filter-button" type="button" data-filter="accessories" aria-pressed="false">Accessories 5</button>
         </div>
-        <p class="filter-status" id="filter-status" aria-live="polite">Showing all 32 pieces</p>
+        <p class="filter-status" id="filter-status" aria-live="polite">Showing all 35 pieces</p>
       </div>
     </section>
 
     <div class="catalog shell" id="catalog">
+      <section class="catalog-section womens-catalog" id="womens" data-catalog-section="womens">
+        <div class="catalog-head"><h2>Women’s LOWMODE</h2><p>3 pieces / Statement essentials</p></div>
+        <div class="womens-campaign-strip">
+          <img src="/assets/lowmode-tattoo-art-collection.webp" alt="LOWMODE women’s tattoo-art apparel campaign">
+          <div><span>Women’s collection / 2026</span><strong>Strong graphics. Clean fits.</strong></div>
+        </div>
+        <div class="product-grid">
+          <article class="product-card" data-category="womens">
+            <div class="product-media"><img class="womens-crop women-rose" src="/assets/lowmode-tattoo-art-collection.webp" alt="Black LOWMODE rose hoodie for women" loading="lazy"><span class="product-index">W1</span></div>
+            <div class="product-meta"><h3>Rose Discipline Hoodie</h3><span class="price coming-soon">New</span><p>Black brushed fleece / Relaxed women’s fit</p><span class="tag">Rose sleeve artwork / XS–2XL</span></div>
+          </article>
+          <article class="product-card" data-category="womens">
+            <div class="product-media"><img class="womens-crop women-wave" src="/assets/lowmode-tattoo-art-collection.webp" alt="Ivory LOWMODE wave graphic tee for women" loading="lazy"><span class="product-index">W2</span></div>
+            <div class="product-meta"><h3>Sunrise Wave Tee</h3><span class="price coming-soon">New</span><p>Warm ivory heavyweight cotton</p><span class="tag">Oversized women’s fit / XS–2XL</span></div>
+          </article>
+          <article class="product-card" data-category="womens">
+            <div class="product-media"><img class="womens-crop women-compass" src="/assets/lowmode-tattoo-art-collection.webp" alt="Navy LOWMODE compass hoodie for women" loading="lazy"><span class="product-index">W3</span></div>
+            <div class="product-meta"><h3>Compass Current Hoodie</h3><span class="price coming-soon">New</span><p>Deep navy heavyweight fleece</p><span class="tag">Wave + compass artwork / XS–2XL</span></div>
+          </article>
+        </div>
+      </section>
+
       <section class="catalog-section" id="tee-shirts" data-catalog-section="tees">
         <div class="catalog-head"><h2>T-Shirts</h2><p>8 pieces / Graphics + essentials</p></div>
         <div class="product-grid">
@@ -234,7 +258,7 @@
       const sections = [...document.querySelectorAll('[data-catalog-section]')];
       const cards = [...document.querySelectorAll('[data-category]')];
       const status = document.getElementById('filter-status');
-      const labels = { tees: 'T-shirts', layers: 'hoodies and layers', polos: 'polos', bottoms: 'bottoms', accessories: 'accessories' };
+      const labels = { womens: 'women’s pieces', tees: 'T-shirts', layers: 'hoodies and layers', polos: 'polos', bottoms: 'bottoms', accessories: 'accessories' };
 
       function applyFilter(category) {
         buttons.forEach((button) => {
