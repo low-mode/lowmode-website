@@ -2894,3 +2894,7 @@ img {
 
 /* LOWMODE-EAGLE-VISIBLE-V2 */
 .wordmark{display:inline-flex;align-items:center;gap:10px}.brand-emblem{width:52px!important;height:40px!important;object-fit:contain!important;flex:0 0 auto}.product-media,.women-card .media{position:relative!important}.product-card .product-media::after,.women-card .media::after{content:""!important;position:absolute!important;left:50%!important;top:34%!important;right:auto!important;bottom:auto!important;transform:translate(-50%,-50%)!important;width:72px!important;height:56px!important;background:url('/assets/lowmode-eagle-lm-emblem.webp') center/contain no-repeat!important;filter:drop-shadow(0 3px 7px rgba(0,0,0,.82))!important;pointer-events:none!important;z-index:20!important;opacity:.98!important}.footer-brand{display:inline-flex;align-items:center;gap:10px}.footer-brand::before{content:"";display:inline-block;width:58px;height:44px;background:url('/assets/lowmode-eagle-lm-emblem.webp') center/contain no-repeat}@media(max-width:760px){.product-card .product-media::after,.women-card .media::after{width:58px!important;height:44px!important;top:33%!important}}
+
+
+/* ACTUAL-EMBLEM-PHOTOS-V4 */
+.product-card .product-media::after,.women-card .media::after{content:none!important;display:none!important}
