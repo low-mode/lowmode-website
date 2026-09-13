@@ -879,3 +879,22 @@ body {
     transition: none;
   }
 }
+
+
+/* POFG × HEAD GAMES refinement */
+.head-games-feature {
+  border-color: rgba(255, 145, 54, .38);
+  background:
+    linear-gradient(135deg, rgba(255, 145, 54, .07), transparent 35%),
+    var(--surface);
+}
+
+.head-games-copy h2 {
+  max-width: 900px;
+}
+
+@media (max-width: 760px) {
+  .head-games-copy h2 {
+    line-height: .86;
+  }
+}
