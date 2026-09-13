@@ -2152,7 +2152,7 @@ p {
 }
 
 .announcement {
-  font-size: .72rem;
+  font-size: .75rem;
 }
 
 .button,
@@ -2238,13 +2238,13 @@ p {
 .filter-button {
   min-height: 40px;
   padding: 10px 14px;
-  font-size: .72rem;
+  font-size: .75rem;
 }
 
 .filter-status,
 .catalog-head p,
 .section-heading p {
-  font-size: .72rem;
+  font-size: .75rem;
 }
 
 .catalog-head h2,
@@ -2262,7 +2262,7 @@ p {
 
 .lookbook-card figcaption span,
 .lookbook-card figcaption small {
-  font-size: .68rem;
+  font-size: .75rem;
 }
 
 @media (max-width: 760px) {
