@@ -2616,3 +2616,235 @@ img {
     border-radius: 4px;
   }
 }
+
+
+/* Signature masthead — September 2026 */
+.signature-header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  border-bottom: 1px solid rgba(255, 255, 255, .18);
+  background: rgba(5, 5, 6, .98);
+  backdrop-filter: blur(22px) saturate(130%);
+}
+
+.signature-header-inner {
+  width: min(100%, 1400px);
+  margin: auto;
+  padding: 30px clamp(22px, 3.2vw, 44px) 0;
+}
+
+.signature-wordmark {
+  display: inline-flex;
+  align-items: flex-start;
+  font-family: Impact, "Arial Narrow", "Helvetica Neue", sans-serif;
+  font-size: clamp(2.3rem, 4vw, 3.8rem);
+  font-weight: 900;
+  letter-spacing: .055em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.signature-wordmark sup {
+  margin: 5px 0 0 10px;
+  color: var(--ice);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: .28em;
+  letter-spacing: 0;
+}
+
+.signature-nav {
+  margin-top: 28px;
+  display: flex;
+  align-items: center;
+  gap: clamp(28px, 5vw, 68px);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.signature-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.signature-nav a {
+  flex: 0 0 auto;
+  padding: 0 0 21px;
+  color: #f7f7f3;
+  font-size: .88rem;
+  font-weight: 900;
+  letter-spacing: .16em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.signature-nav a:hover {
+  color: var(--ice);
+}
+
+.signature-hero {
+  min-height: clamp(600px, 74vh, 830px);
+  padding-top: clamp(30px, 5vw, 64px);
+  padding-bottom: clamp(52px, 7vw, 88px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 1px solid rgba(255, 255, 255, .18);
+}
+
+.signature-kicker {
+  margin: 0 0 clamp(28px, 4vw, 48px);
+  color: var(--ice);
+  font-size: clamp(.78rem, 1vw, .94rem);
+  font-weight: 900;
+  letter-spacing: .24em;
+  text-transform: uppercase;
+}
+
+.signature-hero h1 {
+  max-width: 1220px;
+  margin: 0;
+  font-family: Impact, "Arial Narrow", "Helvetica Neue", sans-serif;
+  font-size: clamp(6.6rem, 13vw, 13rem);
+  font-weight: 900;
+  letter-spacing: -.035em;
+  line-height: .71;
+  text-transform: uppercase;
+}
+
+.signature-hero h1 span {
+  display: block;
+}
+
+.signature-hero h1 span:last-child {
+  color: transparent;
+  -webkit-text-stroke: clamp(1.5px, .16vw, 3px) #f7f7f3;
+  paint-order: stroke fill;
+}
+
+.signature-lead {
+  max-width: 760px;
+  margin: clamp(46px, 6vw, 72px) 0 0;
+  color: #c8c8c3;
+  font-size: clamp(1.05rem, 1.5vw, 1.35rem);
+  line-height: 1.55;
+}
+
+.signature-actions {
+  max-width: 760px;
+  margin-top: 34px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.signature-actions .button {
+  min-height: 62px;
+  font-size: .84rem;
+}
+
+.signature-secondary {
+  border-color: rgba(255, 255, 255, .82);
+  background: transparent;
+  color: #f7f7f3;
+}
+
+.signature-secondary:hover {
+  background: #f7f7f3;
+  color: #050505;
+}
+
+.signature-proof {
+  margin-top: clamp(58px, 8vw, 96px);
+  padding-top: 28px;
+  display: flex;
+  gap: 48px;
+  border-top: 1px solid rgba(255, 255, 255, .18);
+  color: #90908c;
+  font-size: .78rem;
+  font-weight: 900;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 760px) {
+  .signature-header-inner {
+    padding: 28px 0 0;
+  }
+
+  .signature-wordmark {
+    margin-left: 20px;
+    font-size: 2.65rem;
+  }
+
+  .signature-nav {
+    margin-top: 28px;
+    padding-inline: 20px;
+    gap: 34px;
+  }
+
+  .signature-nav a {
+    padding-bottom: 18px;
+    font-size: .82rem;
+  }
+
+  .signature-hero {
+    min-height: 0;
+    padding-top: 20px;
+    padding-bottom: 54px;
+    justify-content: flex-start;
+  }
+
+  .signature-kicker {
+    margin-bottom: 34px;
+    font-size: .78rem;
+    letter-spacing: .2em;
+  }
+
+  .signature-hero h1 {
+    font-size: clamp(5.25rem, 23.5vw, 7.15rem);
+    line-height: .7;
+  }
+
+  .signature-lead {
+    margin-top: 48px;
+    font-size: 1.05rem;
+    line-height: 1.58;
+  }
+
+  .signature-actions {
+    margin-top: 32px;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .signature-actions .button {
+    min-height: 58px;
+    width: 100%;
+  }
+
+  .signature-proof {
+    margin-top: 54px;
+    padding-top: 26px;
+    display: grid;
+    gap: 18px;
+    font-size: .76rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .signature-wordmark {
+    font-size: 2.45rem;
+  }
+
+  .signature-nav {
+    gap: 30px;
+  }
+
+  .signature-hero h1 {
+    font-size: clamp(4.75rem, 22.5vw, 6.25rem);
+  }
+
+  .signature-lead {
+    font-size: 1rem;
+  }
+}
