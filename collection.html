@@ -53,8 +53,8 @@
   <header class="site-header">
     <nav class="nav" aria-label="Main navigation">
       <a class="wordmark" href="/" aria-label="LOWMODE home">LOWMODE<sup>™</sup></a>
-      <div class="nav-links"><a href="/">Home</a><a href="#men">Men</a><a href="#womens">Women</a><a href="#tattoo">Tattoo Art</a><a href="/lookbook.html">Media</a></div>
-      <a class="nav-cta" href="#tattoo">Shop headline</a>
+      <div class="nav-links"><a href="/">Home</a><a href="/collection.html#men">Men</a><a href="/women.html">Women</a><a href="/collection.html#layers">Hoodies</a><a href="/collection.html#tee-shirts">Tees</a><a href="/collection.html#polos">Polos</a><a href="/collection.html#accessories">Hats</a><a href="/lookbook.html">Media</a></div>
+      <a class="nav-cta" href="/collection.html#all">Shop all</a>
     </nav>
   </header>
 
@@ -173,6 +173,11 @@
     const hash=location.hash.replace('#','');
     const initial=hash==='tee-shirts'?'tees':hash||'all';
     selectFilter(initial);
+    window.addEventListener('hashchange',()=>{
+      const nextHash=location.hash.replace('#','');
+      selectFilter(nextHash==='tee-shirts'?'tees':nextHash||'all');
+      document.getElementById('catalog').scrollIntoView({behavior:'smooth',block:'start'});
+    });
   </script>
 </body>
 </html>
