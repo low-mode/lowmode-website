@@ -2458,3 +2458,35 @@ p {
     aspect-ratio: 4 / 4.6;
   }
 }
+
+
+/* Expanded women’s collection — September 2026 */
+.womens-catalog .product-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.womens-catalog .product-card:not(.featured-product) .product-media img {
+  transform: scale(1.16);
+}
+
+.womens-catalog .product-card:not(.featured-product):hover .product-media img {
+  transform: scale(1.18);
+}
+
+.product-media img.women-rose { object-position: 7% center; }
+.product-media img.women-wave { object-position: 38% center; }
+.product-media img.women-compass { object-position: 65% center; }
+.product-media img.women-track { object-position: 96% center; }
+.product-media img.women-cargo { object-position: 13% 78%; }
+
+@media (max-width: 1050px) {
+  .womens-catalog .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .womens-catalog .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
