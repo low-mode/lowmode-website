@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#050505">
-  <meta name="description" content="Shop the LOWMODE women’s collection — hoodies, tees, quarter-zips, track layers and cargo bottoms.">
-  <link rel="stylesheet" href="/styles.css?v=20260913-women3">
+  <meta name="description" content="Shop the LOWMODE women’s collection — individual jackets, quarter-zips, hoodies, tees and cargo bottoms.">
+  <link rel="stylesheet" href="/styles.css?v=20260913-women4">
   <title>LOWMODE™ — Women’s Collection</title>
   <style>
     :root{--gold:#d6b06c}
@@ -13,13 +13,18 @@
     .women-hero{max-width:1360px;margin:0 auto;padding:clamp(42px,7vw,88px) 22px 34px;display:grid;grid-template-columns:1fr 1.2fr;gap:34px;align-items:end}
     .women-hero h1{font-size:clamp(3.4rem,8vw,8rem);line-height:.82;letter-spacing:-.06em;text-transform:uppercase;margin:.15em 0 .2em}
     .women-hero p{max-width:620px;color:#b9b4ab;font-size:1rem}
-    .women-visual{min-height:520px;border:1px solid rgba(255,255,255,.12);background-color:#0a0a0a;background-image:url('/assets/lowmode-womens-complete.webp');background-position:center;background-size:contain;background-repeat:no-repeat}
+    .women-visual{min-height:520px;border:1px solid rgba(255,255,255,.12);background-color:#0a0a0a;background-image:url('/assets/lowmode-womens-complete.webp');background-position:center;background-size:cover;background-repeat:no-repeat}
     .women-strip{max-width:1360px;margin:0 auto;padding:0 22px 28px;display:flex;gap:8px;flex-wrap:wrap}
     .women-strip span{border:1px solid rgba(255,255,255,.14);padding:8px 12px;font-size:.66rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#e6e1d8}
-    .women-grid{max-width:1360px;margin:0 auto;padding:0 22px 80px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+    .women-grid{max-width:1360px;margin:0 auto;padding:0 22px 80px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
     .women-card{border:1px solid rgba(255,255,255,.11);background:linear-gradient(180deg,#0b0b0b,#070707);overflow:hidden;scroll-margin-top:90px}
-    .women-card .media{aspect-ratio:4/5;background:#0a0a0a;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:10px}
-    .women-card img{width:100%;height:100%;object-fit:contain;object-position:center;display:block;transform:none;background:#0a0a0a}
+    .women-card .media{aspect-ratio:4/5;background:#0a0a0a;overflow:hidden}
+    .women-card img{width:100%;height:100%;display:block;object-fit:cover;transform:scale(1.01);background:#0a0a0a}
+    .women-card.track img{object-position:center 5%}
+    .women-card.compass img{object-position:center 27%}
+    .women-card.cargo img{object-position:center 49%}
+    .women-card.rose img{object-position:center 73%}
+    .women-card.wave img{object-position:center 96%}
     .women-card .meta{padding:18px}
     .women-card .tag{display:block;color:var(--gold);font-size:.62rem;font-weight:900;letter-spacing:.15em;text-transform:uppercase;margin-bottom:7px}
     .women-card h2{font-size:1.1rem;line-height:1.1;text-transform:uppercase;margin:0 0 7px}
@@ -27,23 +32,22 @@
     .women-card p{color:#aaa59c;font-size:.82rem;line-height:1.5;margin:0}
     .women-card .sizes{margin-top:12px;color:#eee9df;font-size:.7rem;letter-spacing:.08em}
     .shop-link{display:inline-block;margin-top:13px;padding-bottom:3px;border-bottom:1px solid var(--gold);color:#f0d6a4;font-size:.7rem;font-weight:850;letter-spacing:.14em;text-transform:uppercase}
-    @media(max-width:850px){.women-hero{grid-template-columns:1fr}.women-visual{min-height:430px}.women-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-    @media(max-width:560px){.women-grid{grid-template-columns:1fr}.women-hero{padding-top:36px}.women-visual{min-height:380px}}
+    @media(max-width:850px){.women-hero{grid-template-columns:1fr}.women-visual{min-height:430px}.women-grid{grid-template-columns:1fr}}
+    @media(max-width:560px){.women-hero{padding-top:36px}.women-visual{min-height:380px}.women-card .media{aspect-ratio:706/1180}}
   </style>
 </head>
 <body>
   <div class="announcement">LOWMODE™ / Women / Higher Ground — A Calmer You</div>
-  <header class="site-header"><nav class="nav" aria-label="Main navigation"><a class="wordmark" href="/">LOWMODE<sup>™</sup></a><div class="nav-links"><a href="/">Home</a><a href="/collection.html">Men</a><a href="/women.html" aria-current="page">Women</a><a href="/collection.html#accessories">Accessories</a><a href="/lookbook.html">Media</a></div><a class="nav-cta" href="#women-products">Shop women</a></nav></header>
+  <header class="site-header"><nav class="nav" aria-label="Main navigation"><a class="wordmark" href="/">LOWMODE<sup>™</sup></a><div class="nav-links"><a href="/">Home</a><a href="/collection.html#men">Men</a><a href="/women.html" aria-current="page">Women</a><a href="/collection.html#accessories">Accessories</a><a href="/lookbook.html">Media</a></div><a class="nav-cta" href="#women-products">Shop women</a></nav></header>
   <main>
-    <section class="women-hero"><div><p class="eyebrow">LOWMODE / Women’s Collection</p><h1>Strength.<br>Style.<br>Balance.</h1><p>Clean modern LOWMODE pieces presented as individual products — premium fleece, heavyweight cotton, structured layers and relaxed utility bottoms.</p></div><div class="women-visual" role="img" aria-label="LOWMODE women’s modern apparel collection"></div></section>
-    <div class="women-strip"><span>Individual pieces</span><span>XS–2XL</span><span>Premium materials</span><span>Modern relaxed fits</span><span>LOWMODE™</span></div>
+    <section class="women-hero"><div><p class="eyebrow">LOWMODE / Women’s Collection</p><h1>Individual.<br>Clean.<br>LOWMODE.</h1><p>The women’s looks are now separated into individual product pictures instead of repeating one combined collection image.</p></div><div class="women-visual" role="img" aria-label="LOWMODE women’s modern apparel collection"></div></section>
+    <div class="women-strip"><span>Individual pictures</span><span>Women only</span><span>XS–2XL</span><span>Premium materials</span><span>LOWMODE™</span></div>
     <section class="women-grid" id="women-products" aria-label="LOWMODE women’s products">
-      <article class="women-card" id="rose-discipline-hoodie"><div class="media rose"><img src="/assets/lowmode-womens-modern.webp" alt="LOWMODE Rose Discipline Hoodie"></div><div class="meta"><span class="tag">LOWMODE Women</span><h2>Rose Discipline Hoodie</h2><span class="price">$78</span><p>Black brushed fleece with tonal rose artwork and a relaxed modern fit.</p><div class="sizes">XS–XL $78 · 2XL $82</div><a class="shop-link" href="#rose-discipline-hoodie">View individual piece</a></div></article>
-      <article class="women-card" id="wave-oversized-tee"><div class="media wave"><img src="/assets/lowmode-womens-modern.webp" alt="LOWMODE Wave Oversized Tee"></div><div class="meta"><span class="tag">LOWMODE Women</span><h2>Wave Oversized Tee</h2><span class="price">$42</span><p>Warm ivory heavyweight cotton with wave artwork and an oversized relaxed fit.</p><div class="sizes">XS–XL $42 · 2XL $46</div><a class="shop-link" href="#wave-oversized-tee">View individual piece</a></div></article>
-      <article class="women-card" id="compass-quarter-zip"><div class="media compass"><img src="/assets/lowmode-womens-modern.webp" alt="LOWMODE Compass Quarter-Zip"></div><div class="meta"><span class="tag">LOWMODE Women</span><h2>Compass Quarter-Zip</h2><span class="price">$72</span><p>Deep navy structured fleece with compass line art and a clean quarter-zip collar.</p><div class="sizes">XS–XL $72 · 2XL $76</div><a class="shop-link" href="#compass-quarter-zip">View individual piece</a></div></article>
-      <article class="women-card" id="rose-current-quarter-zip"><div class="media quarter"><img src="/assets/lowmode-rose-current-quarter-zip.webp" alt="LOWMODE Rose Current Quarter-Zip"></div><div class="meta"><span class="tag">LOWMODE Women</span><h2>Rose Current Quarter-Zip</h2><span class="price">$76</span><p>Deep charcoal technical knit with rose and wave artwork.</p><div class="sizes">XS–XL $76 · 2XL $80</div><a class="shop-link" href="#rose-current-quarter-zip">View individual piece</a></div></article>
-      <article class="women-card" id="higher-ground-track-jacket"><div class="media track"><img src="/assets/lowmode-womens-modern.webp" alt="LOWMODE Higher Ground Track Jacket"></div><div class="meta"><span class="tag">LOWMODE Women</span><h2>Higher Ground Track Jacket</h2><span class="price">$88</span><p>Black technical shell with ice-blue trim and a clean athletic fit.</p><div class="sizes">XS–XL $88 · 2XL $92</div><a class="shop-link" href="#higher-ground-track-jacket">View individual piece</a></div></article>
-      <article class="women-card" id="studio-cargo-pant"><div class="media cargo"><img src="/assets/lowmode-womens-complete.webp" alt="LOWMODE Studio Cargo Pant"></div><div class="meta"><span class="tag">LOWMODE Women</span><h2>Studio Cargo Pant</h2><span class="price">$64</span><p>Structured black twill, relaxed leg and utility pocket construction.</p><div class="sizes">XS–XL $64 · 2XL $68</div><a class="shop-link" href="#studio-cargo-pant">View individual piece</a></div></article>
+      <article class="women-card track" id="higher-ground-track-jacket"><div class="media"><img src="/assets/lowmode-womens-complete.webp" alt="LOWMODE Higher Ground Track Jacket"></div><div class="meta"><span class="tag">LOWMODE Women</span><h2>Higher Ground Track Jacket</h2><span class="price">$88</span><p>Black technical track jacket with ice-blue sleeve striping and LOWMODE chest artwork.</p><div class="sizes">XS–XL $88 · 2XL $92</div><a class="shop-link" href="#higher-ground-track-jacket">View piece</a></div></article>
+      <article class="women-card compass" id="compass-quarter-zip"><div class="media"><img src="/assets/lowmode-womens-complete.webp" alt="LOWMODE Compass Quarter-Zip"></div><div class="meta"><span class="tag">LOWMODE Women</span><h2>Compass Quarter-Zip</h2><span class="price">$72</span><p>Black structured quarter-zip with LOWMODE compass graphic and clean relaxed silhouette.</p><div class="sizes">XS–XL $72 · 2XL $76</div><a class="shop-link" href="#compass-quarter-zip">View piece</a></div></article>
+      <article class="women-card cargo" id="studio-cargo-pant"><div class="media"><img src="/assets/lowmode-womens-complete.webp" alt="LOWMODE Studio Cargo Pant"></div><div class="meta"><span class="tag">LOWMODE Women</span><h2>Studio Cargo Pant</h2><span class="price">$64</span><p>Structured black cargo pant with utility pocket construction and LOWMODE detail.</p><div class="sizes">XS–XL $64 · 2XL $68</div><a class="shop-link" href="#studio-cargo-pant">View piece</a></div></article>
+      <article class="women-card rose" id="rose-discipline-hoodie"><div class="media"><img src="/assets/lowmode-womens-complete.webp" alt="LOWMODE Rose Discipline Hoodie"></div><div class="meta"><span class="tag">LOWMODE Women</span><h2>Rose Discipline Hoodie</h2><span class="price">$78</span><p>Black brushed fleece hoodie with tonal rose artwork and a relaxed modern fit.</p><div class="sizes">XS–XL $78 · 2XL $82</div><a class="shop-link" href="#rose-discipline-hoodie">View piece</a></div></article>
+      <article class="women-card wave" id="wave-oversized-tee"><div class="media"><img src="/assets/lowmode-womens-complete.webp" alt="LOWMODE Wave Oversized Tee"></div><div class="meta"><span class="tag">LOWMODE Women</span><h2>Wave Oversized Tee</h2><span class="price">$42</span><p>Warm ivory heavyweight tee with wave artwork and an oversized relaxed fit.</p><div class="sizes">XS–XL $42 · 2XL $46</div><a class="shop-link" href="#wave-oversized-tee">View piece</a></div></article>
     </section>
   </main>
   <footer class="site-footer"><div class="footer-inner"><strong class="footer-brand">LOWMODE™</strong><div class="footer-meta"><p>Women / Men / Accessories / Media</p><p>© 2026 LOWMODE. All rights reserved.</p></div></div></footer>
