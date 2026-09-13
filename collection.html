@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Shop LOWMODE premium men’s and women’s apparel with heavyweight tees, structured layers, polos, headwear and clear size pricing.">
   <meta name="theme-color" content="#050505">
-  <link rel="stylesheet" href="/styles.css?v=20260913-10">
+  <link rel="stylesheet" href="/styles.css?v=20260913-11">
   <title>LOWMODE™ — Men + Women</title>
   <style>
     :root{--gold:#d6b06c;--ink:#050505;--soft:#aaa59b}
@@ -34,6 +34,8 @@
     .product-media img{display:block;width:100%;height:100%;max-width:100%;max-height:100%;object-fit:contain!important;object-position:center!important;background:#0a0a0a}
     .product-media img.cover,.product-media img.womens-crop,.product-media img.head-games-shot,.product-media img.cap-shot{object-fit:contain!important;object-position:center!important}
     .product-card.mens-card .product-media{background-color:#0a0a0a}
+    .product-media.crop-shot{position:relative;background-repeat:no-repeat;background-size:600% auto;background-color:#080808;background-position-y:center}
+    .product-media.crop-shot::after{content:'';position:absolute;inset:0;box-shadow:inset 0 0 0 1px rgba(255,255,255,.04)}
     .product-meta{padding-bottom:20px}
     .product-meta h3{margin-bottom:6px}
     .men-badge{display:inline-block;margin:0 0 7px;color:#d6b06c;font-size:.62rem;font-weight:900;letter-spacing:.17em;text-transform:uppercase}
@@ -45,7 +47,7 @@
     .shop-chip{display:inline-block;margin-top:12px;padding-bottom:2px;border-bottom:1px solid var(--gold);font-size:.7rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#f0d6a4}
     .catalog-head h2{text-transform:uppercase;letter-spacing:-.035em}
     .catalog-head p{color:#9d998f}
-    @media(max-width:760px){.variant{font-size:.62rem}.collection-summary{margin-top:18px}.mens-banner{margin-inline:18px;min-height:480px}.mens-banner-copy{min-height:480px;padding:26px}.mens-banner img{object-position:58% 20%}.mens-banner::after{background:linear-gradient(180deg,rgba(0,0,0,.12),rgba(0,0,0,.92) 78%)}.positive-banner{margin-inline:18px;padding:36px 20px}.product-media{aspect-ratio:1/1}}
+    @media(max-width:760px){.variant{font-size:.62rem}.collection-summary{margin-top:18px}.mens-banner{margin-inline:18px;min-height:480px}.mens-banner-copy{min-height:480px;padding:26px}.mens-banner img{object-position:58% 20%}.mens-banner::after{background:linear-gradient(180deg,rgba(0,0,0,.12),rgba(0,0,0,.92) 78%)}.positive-banner{margin-inline:18px;padding:36px 20px}.product-media{aspect-ratio:1/1}.product-media.crop-shot{background-size:600% auto}}
   </style>
 </head>
 <body>
@@ -53,20 +55,20 @@
   <header class="site-header">
     <nav class="nav" aria-label="Main navigation">
       <a class="wordmark" href="/" aria-label="LOWMODE home">LOWMODE<sup>™</sup></a>
-      <div class="nav-links"><a href="/">Home</a><a href="#tee-shirts">Men</a><a href="#womens">Women</a><a href="/lookbook.html">Media</a></div>
-      <a class="nav-cta" href="#tee-shirts">Shop men</a>
+      <div class="nav-links"><a href="/">Home</a><a href="#tee-shirts">Men</a><a href="#womens">Women</a><a href="#tattoo">Tattoo Art</a><a href="/lookbook.html">Media</a></div>
+      <a class="nav-cta" href="#tattoo">Shop headline</a>
     </nav>
   </header>
 
   <main>
     <section class="collection-hero shell" aria-labelledby="collection-title">
-      <div><p class="eyebrow">LOWMODE / Men’s line / Higher standards</p><h1 class="display" id="collection-title">Built solid.</h1></div>
-      <div class="collection-summary"><p>Men’s LOWMODE is now heavier, darker and sharper—heavyweight cotton, structured fleece, utility layers, clean polos and headwear built around the eagle-LM identity.</p><span class="collection-count">Men’s + women’s apparel / Clear pricing</span><p class="price-note">XS–XL = base price · 2XL and 3XL carry a small material upcharge.</p></div>
+      <div><p class="eyebrow">LOWMODE / Men’s + Women’s / Individual pieces</p><h1 class="display" id="collection-title">Built solid.</h1></div>
+      <div class="collection-summary"><p>Shop LOWMODE as individual pieces—heavyweight cotton, structured fleece, utility layers, clean polos, headwear and the Tattoo Art headline collection.</p><span class="collection-count">Men’s + women’s apparel / Clear pricing</span><p class="price-note">XS–XL = base price · 2XL and 3XL carry a small material upcharge.</p></div>
     </section>
 
     <section class="mens-banner" aria-label="LOWMODE men's collection">
-      <img src="/assets/lowmode-mens-modern.webp" alt="Men wearing LOWMODE heavyweight apparel and layers">
-      <div class="mens-banner-copy"><p class="eyebrow">LOWMODE / Men</p><h2>Strong fits.<br>Zero noise.</h2><p>Heavy tees. Structured hoodies. Utility outerwear. Clean polos. Dark neutrals, deep red, olive and steel-blue accents with the LM eagle used as the signature mark.</p><div class="mens-pill-row"><span class="mens-pill">Heavyweight</span><span class="mens-pill">Structured fit</span><span class="mens-pill">Utility</span><span class="mens-pill">Eagle LM</span></div></div>
+      <img src="/assets/lowmode-tattoo-art-collection.webp" alt="LOWMODE tattoo art collection with individual men and women apparel looks">
+      <div class="mens-banner-copy"><p class="eyebrow">LOWMODE / Headline Collection</p><h2>One campaign.<br>Individual pieces.</h2><p>The tattoo-art looks are now separated in the catalog so each tee, hoodie, crewneck and jacket can be selected on its own.</p><div class="mens-pill-row"><span class="mens-pill">Men + Women</span><span class="mens-pill">Individual items</span><span class="mens-pill">Original graphics</span><span class="mens-pill">LOWMODE</span></div></div>
     </section>
 
     <section class="positive-banner" aria-label="LOWMODE positive message">
@@ -88,6 +90,13 @@
 
   <script>
     const products = [
+      {c:'tattoo',n:'Rose Script Crewneck',p:64,p2:68,d:'Black structured crewneck / Relaxed fit',t:'Rose sleeve artwork / XS–2XL',img:'/assets/lowmode-tattoo-art-collection.webp',crop:'0% center'},
+      {c:'tattoo',n:'Sunburst Eagle Hoodie',p:78,p2:82,p3:84,d:'Deep oxblood heavyweight fleece',t:'Sunburst eagle graphic / XS–3XL',img:'/assets/lowmode-tattoo-art-collection.webp',crop:'20% center'},
+      {c:'tattoo',n:'Sunrise Linework Tee',p:42,p2:46,d:'Warm ivory heavyweight cotton',t:'Black linework + sunrise / XS–2XL',img:'/assets/lowmode-tattoo-art-collection.webp',crop:'40% center'},
+      {c:'tattoo',n:'Night Flight Tattoo Jacket',p:88,p2:92,p3:94,d:'Black structured jacket / Clean modern fit',t:'Tattoo-inspired artwork / XS–3XL',img:'/assets/lowmode-tattoo-art-collection.webp',crop:'60% center'},
+      {c:'tattoo',n:'Ocean Scroll Hoodie',p:78,p2:82,d:'Steel blue heavyweight fleece',t:'Scroll + wave artwork / XS–2XL',img:'/assets/lowmode-tattoo-art-collection.webp',crop:'80% center'},
+      {c:'tattoo',n:'Eagle Crest Heavyweight Tee',p:44,p2:48,p3:50,d:'Jet black heavyweight cotton',t:'Large eagle graphic / XS–3XL',img:'/assets/lowmode-tattoo-art-collection.webp',crop:'100% center'},
+
       {c:'womens',n:'Rose Discipline Hoodie',p:78,p2:82,d:'Black brushed fleece / Relaxed modern fit',t:'Tonal rose artwork / XS–2XL',img:'/assets/lowmode-womens-modern.webp',ic:'womens-crop women-rose'},
       {c:'womens',n:'Brighter Tide Tee',p:42,p2:46,d:'Warm ivory heavyweight cotton',t:'Relaxed modern fit / XS–2XL',img:'/assets/lowmode-womens-modern.webp',ic:'womens-crop women-wave'},
       {c:'womens',n:'Compass Quarter-Zip',p:72,p2:76,d:'Deep navy structured fleece',t:'Compass line art / XS–2XL',img:'/assets/lowmode-womens-modern.webp',ic:'womens-crop women-compass'},
@@ -126,15 +135,14 @@
       {c:'bottoms',n:'Strong Utility Pant',p:68,p2:72,p3:74,d:'Structured dark twill / Straight athletic leg',t:'Built to move / XS–3XL',art:'art classic p5'},
       {c:'bottoms',n:'Focus Training Short',p:48,p2:52,p3:54,d:'Clean athletic short / Durable everyday fabric',t:'Keep your focus / XS–3XL',art:'art classic p6'},
 
-      {c:'accessories',n:'LOWMODE Tattoo Art Collection',p:36,d:"Men's + women's collection",t:'Original graphics / Full looks',img:'/assets/lowmode-tattoo-art-collection.webp',ic:'cover head-games-shot',from:true},
       {c:'accessories',n:'Sunset Trucker Cap',p:38,d:'Steel blue / White mesh / Structured crown',t:'Raised LOWMODE embroidery',img:'/assets/lowmode-sunset-cap.webp',ic:'cover cap-shot'},
       {c:'accessories',n:'Eagle Dream Cap',p:34,d:'Structured six-panel cap',t:'Embroidered mark / One size',art:'art classic p7'},
       {c:'accessories',n:'Black Rib Beanie',p:30,d:'Dense rib knit / Fold cuff',t:'LOWMODE mark / One size',art:'art classic p8'},
       {c:'accessories',n:'Core Crew Socks',p:18,d:'Cushioned everyday crew socks',t:'LOWMODE detail / S–XL',art:'art classic p9'}
     ];
 
-    const labels={tees:"Men’s Heavyweight Tees",layers:"Men’s Hoodies + Outerwear",polos:"Men’s Polos",bottoms:"Men’s Bottoms",accessories:"Headwear + Accessories",womens:"Women’s LOWMODE"};
-    const order=['tees','layers','polos','bottoms','accessories','womens'];
+    const labels={tattoo:"Tattoo Art Collection",tees:"Men’s Heavyweight Tees",layers:"Men’s Hoodies + Outerwear",polos:"Men’s Polos",bottoms:"Men’s Bottoms",accessories:"Headwear + Accessories",womens:"Women’s LOWMODE"};
+    const order=['tattoo','tees','layers','polos','bottoms','accessories','womens'];
     const catalog=document.getElementById('catalog');
     const filters=document.getElementById('filter-buttons');
     const status=document.getElementById('filter-status');
@@ -144,6 +152,7 @@
       return '<div class="variant-row"><span class="variant"><strong>XS–XL</strong> $'+p.p+'</span><span class="variant"><strong>2XL</strong> $'+p.p2+'</span>'+(p.p3?'<span class="variant"><strong>3XL</strong> $'+p.p3+'</span>':'')+'</div>';
     }
     function media(p,i){
+      if(p.crop) return '<div class="product-media crop-shot" style="background-image:url(\''+p.img+'\');background-position:'+p.crop+'"><span class="product-index">'+String(i+1).padStart(2,'0')+'</span></div>';
       if(p.img) return '<div class="product-media"><img '+(p.ic?'class="'+p.ic+'" ':'')+'src="'+p.img+'" alt="'+p.n+'" loading="lazy"><span class="product-index">'+String(i+1).padStart(2,'0')+'</span></div>';
       return '<div class="product-media '+p.art+'" role="img" aria-label="'+p.n+'"><span class="product-index">'+String(i+1).padStart(2,'0')+'</span></div>';
     }
@@ -154,8 +163,9 @@
         const list=products.filter(p=>p.c===c);
         if(!list.length)return;
         const s=document.createElement('section');s.className='catalog-section';s.dataset.catalogSection=c;s.id=c==='tees'?'tee-shirts':c;
-        const menSection=c!=='womens';
-        s.innerHTML='<div class="catalog-head"><h2>'+labels[c]+'</h2><p>'+list.length+' pieces / '+(menSection?'built with weight + structure':'modern essentials')+'</p></div><div class="product-grid">'+list.map((p)=>{const gi=products.indexOf(p);return '<article class="product-card'+(menSection?' mens-card':'')+'" data-category="'+p.c+'">'+media(p,gi)+'<div class="product-meta">'+(menSection?'<span class="men-badge">LOWMODE Men</span>':'')+'<h3>'+p.n+'</h3><span class="price'+(p.from?' from':'')+'">$'+p.p+'</span><p>'+p.d+'</p><span class="tag">'+p.t+'</span>'+variants(p)+'<span class="shop-chip">'+(menSection?'Built solid':'Retail ready')+'</span></div></article>'}).join('')+'</div>';
+        const menSection=!['womens','tattoo'].includes(c);
+        const collectionSection=c==='tattoo';
+        s.innerHTML='<div class="catalog-head"><h2>'+labels[c]+'</h2><p>'+list.length+' pieces / '+(collectionSection?'shop each headline look separately':menSection?'built with weight + structure':'modern essentials')+'</p></div><div class="product-grid">'+list.map((p)=>{const gi=products.indexOf(p);return '<article class="product-card'+(menSection?' mens-card':'')+'" data-category="'+p.c+'">'+media(p,gi)+'<div class="product-meta">'+(menSection?'<span class="men-badge">LOWMODE Men</span>':collectionSection?'<span class="men-badge">LOWMODE Tattoo Art</span>':'')+'<h3>'+p.n+'</h3><span class="price'+(p.from?' from':'')+'">$'+p.p+'</span><p>'+p.d+'</p><span class="tag">'+p.t+'</span>'+variants(p)+'<span class="shop-chip">'+(collectionSection?'Individual piece':menSection?'Built solid':'Retail ready')+'</span></div></article>'}).join('')+'</div>';
         catalog.appendChild(s);
       });
       const count=filter==='all'?products.length:products.filter(p=>p.c===filter).length;
