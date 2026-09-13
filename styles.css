@@ -684,8 +684,8 @@ body {
 }
 
 .product-card:hover .product-media img {
-  transform: scale(1.025);
-  filter: contrast(1.03);
+  transform: none;
+  filter: contrast(1.015);
 }
 
 .product-media img.cap-shot {
