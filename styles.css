@@ -2111,3 +2111,209 @@ body {
     aspect-ratio: 1 / 1;
   }
 }
+
+
+/* Final crisp system — September 2026 */
+:root {
+  --line: rgba(255, 255, 255, .17);
+  --line-strong: rgba(255, 255, 255, .34);
+}
+
+body {
+  font-kerning: normal;
+  font-synthesis: none;
+  letter-spacing: -.004em;
+}
+
+h1,
+h2,
+h3,
+.display,
+.wordmark {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+.site-header {
+  border-bottom-color: rgba(255, 255, 255, .18);
+}
+
+.nav {
+  min-height: 68px;
+}
+
+.nav-links a,
+.nav-cta,
+.button {
+  font-size: .76rem;
+}
+
+.announcement {
+  font-size: .72rem;
+}
+
+.button,
+.nav-cta,
+.filter-button {
+  border-radius: 3px;
+}
+
+.home-hero-frame,
+.gender-card,
+.featured-drop,
+.head-games-feature,
+.womens-feature,
+.womens-campaign-strip,
+.category-card,
+.product-card,
+.lookbook-card,
+.brand-panel {
+  border-radius: 6px;
+}
+
+.home-hero-frame,
+.gender-card,
+.featured-drop,
+.head-games-feature,
+.womens-feature,
+.womens-campaign-strip,
+.category-card,
+.product-card,
+.lookbook-card,
+.brand-panel {
+  border-color: rgba(255, 255, 255, .18);
+}
+
+.category-card:hover,
+.product-card:hover,
+.lookbook-card:hover {
+  transform: none;
+  border-color: rgba(185, 220, 255, .54);
+}
+
+.category-card:hover .category-media img,
+.category-card:hover .category-sprite,
+.product-card:hover .product-media img,
+.lookbook-card:hover img {
+  transform: scale(1.012);
+}
+
+.product-media img,
+.lookbook-media img,
+.category-media img,
+.gender-card img {
+  filter: contrast(1.035) saturate(.99);
+}
+
+.product-meta {
+  min-height: 128px;
+  padding: 17px 17px 18px;
+  gap: 6px 12px;
+}
+
+.product-meta h3 {
+  font-size: .96rem;
+  line-height: 1.2;
+}
+
+.product-meta p {
+  color: #aaa9a4;
+  font-size: .8rem;
+  line-height: 1.42;
+}
+
+.product-meta .tag,
+.coming-soon {
+  font-size: .68rem !important;
+}
+
+.category-meta p,
+.gender-copy span {
+  color: #aaa9a4;
+}
+
+.filter-button {
+  min-height: 40px;
+  padding: 10px 14px;
+  font-size: .72rem;
+}
+
+.filter-status,
+.catalog-head p,
+.section-heading p {
+  font-size: .72rem;
+}
+
+.catalog-head h2,
+.section-heading h2 {
+  font-weight: 850;
+}
+
+.lookbook-card figcaption {
+  min-height: 80px;
+}
+
+.lookbook-card figcaption strong {
+  font-size: .9rem;
+}
+
+.lookbook-card figcaption span,
+.lookbook-card figcaption small {
+  font-size: .68rem;
+}
+
+@media (max-width: 760px) {
+  html {
+    scroll-padding-top: 120px;
+  }
+
+  .announcement {
+    font-size: .66rem;
+  }
+
+  .nav {
+    min-height: 60px;
+  }
+
+  .nav-links a {
+    font-size: .68rem;
+  }
+
+  .filter-bar {
+    top: 60px;
+  }
+
+  .filter-inner {
+    padding-block: 11px;
+  }
+
+  .product-meta,
+  .womens-catalog .product-meta {
+    min-height: 0;
+  }
+}
+
+@media (max-width: 430px) {
+  .home-hero-frame {
+    min-height: 610px;
+  }
+
+  .home-hero-content {
+    bottom: 88px;
+  }
+
+  .home-hero-lead {
+    line-height: 1.5;
+  }
+
+  .product-meta h3 {
+    font-size: .94rem;
+  }
+
+  .product-meta p {
+    font-size: .78rem;
+  }
+}
