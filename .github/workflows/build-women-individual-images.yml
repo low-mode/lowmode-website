@@ -1,0 +1,75 @@
+name: Build individual LOWMODE women images
+
+on:
+  push:
+    paths:
+      - '.github/workflows/build-women-individual-images.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  build-women-images:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Pillow
+        run: python -m pip install --quiet pillow
+
+      - name: Create five separate women product images
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from PIL import Image
+
+          src = Path('assets/lowmode-womens-complete.webp')
+          im = Image.open(src).convert('RGB')
+          w, h = im.size
+
+          # The existing LOWMODE women's campaign image contains five looks across the frame.
+          # Produce five actual standalone portrait image files, one per look.
+          names = [
+              'lowmode-women-track-jacket.jpg',
+              'lowmode-women-compass-quarterzip.jpg',
+              'lowmode-women-cargo-pant.jpg',
+              'lowmode-women-rose-hoodie.jpg',
+              'lowmode-women-wave-tee.jpg',
+          ]
+          centers = [(i + 0.5) * w / 5 for i in range(5)]
+          crop_w = min(w, int(round(h * 0.565)))
+
+          for name, cx in zip(names, centers):
+              left = int(round(cx - crop_w / 2))
+              left = max(0, min(left, w - crop_w))
+              crop = im.crop((left, 0, left + crop_w, h))
+              # Upscale for clean storefront rendering while preserving the source crop.
+              target_w = 900
+              target_h = round(target_w * crop.height / crop.width)
+              crop = crop.resize((target_w, target_h), Image.Resampling.LANCZOS)
+              crop.save(Path('assets') / name, 'JPEG', quality=94, optimize=True, progressive=True)
+
+          page = Path('women.html')
+          s = page.read_text()
+          replacements = [
+              ('<article class="women-card track" id="higher-ground-track-jacket"><div class="media"><img src="/assets/lowmode-womens-complete.webp"', '<article class="women-card track" id="higher-ground-track-jacket"><div class="media"><img src="/assets/lowmode-women-track-jacket.jpg"'),
+              ('<article class="women-card compass" id="compass-quarter-zip"><div class="media"><img src="/assets/lowmode-womens-complete.webp"', '<article class="women-card compass" id="compass-quarter-zip"><div class="media"><img src="/assets/lowmode-women-compass-quarterzip.jpg"'),
+              ('<article class="women-card cargo" id="studio-cargo-pant"><div class="media"><img src="/assets/lowmode-womens-complete.webp"', '<article class="women-card cargo" id="studio-cargo-pant"><div class="media"><img src="/assets/lowmode-women-cargo-pant.jpg"'),
+              ('<article class="women-card rose" id="rose-discipline-hoodie"><div class="media"><img src="/assets/lowmode-womens-complete.webp"', '<article class="women-card rose" id="rose-discipline-hoodie"><div class="media"><img src="/assets/lowmode-women-rose-hoodie.jpg"'),
+              ('<article class="women-card wave" id="wave-oversized-tee"><div class="media"><img src="/assets/lowmode-womens-complete.webp"', '<article class="women-card wave" id="wave-oversized-tee"><div class="media"><img src="/assets/lowmode-women-wave-tee.jpg"'),
+          ]
+          for old, new in replacements:
+              s = s.replace(old, new)
+
+          s = s.replace('.women-card img{width:100%;height:100%;display:block;object-fit:cover;transform:scale(1.01);background:#0a0a0a}', '.women-card img{width:100%;height:100%;display:block;object-fit:contain;object-position:center;transform:none;background:#0a0a0a}')
+          s = s.replace('.women-card.track img{object-position:center 5%}\n    .women-card.compass img{object-position:center 27%}\n    .women-card.cargo img{object-position:center 49%}\n    .women-card.rose img{object-position:center 73%}\n    .women-card.wave img{object-position:center 96%}\n', '')
+          page.write_text(s)
+          PY
+
+      - name: Commit individual women images to main
+        run: |
+          git config user.name "LOWMODE site update"
+          git config user.email "lowmode@lowmode.ai"
+          git add assets/lowmode-women-*.jpg women.html
+          git diff --cached --quiet || git commit -m "Add individual women product images"
+          git push
