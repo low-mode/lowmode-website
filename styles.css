@@ -2490,3 +2490,129 @@ p {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* Final visual edge — September 2026 */
+html {
+  background: #050505;
+}
+
+body {
+  color: #f7f7f3;
+}
+
+img {
+  image-rendering: auto;
+  backface-visibility: hidden;
+}
+
+.site-header {
+  background: rgba(5, 5, 6, .975);
+  backdrop-filter: blur(24px) saturate(135%);
+}
+
+.nav,
+.shell {
+  width: min(100%, 1400px);
+}
+
+.display,
+.home-hero-v2 .display {
+  letter-spacing: -.058em;
+}
+
+.home-hero-frame,
+.gender-card,
+.head-games-feature,
+.womens-feature,
+.featured-drop,
+.womens-campaign-strip {
+  border-color: rgba(255, 255, 255, .22);
+}
+
+.home-hero-image,
+.gender-card img,
+.head-games-media img,
+.womens-feature-media img,
+.womens-campaign-strip img {
+  filter: contrast(1.075) saturate(.985);
+}
+
+.home-hero-shade {
+  background:
+    linear-gradient(90deg, rgba(3, 3, 4, .91) 0%, rgba(3, 3, 4, .58) 42%, rgba(3, 3, 4, .08) 74%),
+    linear-gradient(180deg, transparent 44%, rgba(3, 3, 4, .84) 100%);
+}
+
+.section-heading,
+.catalog-head {
+  border-bottom-color: rgba(255, 255, 255, .2);
+}
+
+.category-card,
+.product-card,
+.lookbook-card {
+  border-color: rgba(255, 255, 255, .2);
+  background: #0a0b0d;
+}
+
+.category-media,
+.product-media,
+.lookbook-media {
+  isolation: isolate;
+}
+
+.category-media::before,
+.product-media::after,
+.lookbook-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .025);
+  pointer-events: none;
+}
+
+.product-meta h3,
+.category-meta h3,
+.lookbook-card figcaption strong {
+  color: #fafaf6;
+}
+
+.product-meta p,
+.category-meta p,
+.gender-copy span {
+  color: #b7b7b1;
+}
+
+.button,
+.nav-cta,
+.filter-button {
+  font-weight: 850;
+}
+
+.womens-catalog .product-card:not(.featured-product) .product-media img {
+  transform: scale(1.2);
+}
+
+.womens-catalog .product-card:not(.featured-product):hover .product-media img {
+  transform: scale(1.22);
+}
+
+@media (max-width: 760px) {
+  .home-hero-shade {
+    background:
+      linear-gradient(180deg, rgba(3, 3, 4, .06) 16%, rgba(3, 3, 4, .93) 78%),
+      linear-gradient(90deg, rgba(3, 3, 4, .24), transparent 80%);
+  }
+
+  .catalog-section {
+    padding-block: 44px;
+  }
+
+  .product-card,
+  .category-card,
+  .lookbook-card {
+    border-radius: 4px;
+  }
+}
