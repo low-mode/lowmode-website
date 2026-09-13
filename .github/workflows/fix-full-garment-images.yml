@@ -1,0 +1,39 @@
+name: Fix full garment images
+
+on:
+  push:
+    paths:
+      - '.github/workflows/fix-full-garment-images.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Keep full garments and sleeves visible
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('collection.html')
+          s = p.read_text()
+          s = s.replace(".product-media{aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#0a0a0a}", ".product-media{aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#0a0a0a;padding:10px}")
+          s = s.replace(".product-media.crop-shot{position:relative;background-repeat:no-repeat;background-size:600% auto;background-color:#080808;background-position-y:center}", ".product-media.crop-shot{position:relative;padding:0;background-repeat:no-repeat;background-size:540% auto;background-color:#080808;background-position-y:center}")
+          s = s.replace(".product-media.crop-shot{background-size:600% auto}", ".product-media.crop-shot{background-size:540% auto}")
+          s = s.replace(".product-card:hover{transform:translateY(-4px);border-color:rgba(214,176,108,.45);box-shadow:0 18px 44px rgba(0,0,0,.28)}", ".product-card:hover{transform:translateY(-2px);border-color:rgba(214,176,108,.45);box-shadow:0 14px 34px rgba(0,0,0,.24)}")
+          p.write_text(s)
+
+          p = Path('styles.css')
+          s = p.read_text()
+          s = s.replace(".product-card:hover .product-media img {\n  transform: scale(1.025);\n  filter: contrast(1.03);\n}", ".product-card:hover .product-media img {\n  transform: none;\n  filter: contrast(1.015);\n}")
+          p.write_text(s)
+          PY
+      - name: Commit storefront image fix
+        run: |
+          git config user.name "LOWMODE site update"
+          git config user.email "lowmode@lowmode.ai"
+          git add collection.html styles.css
+          git diff --cached --quiet || git commit -m "Keep LOWMODE product garments fully visible"
+          git push
