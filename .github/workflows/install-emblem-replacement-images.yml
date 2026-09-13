@@ -2,7 +2,6 @@ name: Install edited LOWMODE eagle LM product images
 on:
   push:
     paths:
-      - 'assets/emblem-rem7.zip'
       - '.github/workflows/install-emblem-replacement-images.yml'
   workflow_dispatch:
 permissions:
@@ -12,29 +11,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Install edited product images
+      - name: Apply real LOWMODE emblem photos
         run: |
-          unzip -o assets/emblem-rem7.zip -d .
           python - <<'PY'
           from pathlib import Path
           import re
 
-          p = Path('collection.html')
-          s = p.read_text()
-          old = "{c:'polos',n:'Racing Edge Polo',p:64,p2:68,p3:70,d:'Deep olive / Racing stripe / Athletic collar',t:'Quarter zip / XS–3XL',art:'art polo-art p4'},"
-          new = "{c:'polos',n:'Racing Edge Polo',p:64,p2:68,p3:70,d:'Deep olive / Racing stripe / Athletic collar',t:'Eagle-LM emblem / XS–3XL',img:'/assets/racing-edge-polo.webp'},"
-          if old in s:
-              s = s.replace(old, new)
-          s = re.sub(r'/styles\.css\?v=[^\"\']+', '/styles.css?v=20260913-actualphotos3', s)
-          p.write_text(s)
-
-          for fname in ['women.html','lookbook.html']:
+          version = '20260913-realphotos4'
+          for fname in ['collection.html','women.html','lookbook.html']:
               p = Path(fname)
               s = p.read_text()
-              s = re.sub(r'/styles\.css\?v=[^\"\']+', '/styles.css?v=20260913-actualphotos3', s)
+              s = re.sub(r'/styles\.css\?v=[^\"\']+', f'/styles.css?v={version}', s)
               p.write_text(s)
 
-          marker = '/* ACTUAL-EMBLEM-PHOTOS-V3 */'
+          marker = '/* ACTUAL-EMBLEM-PHOTOS-V4 */'
           p = Path('styles.css')
           s = p.read_text()
           if marker not in s:
@@ -47,12 +37,12 @@ jobs:
               s = s.replace('</style>', marker + '\n.card-media:after{content:none!important;display:none!important}\n</style>', 1)
           p.write_text(s)
           PY
-      - name: Commit edited product images
+      - name: Commit corrected site presentation
         run: |
           git config user.name "low-mode"
           git config user.email "lowmode@lowmode.ai"
-          git add assets collection.html women.html lookbook.html styles.css index.html
+          git add collection.html women.html lookbook.html styles.css index.html
           git diff --cached --quiet && exit 0
-          git commit -m "Replace old product emblems with eagle LM product photos"
+          git commit -m "Use real eagle LM product photos across LOWMODE"
           git push
-# rerun 2026-09-13
+# direct safe installer 2026-09-13
