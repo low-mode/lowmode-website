@@ -898,3 +898,294 @@ body {
     line-height: .86;
   }
 }
+
+
+/* LOWMODE crisp storefront */
+:root {
+  --black: #050506;
+  --surface: #0e0f11;
+  --surface-2: #15171a;
+  --white: #fafaf7;
+  --soft: #c1c2bf;
+  --muted: #8d8f8d;
+  --line: rgba(255, 255, 255, .11);
+  --line-strong: rgba(255, 255, 255, .24);
+  --shell: 1320px;
+}
+
+body {
+  background:
+    radial-gradient(circle at 78% 3%, rgba(185, 220, 255, .065), transparent 24rem),
+    var(--black);
+  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+}
+
+.announcement {
+  min-height: 28px;
+  padding-block: 7px 6px;
+  font-size: .65rem;
+  letter-spacing: .16em;
+}
+
+.site-header {
+  background: rgba(5, 5, 6, .94);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, .22);
+}
+
+.nav {
+  min-height: 64px;
+  padding-inline: 30px;
+}
+
+.wordmark {
+  font-size: 1.22rem;
+  letter-spacing: .19em;
+}
+
+.nav-links a {
+  padding-block: 23px 21px;
+}
+
+.nav-links a::after {
+  bottom: 15px;
+}
+
+.nav-cta {
+  min-height: 38px;
+  padding: 11px 16px;
+}
+
+.shell {
+  padding-inline: 30px;
+}
+
+.display {
+  letter-spacing: -.075em;
+}
+
+.home-hero {
+  min-height: 330px;
+  padding-block: clamp(50px, 6vw, 78px) clamp(38px, 5vw, 58px);
+  grid-template-columns: minmax(0, 1.4fr) minmax(300px, .6fr);
+}
+
+.hero-side {
+  padding: 22px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, .025);
+}
+
+.button {
+  min-height: 44px;
+  padding: 13px 16px;
+  border-radius: 3px;
+  letter-spacing: .12em;
+}
+
+.head-games-feature,
+.featured-drop {
+  border-radius: 8px;
+  box-shadow: 0 20px 54px rgba(0, 0, 0, .26);
+}
+
+.head-games-media {
+  aspect-ratio: 16 / 7.6;
+}
+
+.head-games-copy {
+  padding: clamp(26px, 3.6vw, 46px);
+}
+
+.head-games-copy h2,
+.featured-drop-copy h2 {
+  letter-spacing: -.075em;
+}
+
+.featured-drop {
+  grid-template-columns: minmax(0, 1.2fr) minmax(320px, .8fr);
+}
+
+.featured-drop-media {
+  min-height: 500px;
+}
+
+.category-section {
+  padding-block: clamp(46px, 5vw, 66px);
+}
+
+.category-grid,
+.product-grid {
+  gap: 18px;
+}
+
+.category-card,
+.product-card,
+.brand-panel {
+  border-radius: 6px;
+  box-shadow: none;
+}
+
+.category-card:hover,
+.product-card:hover {
+  border-color: rgba(185, 220, 255, .48);
+  box-shadow: 0 16px 38px rgba(0, 0, 0, .25);
+  transform: translateY(-2px);
+}
+
+.category-meta {
+  min-height: 80px;
+  padding: 16px 17px;
+}
+
+.category-meta h3,
+.product-meta h3 {
+  font-weight: 850;
+  letter-spacing: .01em;
+}
+
+.category-meta p,
+.product-meta p {
+  color: var(--soft);
+}
+
+.product-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.product-media {
+  background-color: #f1f1ed;
+}
+
+.product-media img {
+  image-rendering: auto;
+}
+
+.product-meta {
+  min-height: 132px;
+  padding: 17px;
+}
+
+.product-meta h3 {
+  font-size: 1rem;
+}
+
+.product-meta .price {
+  font-weight: 900;
+}
+
+.product-meta .tag {
+  letter-spacing: .055em;
+}
+
+.filter-bar {
+  top: 64px;
+  background: rgba(5, 5, 6, .97);
+}
+
+.filter-inner {
+  padding-block: 12px;
+}
+
+.filter-button {
+  min-height: 36px;
+  padding: 9px 12px;
+  border-radius: 3px;
+}
+
+.catalog-section {
+  padding-block: clamp(48px, 6vw, 76px);
+}
+
+.catalog-head {
+  margin-bottom: 22px;
+}
+
+.brand-panel {
+  min-height: 290px;
+}
+
+.site-footer {
+  border-top-color: rgba(255, 255, 255, .16);
+}
+
+@media (max-width: 1050px) {
+  .home-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .head-games-media {
+    aspect-ratio: 16 / 8.6;
+  }
+}
+
+@media (max-width: 760px) {
+  .announcement {
+    font-size: .59rem;
+    letter-spacing: .115em;
+  }
+
+  .nav,
+  .shell {
+    padding-inline: 18px;
+  }
+
+  .home-hero {
+    padding-block: 42px 36px;
+  }
+
+  .hero-side {
+    padding: 17px;
+  }
+
+  .head-games-feature,
+  .featured-drop {
+    border-radius: 6px;
+  }
+
+  .head-games-media {
+    aspect-ratio: 4 / 3;
+  }
+
+  .featured-drop-media {
+    min-height: 0;
+  }
+
+  .category-grid {
+    gap: 10px;
+  }
+
+  .product-grid {
+    gap: 14px;
+  }
+
+  .product-meta {
+    min-height: 118px;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 520px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-media {
+    aspect-ratio: 1 / 1;
+  }
+
+  .product-meta {
+    min-height: 112px;
+  }
+
+  .product-meta h3 {
+    font-size: 1rem;
+  }
+
+  .product-meta p {
+    font-size: .78rem;
+  }
+}
