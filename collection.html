@@ -53,7 +53,7 @@
   <header class="site-header">
     <nav class="nav" aria-label="Main navigation">
       <a class="wordmark" href="/" aria-label="LOWMODE home">LOWMODE<sup>™</sup></a>
-      <div class="nav-links"><a href="/">Home</a><a href="#tee-shirts">Men</a><a href="#womens">Women</a><a href="#tattoo">Tattoo Art</a><a href="/lookbook.html">Media</a></div>
+      <div class="nav-links"><a href="/">Home</a><a href="#men">Men</a><a href="#womens">Women</a><a href="#tattoo">Tattoo Art</a><a href="/lookbook.html">Media</a></div>
       <a class="nav-cta" href="#tattoo">Shop headline</a>
     </nav>
   </header>
@@ -79,7 +79,7 @@
     <div class="catalog shell" id="catalog"></div>
 
     <section class="brand-grid shell" aria-label="LOWMODE brand information">
-      <article class="brand-panel accent"><p class="eyebrow">LOWMODE Men</p><div><h2>Weight.<br>Structure.<br>Presence.</h2><p>Heavy cotton, substantial fleece, durable layers and sharp embroidery without over-designing the piece.</p><a class="panel-link" href="#tee-shirts">Shop men’s apparel</a></div></article>
+      <article class="brand-panel accent"><p class="eyebrow">LOWMODE Men</p><div><h2>Weight.<br>Structure.<br>Presence.</h2><p>Heavy cotton, substantial fleece, durable layers and sharp embroidery without over-designing the piece.</p><a class="panel-link" href="#men">Shop men’s apparel</a></div></article>
       <article class="brand-panel"><p class="eyebrow">LOWMODE standard</p><div><h2>Quiet moves.<br>Strong identity.</h2><p>The eagle-LM emblem stays clean and controlled while the garment carries the attitude.</p><a class="panel-link" href="/lookbook.html">View the lookbook</a></div></article>
     </section>
   </main>
@@ -132,6 +132,7 @@
 
     const labels={tattoo:"Tattoo Art Collection",tees:"Men’s Heavyweight Tees",layers:"Men’s Hoodies + Outerwear",polos:"Men’s Polos",bottoms:"Men’s Bottoms",accessories:"Headwear + Accessories",womens:"Women’s LOWMODE"};
     const order=['tattoo','tees','layers','polos','bottoms','accessories','womens'];
+    const menOrder=['tees','layers','polos','bottoms','accessories'];
     const catalog=document.getElementById('catalog');
     const filters=document.getElementById('filter-buttons');
     const status=document.getElementById('filter-status');
@@ -146,7 +147,7 @@
     }
     function render(filter='all'){
       catalog.innerHTML='';
-      const groups=filter==='all'?order:[filter];
+      const groups=filter==='all'?order:filter==='men'?menOrder:[filter];
       groups.forEach(c=>{
         const list=products.filter(p=>p.c===c);
         if(!list.length)return;
@@ -156,13 +157,22 @@
         s.innerHTML='<div class="catalog-head"><h2>'+labels[c]+'</h2><p>'+list.length+' pieces / '+(collectionSection?'full campaign image':menSection?'built with weight + structure':'modern essentials')+'</p></div><div class="product-grid">'+list.map((p)=>{const gi=products.indexOf(p);return '<article class="product-card'+(menSection?' mens-card':'')+'" data-category="'+p.c+'">'+media(p,gi)+'<div class="product-meta">'+(menSection?'<span class="men-badge">LOWMODE Men</span>':collectionSection?'<span class="men-badge">LOWMODE Tattoo Art</span>':'')+'<h3>'+p.n+'</h3><span class="price'+(p.from?' from':'')+'">$'+p.p+'</span><p>'+p.d+'</p><span class="tag">'+p.t+'</span>'+variants(p)+'<span class="shop-chip">'+(collectionSection?'Full image':menSection?'Built solid':'Retail ready')+'</span></div></article>'}).join('')+'</div>';
         catalog.appendChild(s);
       });
-      const count=filter==='all'?products.length:products.filter(p=>p.c===filter).length;
-      status.textContent=filter==='all'?'Showing all '+count+' pieces':'Showing '+count+' '+labels[filter].toLowerCase();
+      const count=filter==='all'?products.length:filter==='men'?products.filter(p=>menOrder.includes(p.c)).length:products.filter(p=>p.c===filter).length;
+      status.textContent=filter==='all'?'Showing all '+count+' pieces':filter==='men'?'Showing all '+count+' men’s pieces':'Showing '+count+' '+labels[filter].toLowerCase();
     }
     const counts=Object.fromEntries(order.map(c=>[c,products.filter(p=>p.c===c).length]));
-    filters.innerHTML='<button class="filter-button is-active" data-filter="all" aria-pressed="true">All '+products.length+'</button>'+order.map(c=>'<button class="filter-button" data-filter="'+c+'" aria-pressed="false">'+labels[c]+' '+counts[c]+'</button>').join('');
-    [...filters.querySelectorAll('[data-filter]')].forEach(b=>b.addEventListener('click',()=>{[...filters.children].forEach(x=>{x.classList.remove('is-active');x.setAttribute('aria-pressed','false')});b.classList.add('is-active');b.setAttribute('aria-pressed','true');render(b.dataset.filter)}));
-    render();
+    const menCount=products.filter(p=>menOrder.includes(p.c)).length;
+    filters.innerHTML='<button class="filter-button" data-filter="all" aria-pressed="false">All '+products.length+'</button><button class="filter-button" data-filter="men" aria-pressed="false">Men '+menCount+'</button>'+order.map(c=>'<button class="filter-button" data-filter="'+c+'" aria-pressed="false">'+labels[c]+' '+counts[c]+'</button>').join('');
+    function selectFilter(filter){
+      const valid=filter==='all'||filter==='men'||order.includes(filter);
+      const chosen=valid?filter:'all';
+      [...filters.children].forEach(x=>{const active=x.dataset.filter===chosen;x.classList.toggle('is-active',active);x.setAttribute('aria-pressed',active?'true':'false')});
+      render(chosen);
+    }
+    [...filters.querySelectorAll('[data-filter]')].forEach(b=>b.addEventListener('click',()=>{history.replaceState(null,'','#'+b.dataset.filter);selectFilter(b.dataset.filter)}));
+    const hash=location.hash.replace('#','');
+    const initial=hash==='tee-shirts'?'tees':hash||'all';
+    selectFilter(initial);
   </script>
 </body>
 </html>
