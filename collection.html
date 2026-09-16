@@ -53,7 +53,7 @@
   <header class="site-header">
     <nav class="nav" aria-label="Main navigation">
       <a class="wordmark" href="/" aria-label="LOWMODE home"><img class="brand-emblem" src="/assets/lowmode-eagle-lm-emblem.webp" alt="LOWMODE eagle LM emblem"><span>LOWMODE<sup>™</sup></span></a>
-      <div class="nav-links"><a href="/">Home</a><a href="/collection.html#men">Men</a><a href="/women.html">Women</a><a href="/collection.html#layers">Hoodies</a><a href="/collection.html#tee-shirts">Tees</a><a href="/collection.html#polos">Polos</a><a href="/collection.html#accessories">Hats</a><a href="/lookbook.html">Media</a></div>
+      <div class="nav-links"><a href="/">Home</a><a href="/collection.html#men" aria-current="page">Men</a><a href="/women.html">Women</a><a href="/lookbook.html">Media</a></div>
       <a class="nav-cta" href="/collection.html#all">Shop all</a>
     </nav>
   </header>
@@ -89,10 +89,8 @@
   <script>
     const products = [
       {c:'tattoo',n:'Tattoo Art Headline Collection',p:42,p2:46,p3:48,d:'Full LOWMODE campaign image / Men + women',t:'Shown whole — no artificial product slicing',img:'/assets/lowmode-tattoo-art-collection.webp'},
-
       {c:'womens',n:'Women’s Modern Collection',p:42,p2:46,d:'Modern LOWMODE women’s campaign',t:'Full campaign view / clean presentation',img:'/assets/lowmode-womens-modern.webp'},
       {c:'womens',n:'Rose Current Quarter-Zip',p:76,p2:80,d:'Deep charcoal technical knit',t:'Rose + wave artwork / XS–2XL',img:'/assets/lowmode-rose-current-quarter-zip.webp'},
-
       {c:'tees',n:'Iron Eagle Heavyweight Tee',p:44,p2:48,p3:50,d:'Jet black heavyweight cotton / Broad everyday cut',t:'Eagle graphic / XS–3XL',art:'art signature s0'},
       {c:'tees',n:'Redline Rose Heavyweight Tee',p:46,p2:50,p3:52,d:'Washed oxblood heavyweight cotton',t:'Dark tonal artwork / XS–3XL',art:'art signature s1'},
       {c:'tees',n:'Breaker Wave Heavyweight Tee',p:44,p2:48,p3:50,d:'Steel blue heavyweight cotton',t:'Bold front graphic / XS–3XL',art:'art signature s2'},
@@ -101,7 +99,6 @@
       {c:'tees',n:'Believe Tee',p:42,p2:46,p3:48,d:'Heavy cotton / Front + back graphic',t:'In yourself / XS–3XL',img:'/assets/believe-tee-front-back-v6.jpg'},
       {c:'tees',n:'Create Tee',p:42,p2:46,p3:48,d:'Heavy cotton / Original graphic',t:'Create your lane / XS–3XL',art:'art classic p2'},
       {c:'tees',n:'Proof of the Grind Tee',p:54,p2:58,p3:60,d:'Jet black heavyweight cotton / Front + back',t:'Limited graphic / XS–3XL',img:'/assets/proof-of-the-grind-tee.jpg'},
-
       {c:'layers',n:'Steel Rose Zip Hoodie',p:82,p2:86,p3:88,d:'Black heavyweight brushed fleece',t:'Dark sleeve artwork / XS–3XL',art:'art signature s3'},
       {c:'layers',n:'Blackout Crest Track Jacket',p:88,p2:92,p3:94,d:'Charcoal technical shell / Structured shoulder',t:'Steel trim / XS–3XL',art:'art signature s4'},
       {c:'layers',n:'Burgundy Field Quarter-Zip',p:68,p2:72,p3:74,d:'Structured midweight fleece / Clean collar',t:'Eagle-LM emblem / XS–3XL',img:'/assets/burgundy-quarter-zip.webp'},
@@ -110,7 +107,6 @@
       {c:'layers',n:'Redline Heavy Flannel',p:78,p2:82,p3:84,d:'Brushed heavyweight flannel / Overshirt fit',t:'Workwear layer / XS–3XL',img:'/assets/red-plaid-overshirt.webp'},
       {c:'layers',n:'Courage Heavy Hoodie',p:72,p2:76,p3:78,d:'Dense brushed fleece / Relaxed shoulder',t:'LOWMODE graphic / XS–3XL',art:'art classic p3'},
       {c:'layers',n:'Purpose Heavy Crewneck',p:62,p2:66,p3:68,d:'Structured fleece crewneck',t:'Purpose over noise / XS–3XL',art:'art classic p4'},
-
       {c:'polos',n:'Black Crest Polo',p:58,p2:62,p3:64,d:'Black premium knit / Firm collar',t:'Eagle-LM emblem embroidery / XS–3XL',art:'art signature s5'},
       {c:'polos',n:'Cobalt Performance Pique',p:52,p2:56,p3:58,d:'Cotton pique / Cobalt blue / Athletic cut',t:'Eagle-LM emblem / XS–3XL',img:'/assets/cobalt-pique-polo.webp'},
       {c:'polos',n:'Ivory Heritage Knit Polo',p:64,p2:68,p3:70,d:'Textured knit / Black contrast tipping',t:'Structured fit / XS–3XL',img:'/assets/ivory-knit-polo.webp'},
@@ -120,10 +116,8 @@
       {c:'polos',n:'Ocean Discipline Polo',p:64,p2:68,p3:70,d:'Midnight blue / Subtle wave texture',t:'Premium knit / XS–3XL',art:'art polo-art p3'},
       {c:'polos',n:'Racing Edge Polo',p:64,p2:68,p3:70,d:'Deep olive / Racing stripe / Athletic collar',t:'Quarter zip / XS–3XL',art:'art polo-art p4'},
       {c:'polos',n:'Tempest Polo',p:64,p2:68,p3:70,d:'Charcoal / Storm artwork / Contrast piping',t:'Structured fit / XS–3XL',art:'art polo-art p5'},
-
       {c:'bottoms',n:'Strong Utility Pant',p:68,p2:72,p3:74,d:'Structured dark twill / Straight athletic leg',t:'Built to move / XS–3XL',art:'art classic p5'},
       {c:'bottoms',n:'Focus Training Short',p:48,p2:52,p3:54,d:'Clean athletic short / Durable everyday fabric',t:'Keep your focus / XS–3XL',art:'art classic p6'},
-
       {c:'accessories',n:'Sunset Trucker Cap',p:38,d:'Steel blue / White mesh / Structured crown',t:'Raised LOWMODE embroidery',img:'/assets/lowmode-sunset-cap.webp'},
       {c:'accessories',n:'Eagle Dream Cap',p:34,d:'Structured six-panel cap',t:'Embroidered mark / One size',art:'art classic p7'},
       {c:'accessories',n:'Black Rib Beanie',p:30,d:'Dense rib knit / Fold cuff',t:'LOWMODE mark / One size',art:'art classic p8'},
@@ -137,47 +131,24 @@
     const filters=document.getElementById('filter-buttons');
     const status=document.getElementById('filter-status');
 
-    function variants(p){
-      if(!p.p2) return '<div class="variant-row"><span class="variant"><strong>Price</strong> $'+p.p+'</span></div>';
-      return '<div class="variant-row"><span class="variant"><strong>XS–XL</strong> $'+p.p+'</span><span class="variant"><strong>2XL</strong> $'+p.p2+'</span>'+(p.p3?'<span class="variant"><strong>3XL</strong> $'+p.p3+'</span>':'')+'</div>';
-    }
-    function media(p,i){
-      if(p.img) return '<div class="product-media"><img src="'+p.img+'" alt="'+p.n+'" loading="lazy"><span class="product-index">'+String(i+1).padStart(2,'0')+'</span></div>';
-      return '<div class="product-media '+p.art+'" role="img" aria-label="'+p.n+'"><span class="product-index">'+String(i+1).padStart(2,'0')+'</span></div>';
-    }
+    function variants(p){if(!p.p2)return '<div class="variant-row"><span class="variant"><strong>Price</strong> $'+p.p+'</span></div>';return '<div class="variant-row"><span class="variant"><strong>XS–XL</strong> $'+p.p+'</span><span class="variant"><strong>2XL</strong> $'+p.p2+'</span>'+(p.p3?'<span class="variant"><strong>3XL</strong> $'+p.p3+'</span>':'')+'</div>'}
+    function media(p,i){if(p.img)return '<div class="product-media"><img src="'+p.img+'" alt="'+p.n+'" loading="lazy"><span class="product-index">'+String(i+1).padStart(2,'0')+'</span></div>';return '<div class="product-media '+p.art+'" role="img" aria-label="'+p.n+'"><span class="product-index">'+String(i+1).padStart(2,'0')+'</span></div>'}
     function render(filter='all'){
       catalog.innerHTML='';
       const groups=filter==='all'?order:filter==='men'?menOrder:[filter];
-      groups.forEach(c=>{
-        const list=products.filter(p=>p.c===c);
-        if(!list.length)return;
-        const s=document.createElement('section');s.className='catalog-section';s.dataset.catalogSection=c;s.id=c==='tees'?'tee-shirts':c;
-        const menSection=!['womens','tattoo'].includes(c);
-        const collectionSection=c==='tattoo';
-        s.innerHTML='<div class="catalog-head"><h2>'+labels[c]+'</h2><p>'+list.length+' pieces / '+(collectionSection?'full campaign image':menSection?'built with weight + structure':'modern essentials')+'</p></div><div class="product-grid">'+list.map((p)=>{const gi=products.indexOf(p);return '<article class="product-card'+(menSection?' mens-card':'')+'" data-category="'+p.c+'">'+media(p,gi)+'<div class="product-meta">'+(menSection?'<span class="men-badge">LOWMODE Men</span>':collectionSection?'<span class="men-badge">LOWMODE Tattoo Art</span>':'')+'<h3>'+p.n+'</h3><span class="price'+(p.from?' from':'')+'">$'+p.p+'</span><p>'+p.d+'</p><span class="tag">'+p.t+'</span>'+variants(p)+'<span class="shop-chip">'+(collectionSection?'Full image':menSection?'Built solid':'Retail ready')+'</span></div></article>'}).join('')+'</div>';
-        catalog.appendChild(s);
-      });
+      groups.forEach(c=>{const list=products.filter(p=>p.c===c);if(!list.length)return;const s=document.createElement('section');s.className='catalog-section';s.dataset.catalogSection=c;s.id=c==='tees'?'tee-shirts':c;const menSection=!['womens','tattoo'].includes(c);const collectionSection=c==='tattoo';s.innerHTML='<div class="catalog-head"><h2>'+labels[c]+'</h2><p>'+list.length+' pieces / '+(collectionSection?'full campaign image':menSection?'built with weight + structure':'modern essentials')+'</p></div><div class="product-grid">'+list.map((p)=>{const gi=products.indexOf(p);return '<article class="product-card'+(menSection?' mens-card':'')+'" data-category="'+p.c+'">'+media(p,gi)+'<div class="product-meta">'+(menSection?'<span class="men-badge">LOWMODE Men</span>':collectionSection?'<span class="men-badge">LOWMODE Tattoo Art</span>':'')+'<h3>'+p.n+'</h3><span class="price'+(p.from?' from':'')+'">$'+p.p+'</span><p>'+p.d+'</p><span class="tag">'+p.t+'</span>'+variants(p)+'<span class="shop-chip">'+(collectionSection?'Full image':menSection?'Built solid':'Retail ready')+'</span></div></article>'}).join('')+'</div>';catalog.appendChild(s)});
       const count=filter==='all'?products.length:filter==='men'?products.filter(p=>menOrder.includes(p.c)).length:products.filter(p=>p.c===filter).length;
       status.textContent=filter==='all'?'Showing all '+count+' pieces':filter==='men'?'Showing all '+count+' men’s pieces':'Showing '+count+' '+labels[filter].toLowerCase();
     }
     const counts=Object.fromEntries(order.map(c=>[c,products.filter(p=>p.c===c).length]));
     const menCount=products.filter(p=>menOrder.includes(p.c)).length;
-    filters.innerHTML='<button class="filter-button" data-filter="all" aria-pressed="false">All '+products.length+'</button><button class="filter-button" data-filter="men" aria-pressed="false">Men '+menCount+'</button>'+order.map(c=>'<button class="filter-button" data-filter="'+c+'" aria-pressed="false">'+labels[c]+' '+counts[c]+'</button>').join('');
-    function selectFilter(filter){
-      const valid=filter==='all'||filter==='men'||order.includes(filter);
-      const chosen=valid?filter:'all';
-      [...filters.children].forEach(x=>{const active=x.dataset.filter===chosen;x.classList.toggle('is-active',active);x.setAttribute('aria-pressed',active?'true':'false')});
-      render(chosen);
-    }
+    filters.innerHTML='<button class="filter-button" data-filter="men" aria-pressed="false">Men '+menCount+'</button><button class="filter-button" data-filter="tees" aria-pressed="false">Tees '+counts.tees+'</button><button class="filter-button" data-filter="layers" aria-pressed="false">Hoodies + Outerwear '+counts.layers+'</button><button class="filter-button" data-filter="polos" aria-pressed="false">Polos '+counts.polos+'</button><button class="filter-button" data-filter="bottoms" aria-pressed="false">Bottoms '+counts.bottoms+'</button><button class="filter-button" data-filter="accessories" aria-pressed="false">Hats + Accessories '+counts.accessories+'</button><button class="filter-button" data-filter="womens" aria-pressed="false">Women '+counts.womens+'</button><button class="filter-button" data-filter="all" aria-pressed="false">All '+products.length+'</button>';
+    function selectFilter(filter){const valid=filter==='all'||filter==='men'||order.includes(filter);const chosen=valid?filter:'men';[...filters.children].forEach(x=>{const active=x.dataset.filter===chosen;x.classList.toggle('is-active',active);x.setAttribute('aria-pressed',active?'true':'false')});render(chosen)}
     [...filters.querySelectorAll('[data-filter]')].forEach(b=>b.addEventListener('click',()=>{history.replaceState(null,'','#'+b.dataset.filter);selectFilter(b.dataset.filter)}));
     const hash=location.hash.replace('#','');
-    const initial=hash==='tee-shirts'?'tees':hash||'all';
+    const initial=hash==='tee-shirts'?'tees':hash||'men';
     selectFilter(initial);
-    window.addEventListener('hashchange',()=>{
-      const nextHash=location.hash.replace('#','');
-      selectFilter(nextHash==='tee-shirts'?'tees':nextHash||'all');
-      document.getElementById('catalog').scrollIntoView({behavior:'smooth',block:'start'});
-    });
+    window.addEventListener('hashchange',()=>{const nextHash=location.hash.replace('#','');selectFilter(nextHash==='tee-shirts'?'tees':nextHash||'men');document.getElementById('catalog').scrollIntoView({behavior:'smooth',block:'start'})});
   </script>
 </body>
 </html>
