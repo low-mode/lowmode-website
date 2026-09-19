@@ -9,12 +9,17 @@
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
 <title>LOWMODE™ Swim Collection</title>
-<style>*{box-sizing:border-box}html,body{margin:0;background:#050505;color:#fff;font-family:Arial,Helvetica,sans-serif}.wrap{min-height:100vh;display:flex;align-items:center;justify-content:center}.wrap img{display:block;width:100%;height:auto;max-width:1536px}.loading{padding:50px 20px;text-align:center;letter-spacing:.12em;text-transform:uppercase;color:#aaa}</style>
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;background:#050505;color:#fff;font-family:Arial,Helvetica,sans-serif}
+.wrap{min-height:100vh;display:flex;align-items:flex-start;justify-content:center;background:#050505}
+.wrap img{display:block;width:100%;height:auto;max-width:1536px;margin:0 auto}
+.fallback{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:50px 20px;text-align:center;letter-spacing:.12em;text-transform:uppercase;color:#aaa}
+</style>
 </head>
 <body>
-<main class="wrap" id="swim-wrap"><div class="loading">Loading LOWMODE Swim Collection…</div></main>
-<script>
-(async()=>{const wrap=document.getElementById('swim-wrap');try{const names=['/assets/swim-section-0.b64','/assets/swim-section-1.b64','/assets/swim-section-2.b64'];const parts=await Promise.all(names.map(u=>fetch(u+'?v=202609182346').then(r=>{if(!r.ok)throw new Error('chunk');return r.text()})));const b64=parts.join('').replace(/\s+/g,'');const img=new Image();img.alt='LOWMODE swim collection';img.onload=()=>{wrap.innerHTML='';wrap.appendChild(img)};img.onerror=()=>{wrap.innerHTML='<div class="loading">LOWMODE™ Swim Collection</div>'};img.src='data:image/jpeg;base64,'+b64}catch(e){wrap.innerHTML='<div class="loading">LOWMODE™ Swim Collection</div>'}})();
-</script>
+<main class="wrap" id="swim-wrap">
+  <img src="/assets/lowmode-swim-reference.jpg?v=202609190045" alt="LOWMODE swim collection" fetchpriority="high" decoding="sync" onerror="this.remove();document.getElementById('swim-wrap').className='fallback';document.getElementById('swim-wrap').textContent='LOWMODE™ Swim Collection';">
+</main>
 </body>
 </html>
