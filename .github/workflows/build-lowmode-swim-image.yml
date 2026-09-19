@@ -31,17 +31,18 @@ jobs:
 
           s = ''.join(parts)
           s = re.sub(r'[^A-Za-z0-9+/=]', '', s)
-          first_pad = s.find('=')
-          if first_pad != -1:
-              # Keep only valid base64 through final padding; remove accidental junk after it.
-              while first_pad > 0 and s[first_pad-1] == '=':
-                  first_pad -= 1
+          # Remove any internal padding markers and repair malformed trailing data.
+          s = s.replace('=', '')
+          if len(s) % 4 == 1:
+              s = s[:-1]
           s += '=' * ((4 - len(s) % 4) % 4)
+
           data = base64.b64decode(s, validate=False)
-          out = Path('assets/lowmode-swim-reference.jpg')
-          out.write_bytes(data)
           if not data.startswith(b'\xff\xd8\xff'):
               raise SystemExit('Decoded data is not a JPEG')
+
+          out = Path('assets/lowmode-swim-reference.jpg')
+          out.write_bytes(data)
           print(f'Wrote {out} ({len(data)} bytes)')
           PY
           file assets/lowmode-swim-reference.jpg
