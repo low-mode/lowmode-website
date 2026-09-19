@@ -4,19 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="description" content="LOWMODE™ Swim Collection">
-<meta name="theme-color" content="#ffffff">
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta name="theme-color" content="#050505">
+<meta http-equiv="Cache-Control" content="no-cache,no-store,must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
 <title>LOWMODE™ Swim Collection</title>
-<style>
-*{box-sizing:border-box}html,body{margin:0;padding:0;background:#fff;color:#111;font-family:Arial,Helvetica,sans-serif}body{min-height:100vh}.page{width:100%;margin:0 auto;background:#fff}.reference{display:block;width:100%;height:auto;margin:0 auto;background:#f4f4f4}.fallback{display:none;min-height:70vh;align-items:center;justify-content:center;text-align:center;padding:40px 20px}.fallback h1{font-size:34px;letter-spacing:.08em;margin:0 0 12px}.fallback p{font-size:16px;color:#555;margin:0}@media(min-width:1536px){.page{max-width:1536px}}
-</style>
+<style>*{box-sizing:border-box}html,body{margin:0;background:#050505;color:#fff;font-family:Arial,Helvetica,sans-serif}.wrap{min-height:100vh;display:flex;align-items:center;justify-content:center}.wrap img{display:block;width:100%;height:auto;max-width:1536px}.loading{padding:50px 20px;text-align:center;letter-spacing:.12em;text-transform:uppercase;color:#aaa}</style>
 </head>
 <body>
-<main class="page">
-<img id="swim-reference" class="reference" alt="LOWMODE swim collection with male and female models, sunset swim trunks, bikini pieces, sets and beach lifestyle panels" src="/assets/lowmode-swim-reference.jpg?v=20260918-2328" onerror="this.style.display='none';document.getElementById('fallback').style.display='flex'">
-<section id="fallback" class="fallback"><div><h1>LOWMODE™ SWIM</h1><p>The swim collection image is refreshing. Reload this page to pull the newest version.</p></div></section>
-</main>
+<main class="wrap" id="swim-wrap"><div class="loading">Loading LOWMODE Swim Collection…</div></main>
+<script>
+(async()=>{const wrap=document.getElementById('swim-wrap');try{const names=['/assets/swim-section-0.b64','/assets/swim-section-1.b64','/assets/swim-section-2.b64'];const parts=await Promise.all(names.map(u=>fetch(u+'?v=202609182346').then(r=>{if(!r.ok)throw new Error('chunk');return r.text()})));const b64=parts.join('').replace(/\s+/g,'');const img=new Image();img.alt='LOWMODE swim collection';img.onload=()=>{wrap.innerHTML='';wrap.appendChild(img)};img.onerror=()=>{wrap.innerHTML='<div class="loading">LOWMODE™ Swim Collection</div>'};img.src='data:image/jpeg;base64,'+b64}catch(e){wrap.innerHTML='<div class="loading">LOWMODE™ Swim Collection</div>'}})();
+</script>
 </body>
 </html>
