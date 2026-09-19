@@ -40,25 +40,27 @@ jobs:
           if not data.startswith(b'\xff\xd8\xff'):
               raise SystemExit('Decoded data is not a JPEG')
 
-          source = Path('/tmp/lowmode-swim-source.jpg')
-          source.write_bytes(data)
+          Path('/tmp/lowmode-swim-source.jpg').write_bytes(data)
           PY
 
           python3 -m pip install --quiet pillow
           python3 - <<'PY'
-          from PIL import Image, ImageFilter, ImageEnhance
+          from PIL import Image, ImageFilter, ImageEnhance, ImageFile
           from pathlib import Path
 
+          ImageFile.LOAD_TRUNCATED_IMAGES = True
           source = Path('/tmp/lowmode-swim-source.jpg')
           out = Path('assets/lowmode-swim-reference.jpg')
+
           with Image.open(source) as im:
+              im.load()
               im = im.convert('RGB')
               w, h = im.size
               im = im.resize((w * 4, h * 4), Image.Resampling.LANCZOS)
-              im = im.filter(ImageFilter.UnsharpMask(radius=1.6, percent=145, threshold=2))
-              im = ImageEnhance.Sharpness(im).enhance(1.12)
-              im = ImageEnhance.Contrast(im).enhance(1.03)
-              im.save(out, 'JPEG', quality=96, subsampling=0, optimize=True)
+              im = im.filter(ImageFilter.UnsharpMask(radius=1.5, percent=135, threshold=2))
+              im = ImageEnhance.Sharpness(im).enhance(1.10)
+              im = ImageEnhance.Contrast(im).enhance(1.02)
+              im.save(out, 'JPEG', quality=97, subsampling=0, optimize=True)
               print(f'Wrote {out}: {im.size[0]}x{im.size[1]}')
           PY
 
