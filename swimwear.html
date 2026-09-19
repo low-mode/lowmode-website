@@ -1,43 +1,17 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="LOWMODE™ Swim Collection">
-  <title>LOWMODE™ Swim Collection</title>
-  <style>
-    *{box-sizing:border-box}
-    html,body{margin:0;background:#000;color:#fff;font-family:Arial,Helvetica,sans-serif;min-height:100%}
-    body{min-height:100vh}
-    .page{width:100%;min-height:100vh;display:flex;justify-content:center;background:#000}
-    .reference{display:block;width:min(100%,706px);height:auto;margin:0 auto}
-    .status{padding:40px 20px;text-align:center;color:#aaa;font-size:14px;letter-spacing:.08em;text-transform:uppercase}
-    @media(min-width:707px){.reference{width:min(100%,1180px)}}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="LOWMODE™ Swim Collection">
+<title>LOWMODE™ Swim Collection</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;background:#000;color:#fff;font-family:Arial,Helvetica,sans-serif}body{min-height:100vh}.page{width:100%;display:flex;justify-content:center;background:#000}.reference{display:block;width:min(100%,706px);height:auto;margin:0 auto}@media(min-width:707px){.reference{width:min(100%,1180px)}}
+</style>
 </head>
 <body>
-  <main class="page">
-    <div id="status" class="status">Loading LOWMODE Swim Collection…</div>
-    <img id="swimImage" class="reference" alt="LOWMODE swim collection with male and female models, product lineup, and beach lifestyle panels" hidden>
-  </main>
-  <script>
-    (async function(){
-      const image=document.getElementById('swimImage');
-      const status=document.getElementById('status');
-      try{
-        const parts=await Promise.all([
-          fetch('/assets/swim-section-0.b64').then(r=>{if(!r.ok)throw new Error('0');return r.text()}),
-          fetch('/assets/swim-section-1.b64').then(r=>{if(!r.ok)throw new Error('1');return r.text()}),
-          fetch('/assets/swim-section-2.b64').then(r=>{if(!r.ok)throw new Error('2');return r.text()})
-        ]);
-        const b64=parts.join('').replace(/\s+/g,'');
-        image.onload=function(){status.remove();image.hidden=false};
-        image.onerror=function(){status.textContent='Swim collection image could not load.'};
-        image.src='data:image/jpeg;base64,'+b64;
-      }catch(e){
-        status.textContent='Swim collection image could not load.';
-      }
-    })();
-  </script>
+<main class="page">
+<img class="reference" alt="LOWMODE swim collection with male and female models, product lineup, and beach lifestyle panels" src="/assets/lowmode-swim-reference.jpg?v=20260918-2236">
+</main>
 </body>
 </html>

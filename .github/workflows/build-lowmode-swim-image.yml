@@ -1,0 +1,32 @@
+name: Build LOWMODE swim image
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  build-swim-image:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Build JPEG from stored Base64 chunks
+        run: |
+          cat assets/swim-section-0.b64 assets/swim-section-1.b64 assets/swim-section-2.b64 | tr -d '\n\r ' | base64 --decode > assets/lowmode-swim-reference.jpg
+          file assets/lowmode-swim-reference.jpg
+      - name: Commit generated swim image
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/lowmode-swim-reference.jpg
+          if git diff --cached --quiet; then
+            echo "No image changes"
+          else
+            git commit -m "Build real LOWMODE swim image"
+            git push
+          fi
