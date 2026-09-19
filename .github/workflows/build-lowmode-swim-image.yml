@@ -17,7 +17,33 @@ jobs:
           fetch-depth: 0
       - name: Build JPEG from stored Base64 chunks
         run: |
-          cat assets/swim-section-0.b64 assets/swim-section-1.b64 assets/swim-section-2.b64 | tr -d '\n\r ' | base64 --decode > assets/lowmode-swim-reference.jpg
+          python3 - <<'PY'
+          import base64, re
+          from pathlib import Path
+
+          parts = []
+          for p in [
+              Path('assets/swim-section-0.b64'),
+              Path('assets/swim-section-1.b64'),
+              Path('assets/swim-section-2.b64'),
+          ]:
+              parts.append(p.read_text(errors='ignore'))
+
+          s = ''.join(parts)
+          s = re.sub(r'[^A-Za-z0-9+/=]', '', s)
+          first_pad = s.find('=')
+          if first_pad != -1:
+              # Keep only valid base64 through final padding; remove accidental junk after it.
+              while first_pad > 0 and s[first_pad-1] == '=':
+                  first_pad -= 1
+          s += '=' * ((4 - len(s) % 4) % 4)
+          data = base64.b64decode(s, validate=False)
+          out = Path('assets/lowmode-swim-reference.jpg')
+          out.write_bytes(data)
+          if not data.startswith(b'\xff\xd8\xff'):
+              raise SystemExit('Decoded data is not a JPEG')
+          print(f'Wrote {out} ({len(data)} bytes)')
+          PY
           file assets/lowmode-swim-reference.jpg
       - name: Commit generated swim image
         run: |
