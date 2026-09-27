@@ -1,0 +1,157 @@
+/* LOWMODE futuristic visual system — 2026 */
+:root{
+  --lm-bg:#030407;
+  --lm-panel:rgba(10,14,22,.86);
+  --lm-panel-2:rgba(16,20,30,.88);
+  --lm-line:rgba(125,220,255,.20);
+  --lm-line-hot:rgba(255,47,147,.28);
+  --lm-cyan:#72e7ff;
+  --lm-blue:#4f8cff;
+  --lm-pink:#ff2f93;
+  --lm-text:#f7fbff;
+  --lm-muted:#9aa8b7;
+  --lm-glow:0 0 34px rgba(114,231,255,.10),0 0 72px rgba(255,47,147,.06);
+}
+html{background:var(--lm-bg)}
+body{
+  background:
+    radial-gradient(circle at 12% 0%,rgba(79,140,255,.13),transparent 32rem),
+    radial-gradient(circle at 88% 8%,rgba(255,47,147,.10),transparent 30rem),
+    linear-gradient(180deg,#05070b 0%,#020306 100%)!important;
+  color:var(--lm-text)!important;
+  font-family:Inter,"Helvetica Neue",Arial,sans-serif!important;
+  letter-spacing:.005em;
+}
+body:before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:.10;
+  background:repeating-linear-gradient(180deg,rgba(255,255,255,.035) 0,rgba(255,255,255,.035) 1px,transparent 1px,transparent 5px);
+  mix-blend-mode:soft-light;
+}
+::selection{background:var(--lm-cyan);color:#020306}
+a,button{transition:all .22s ease}
+img{image-rendering:auto;filter:saturate(1.04) contrast(1.035)}
+
+/* chrome */
+header,.site-header{
+  background:rgba(3,5,9,.78)!important;
+  border-bottom:1px solid var(--lm-line)!important;
+  box-shadow:0 10px 34px rgba(0,0,0,.28),0 1px 0 rgba(255,47,147,.08)!important;
+  backdrop-filter:blur(22px) saturate(145%)!important;
+  -webkit-backdrop-filter:blur(22px) saturate(145%)!important;
+}
+.announcement{
+  background:linear-gradient(90deg,var(--lm-cyan),#b5d8ff 42%,#ff83c3)!important;
+  color:#020306!important;
+  border:0!important;
+  box-shadow:0 0 32px rgba(114,231,255,.20);
+}
+.brand,.wordmark,.footer-brand{
+  color:#fff!important;
+  text-shadow:0 0 16px rgba(114,231,255,.28),0 0 28px rgba(255,47,147,.12);
+}
+.brand sup,.wordmark sup{color:var(--lm-cyan)!important}
+.links a,.nav-links a{color:#dfe8f2!important;opacity:.86}
+.links a:hover,.nav-links a:hover{color:#fff!important;opacity:1;text-shadow:0 0 12px rgba(114,231,255,.5)}
+.nav-cta,.button{
+  border:1px solid rgba(114,231,255,.75)!important;
+  background:linear-gradient(135deg,rgba(114,231,255,.96),rgba(143,173,255,.94))!important;
+  color:#031019!important;
+  box-shadow:0 0 24px rgba(114,231,255,.18)!important;
+}
+.nav-cta:hover,.button:hover{transform:translateY(-2px);box-shadow:0 0 34px rgba(114,231,255,.35)!important}
+.button.ghost{background:rgba(3,8,14,.35)!important;color:#fff!important}
+
+/* large typography */
+.display,.hero h1,.shop-hero h1,.women-hero h1,.banner-copy h2,.featured-copy h2,.cat-head h2,.section h2{
+  font-weight:900!important;
+  letter-spacing:-.055em!important;
+  text-wrap:balance;
+}
+.eyebrow,.collection-count,.tag,.filter-status,.cat-head span{
+  color:var(--lm-cyan)!important;
+  text-shadow:0 0 12px rgba(114,231,255,.22);
+}
+
+/* imagery */
+.hero,.banner,.hero-strip img,.featured-card,.women-visual,.lookbook-media{
+  border-color:var(--lm-line)!important;
+  box-shadow:var(--lm-glow)!important;
+}
+.hero:after{
+  background:linear-gradient(90deg,rgba(1,4,8,.90),rgba(3,7,14,.38) 58%,rgba(3,7,14,.12))!important;
+}
+.hero-copy{filter:drop-shadow(0 10px 24px rgba(0,0,0,.35))}
+.hero h1,.shop-hero h1,.women-hero h1{
+  text-shadow:0 0 28px rgba(114,231,255,.10),0 0 52px rgba(255,47,147,.06);
+}
+
+/* cards and grids */
+.card,.product-card,.category-card,.women-card,.lookbook-card,.featured-card,.brand-panel,.collection-end{
+  position:relative;
+  background:linear-gradient(160deg,rgba(16,21,31,.94),rgba(5,7,12,.96))!important;
+  border:1px solid var(--lm-line)!important;
+  box-shadow:0 14px 36px rgba(0,0,0,.24),inset 0 1px 0 rgba(255,255,255,.025);
+}
+.card:before,.product-card:before,.category-card:before,.women-card:before,.lookbook-card:before,.featured-card:before{
+  content:"";position:absolute;inset:0;pointer-events:none;z-index:2;
+  background:linear-gradient(125deg,rgba(114,231,255,.055),transparent 30%,transparent 72%,rgba(255,47,147,.045));
+}
+.card:hover,.product-card:hover,.category-card:hover,.women-card:hover,.lookbook-card:hover{
+  transform:translateY(-5px)!important;
+  border-color:rgba(114,231,255,.52)!important;
+  box-shadow:0 18px 44px rgba(0,0,0,.34),0 0 28px rgba(114,231,255,.10),0 0 40px rgba(255,47,147,.05)!important;
+}
+.media,.product-media,.category-media,.women-card .media,.lookbook-media{
+  background:radial-gradient(circle at 50% 30%,#172235 0%,#090d14 48%,#030509 84%)!important;
+}
+.media img,.product-media img,.category-media img,.women-card img,.lookbook-media img{
+  transition:transform .35s cubic-bezier(.2,.8,.2,1),filter .35s ease!important;
+}
+.card:hover img,.product-card:hover img,.category-card:hover img,.women-card:hover img,.lookbook-card:hover img{
+  transform:scale(1.018)!important;filter:saturate(1.08) contrast(1.055)!important;
+}
+.copy,.meta,.product-meta,.category-meta,.women-card .meta{position:relative;z-index:3}
+.price,.featured-price{color:var(--lm-pink)!important;text-shadow:0 0 14px rgba(255,47,147,.18)}
+
+/* collection */
+.jump,.filter-bar{
+  background:rgba(3,5,9,.86)!important;
+  border-color:var(--lm-line)!important;
+  backdrop-filter:blur(18px) saturate(150%)!important;
+}
+.jump a,.filter-button,.women-strip span{
+  border:1px solid rgba(114,231,255,.18)!important;
+  background:rgba(7,11,18,.72)!important;
+  color:#dfeaff!important;
+}
+.jump a:hover,.filter-button:hover,.filter-button.is-active,.women-strip span:hover{
+  border-color:rgba(114,231,255,.58)!important;
+  background:linear-gradient(135deg,rgba(114,231,255,.13),rgba(255,47,147,.09))!important;
+  color:#fff!important;
+  box-shadow:0 0 18px rgba(114,231,255,.08);
+}
+.cat{position:relative}
+.cat:before{content:"";display:block;height:1px;background:linear-gradient(90deg,transparent,var(--lm-cyan),var(--lm-pink),transparent);opacity:.32;margin-bottom:18px}
+.cat-head{border-color:rgba(114,231,255,.14)!important}
+.media:after{color:rgba(230,244,255,.68)!important;text-shadow:0 0 8px rgba(114,231,255,.24)}
+
+/* women + lookbook */
+.women-visual{background-color:#05080d!important}
+.women-card .tag,.shop-link{color:var(--lm-cyan)!important;border-color:var(--lm-cyan)!important}
+.lookbook-grid{gap:14px!important}
+.lookbook-card figcaption{background:linear-gradient(180deg,rgba(12,17,25,.98),rgba(4,7,11,.98))!important;border-top:1px solid var(--lm-line)!important}
+
+/* footer */
+footer,.site-footer{border-color:var(--lm-line)!important;background:rgba(2,4,7,.86)!important}
+.footer-meta{color:var(--lm-muted)!important}
+
+/* swim page */
+.wrap{background:radial-gradient(circle at 50% 0%,rgba(79,140,255,.12),transparent 38rem),#030407!important;padding:18px!important}
+.wrap img{border:1px solid var(--lm-line)!important;box-shadow:var(--lm-glow)!important;border-radius:2px}
+
+@media(max-width:720px){
+  body:before{opacity:.07}
+  .card:hover,.product-card:hover,.category-card:hover,.women-card:hover,.lookbook-card:hover{transform:none!important}
+  .hero-copy{padding-bottom:54px!important}
+}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
