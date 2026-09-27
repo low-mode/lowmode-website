@@ -1,152 +1,65 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Shop the complete LOWMODE collection in one place: hoodies, tees, polos, shorts, sweatpants, women, swimwear, headwear and accessories.">
-  <meta name="theme-color" content="#050505">
-  <link rel="stylesheet" href="/styles.css?v=20260926-categories1">
-  <title>LOWMODE™ — Shop All</title>
-  <style>
-    :root{--gold:#d6b06c;--ink:#050505;--soft:#aaa59b}
-    body{background:#050505;color:#fff}
-    .announcement{letter-spacing:.18em;text-transform:uppercase}
-    .collection-hero{padding-top:clamp(44px,7vw,90px);padding-bottom:34px}
-    .collection-hero .display{max-width:960px;text-transform:uppercase;letter-spacing:-.055em}
-    .collection-summary{max-width:650px}
-    .price-note{margin-top:12px;color:#8f8b84;font-size:.78rem;letter-spacing:.04em}
-    .category-jump{position:sticky;top:76px;z-index:30;background:#070707f5;border-top:1px solid #ffffff14;border-bottom:1px solid #ffffff14;backdrop-filter:blur(14px)}
-    .category-jump-inner{max-width:1360px;margin:auto;padding:12px 22px;display:flex;gap:8px;overflow-x:auto;white-space:nowrap}
-    .category-jump a{border:1px solid #ffffff1f;padding:8px 11px;font-size:.66rem;font-weight:850;letter-spacing:.13em;text-transform:uppercase;color:#e9e6df}
-    .category-jump a:hover{border-color:var(--gold);color:#fff}
-    .feature-banner{max-width:1360px;margin:0 auto 34px;min-height:360px;border:1px solid #ffffff18;background:#090909 url('/assets/lowmode-tattoo-art-collection.webp') center/contain no-repeat;position:relative;overflow:hidden}
-    .feature-banner:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#000e 0%,#0009 42%,#0002 75%)}
-    .feature-copy{position:relative;z-index:2;min-height:360px;display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(28px,5vw,60px);max-width:640px}
-    .feature-copy h2{margin:.2em 0;font-size:clamp(2.8rem,6vw,6rem);line-height:.86;letter-spacing:-.055em;text-transform:uppercase}
-    .feature-copy p{color:#cfcbc3;max-width:580px}
-    .catalog{padding-bottom:80px}
-    .catalog-section{scroll-margin-top:150px;padding-top:34px;margin-top:10px}
-    .catalog-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:18px;border-bottom:1px solid #ffffff18;padding-bottom:14px}
-    .catalog-head h2{margin:0;text-transform:uppercase;letter-spacing:-.035em;font-size:clamp(2rem,4vw,4rem)}
-    .catalog-head p{margin:0;color:#9d998f;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase}
-    .product-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
-    .product-card{border:1px solid #ffffff16;background:linear-gradient(180deg,#0b0b0b,#070707);overflow:hidden;transition:.25s}
-    .product-card:hover{transform:translateY(-2px);border-color:#d6b06c66;box-shadow:0 14px 34px #0008}
-    .product-media{aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#0a0a0a;padding:16px;position:relative}
-    .product-media img{width:100%;height:100%;object-fit:contain;object-position:center;display:block}
-    .product-index{position:absolute;top:10px;right:10px;color:#777;font-size:.66rem;letter-spacing:.16em}
-    .product-meta{padding:17px}
-    .product-meta h3{margin:0 0 8px;text-transform:uppercase;font-size:1rem;line-height:1.15}
-    .category-badge{display:inline-block;margin-bottom:7px;color:var(--gold);font-size:.6rem;font-weight:900;letter-spacing:.16em;text-transform:uppercase}
-    .price{display:block;font-size:1.08rem;font-weight:900;margin-bottom:8px}
-    .product-meta p{margin:0;color:#aaa59c;font-size:.8rem;line-height:1.48}
-    .tag{display:block;margin-top:8px;color:#ddd7ce;font-size:.7rem;line-height:1.4}
-    .variant-row{display:flex;gap:6px;flex-wrap:wrap;margin-top:12px}
-    .variant{border:1px solid #ffffff1c;background:#101010;padding:6px 8px;font-size:.64rem;color:#c7c3bb}
-    .variant strong{color:#fff}
-    .shop-chip{display:inline-block;margin-top:12px;padding-bottom:2px;border-bottom:1px solid var(--gold);font-size:.68rem;font-weight:850;letter-spacing:.13em;text-transform:uppercase;color:#f0d6a4}
-    .art{background:radial-gradient(circle at 50% 34%,#18222f 0,#0a0a0a 42%,#050505 75%);position:relative}
-    .art:before{content:'LOWMODE™';font-size:clamp(1.2rem,2.5vw,2rem);font-weight:950;font-style:italic;letter-spacing:-.04em;color:#fff;text-shadow:3px 3px 0 #b40000,-3px -3px 0 #0746cc;transform:rotate(-6deg)}
-    .swim-media{padding:0}.swim-media img{object-fit:cover}
-    .footer-meta p{margin:.2em 0}
-    @media(max-width:1050px){.product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-    @media(max-width:620px){.product-grid{grid-template-columns:1fr}.catalog-head{align-items:flex-start;flex-direction:column}.category-jump{top:72px}.feature-banner{margin-inline:12px}.product-media{aspect-ratio:1/1}}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Shop the complete LOWMODE collection: hoodies, tees, polos, shorts, pants, women, swimwear, headwear and accessories.">
+<meta name="theme-color" content="#050505">
+<link rel="stylesheet" href="/styles.css?v=20260926-fullcatalog2">
+<title>LOWMODE™ — Complete Collection</title>
+<style>
+:root{--pink:#ff2f93;--gold:#d6b06c}body{background:#050505;color:#fff}.announcement{text-transform:uppercase;letter-spacing:.18em}.shop-hero{max-width:1360px;margin:auto;padding:56px 22px 34px}.shop-hero h1{font-size:clamp(3rem,8vw,7rem);line-height:.84;margin:.15em 0;text-transform:uppercase;letter-spacing:-.055em}.shop-hero p{max-width:720px;color:#b7b2a9}.jump{position:sticky;top:76px;z-index:30;background:#080808f4;border-block:1px solid #ffffff18}.jump-inner{max-width:1360px;margin:auto;padding:11px 22px;display:flex;gap:8px;overflow-x:auto;white-space:nowrap}.jump a{border:1px solid #ffffff20;padding:8px 11px;font-size:.66rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase}.jump a:hover{border-color:var(--pink)}.catalog{max-width:1360px;margin:auto;padding:22px 22px 90px}.cat{scroll-margin-top:145px;padding-top:28px}.cat-head{display:flex;justify-content:space-between;align-items:end;gap:15px;border-bottom:1px solid #ffffff18;padding-bottom:12px;margin-bottom:14px}.cat-head h2{font-size:clamp(2rem,4vw,3.8rem);text-transform:uppercase;margin:0;letter-spacing:-.035em}.cat-head span{color:var(--pink);font-weight:900;letter-spacing:.12em;text-transform:uppercase;font-size:.72rem}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.card{border:1px solid #ffffff16;background:linear-gradient(180deg,#0c0c0c,#070707);overflow:hidden}.media{aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 30%,#162238 0,#090909 48%,#050505 80%);position:relative;padding:14px}.media img{width:100%;height:100%;object-fit:contain;display:block}.media.placeholder:before{content:'LOWMODE™';font-size:clamp(1.15rem,2.2vw,1.8rem);font-weight:950;font-style:italic;color:#fff;text-shadow:3px 3px 0 #b40000,-3px -3px 0 #0746cc;transform:rotate(-7deg)}.fb{position:absolute;bottom:9px;left:10px;font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;color:#aaa}.meta{padding:14px}.meta h3{font-size:.95rem;line-height:1.15;text-transform:uppercase;margin:0 0 7px}.price{font-size:1.08rem;font-weight:950;color:var(--pink);display:block;margin-bottom:7px}.meta p{margin:0;color:#aaa59c;font-size:.78rem;line-height:1.45}.tag{display:inline-block;margin-top:10px;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:#ddd}.hero-strip{max-width:1360px;margin:0 auto 12px;border:1px solid #ffffff16;background:#0a0a0a;overflow:hidden}.hero-strip img{width:100%;height:auto;display:block;max-height:440px;object-fit:contain}.footer-meta p{margin:.2em 0}@media(max-width:1000px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:620px){.grid{grid-template-columns:1fr}.cat-head{align-items:flex-start;flex-direction:column}.jump{top:72px}.shop-hero{padding-top:38px}}
+</style>
 </head>
 <body>
-  <div class="announcement">LOWMODE™ / Everything together / One storefront</div>
-  <header class="site-header">
-    <nav class="nav" aria-label="Main navigation">
-      <a class="wordmark" href="/" aria-label="LOWMODE home"><img class="brand-emblem" src="/assets/lowmode-eagle-lm-emblem.webp" alt="LOWMODE eagle LM emblem"><span>LOWMODE<sup>™</sup></span></a>
-      <div class="nav-links"><a href="/">Home</a><a href="/collection.html#hoodies">Hoodies</a><a href="/collection.html#tees">Tees</a><a href="/collection.html#women">Women</a><a href="/collection.html#swimwear">Swim</a><a href="/lookbook.html">Media</a></div>
-      <a class="nav-cta" href="/collection.html#all">Shop all</a>
-    </nav>
-  </header>
-
-  <main>
-    <section class="collection-hero shell" aria-labelledby="collection-title">
-      <div><p class="eyebrow">LOWMODE / Complete Store</p><h1 class="display" id="collection-title">Everything.<br>One place.</h1></div>
-      <div class="collection-summary"><p>Every LOWMODE category is now organized together on one shop page so customers can move from hoodies to tees, bottoms, women, swim, hats and accessories without leaving the collection.</p><p class="price-note">Prices shown below are the current LOWMODE storefront prices.</p></div>
-    </section>
-
-    <nav class="category-jump" aria-label="Shop categories"><div class="category-jump-inner">
-      <a href="#hoodies">Hoodies</a><a href="#tees">Tees</a><a href="#polos">Polos</a><a href="#shorts">Shorts</a><a href="#sweatpants">Sweatpants</a><a href="#women">Women</a><a href="#swimwear">Swimwear</a><a href="#headwear">Headwear</a><a href="#accessories">Accessories</a>
-    </div></nav>
-
-    <section class="feature-banner" aria-label="LOWMODE featured collection"><div class="feature-copy"><p class="eyebrow">LOWMODE™ / Shop by category</p><h2>Built to<br>stand out.</h2><p>Clear categories, visible prices and one consistent LOWMODE storefront.</p></div></section>
-
-    <div class="catalog shell" id="catalog"></div>
-  </main>
-
-  <footer class="site-footer"><div class="footer-inner"><strong class="footer-brand">LOWMODE™</strong><div class="footer-meta"><p>Hoodies / Tees / Polos / Shorts / Sweatpants / Women / Swimwear / Headwear / Accessories / Media</p><p>© 2026 LOWMODE. All rights reserved.</p></div></div></footer>
-
-  <script>
-    const products=[
-      {c:'hoodies',n:'Steel Rose Zip Hoodie',p:82,p2:86,p3:88,d:'Black heavyweight brushed fleece',t:'Dark sleeve artwork / XS–3XL'},
-      {c:'hoodies',n:'Courage Heavy Hoodie',p:72,p2:76,p3:78,d:'Dense brushed fleece / Relaxed shoulder',t:'LOWMODE graphic / XS–3XL'},
-      {c:'hoodies',n:'Graphite Heavyweight Fleece Set',p:118,p2:122,p3:126,d:'Heavy zip hoodie + relaxed sweatpant',t:'Two-piece set / XS–3XL',img:'/assets/graphite-set.webp'},
-      {c:'hoodies',n:'Burgundy Field Quarter-Zip',p:68,p2:72,p3:74,d:'Structured midweight fleece / Clean collar',t:'Eagle-LM emblem / XS–3XL',img:'/assets/burgundy-quarter-zip.webp'},
-      {c:'hoodies',n:'Olive Utility Funnel Jacket',p:96,p2:100,p3:104,d:'Technical shell / Two-way zip / Utility cut',t:'Weather-ready layer / XS–3XL',img:'/assets/olive-funnel-jacket.webp'},
-      {c:'hoodies',n:'Blackout Crest Track Jacket',p:88,p2:92,p3:94,d:'Charcoal technical shell / Structured shoulder',t:'Steel trim / XS–3XL'},
-
-      {c:'tees',n:'Iron Eagle Heavyweight Tee',p:44,p2:48,p3:50,d:'Jet black heavyweight cotton',t:'Broad everyday cut / XS–3XL'},
-      {c:'tees',n:'Redline Rose Heavyweight Tee',p:46,p2:50,p3:52,d:'Washed oxblood heavyweight cotton',t:'Dark tonal artwork / XS–3XL'},
-      {c:'tees',n:'Breaker Wave Heavyweight Tee',p:44,p2:48,p3:50,d:'Steel blue heavyweight cotton',t:'Bold front graphic / XS–3XL'},
-      {c:'tees',n:'Core White Heavyweight Tee',p:36,p2:40,p3:42,d:'Substantial cotton / Boxier relaxed fit',t:'Eagle-LM emblem / XS–3XL',img:'/assets/essential-white-tee.webp'},
-      {c:'tees',n:'Rise Tee',p:42,p2:46,p3:48,d:'Heavy cotton / Front + back graphic',t:'Above all / XS–3XL',img:'/assets/rise-tee-front-back-v2.jpg'},
-      {c:'tees',n:'Believe Tee',p:42,p2:46,p3:48,d:'Heavy cotton / Front + back graphic',t:'In yourself / XS–3XL',img:'/assets/believe-tee-front-back-v6.jpg'},
-      {c:'tees',n:'Create Tee',p:42,p2:46,p3:48,d:'Heavy cotton / Original graphic',t:'Create your lane / XS–3XL'},
-      {c:'tees',n:'Proof of the Grind Tee',p:54,p2:58,p3:60,d:'Jet black heavyweight cotton / Front + back',t:'Limited graphic / XS–3XL',img:'/assets/proof-of-the-grind-tee.jpg'},
-
-      {c:'polos',n:'Black Crest Polo',p:58,p2:62,p3:64,d:'Black premium knit / Firm collar',t:'Eagle-LM embroidery / XS–3XL'},
-      {c:'polos',n:'Cobalt Performance Pique',p:52,p2:56,p3:58,d:'Cotton pique / Cobalt blue / Athletic cut',t:'Eagle-LM emblem / XS–3XL',img:'/assets/cobalt-pique-polo.webp'},
-      {c:'polos',n:'Ivory Heritage Knit Polo',p:64,p2:68,p3:70,d:'Textured knit / Black contrast tipping',t:'Structured fit / XS–3XL',img:'/assets/ivory-knit-polo.webp'},
-      {c:'polos',n:'Shadow Heritage Polo',p:64,p2:68,p3:70,d:'Jet black / Tonal artwork / Firm collar',t:'Quarter zip / XS–3XL',img:'/assets/lowmode-shadow-heritage-polo.webp'},
-      {c:'polos',n:'Ivory Contrast Polo',p:64,p2:68,p3:70,d:'Warm ivory / Black trim',t:'Tailored structure / XS–3XL',img:'/assets/lowmode-ivory-contrast-polo-v2.webp'},
-
-      {c:'shorts',n:'Focus Training Short',p:48,p2:52,p3:54,d:'Clean athletic short / Durable everyday fabric',t:'Keep your focus / XS–3XL'},
-      {c:'shorts',n:'Send It Shorts',p:48,d:'Black performance short',t:'Bad decisions. Great stories.'},
-      {c:'shorts',n:'No Limits Shorts',p:48,d:'Black + neon lifestyle short',t:'Same fit. Different day.'},
-      {c:'shorts',n:'Built Different Shorts',p:48,d:'Technical LOWMODE short',t:'Normal is boring.'},
-      {c:'shorts',n:'Good Times Shorts',p:48,d:'Sunset LOWMODE short',t:'Work hard. Play harder.'},
-      {c:'shorts',n:'Stay Salty Shorts',p:48,d:'Aqua LOWMODE short',t:'Salt water. Better days.'},
-      {c:'shorts',n:'Out of Office Shorts',p:48,d:'Blue vacation short',t:'Mental vacation.'},
-
-      {c:'sweatpants',n:'Strong Utility Pant',p:68,p2:72,p3:74,d:'Structured dark twill / Straight athletic leg',t:'Built to move / XS–3XL'},
-      {c:'sweatpants',n:'Daily Grind Pants',p:68,d:'Black LOWMODE sweatpant',t:'Same shift. Bigger plans.'},
-      {c:'sweatpants',n:'Late Nights Pants',p:68,d:'Black utility sweatpant',t:'No days off.'},
-      {c:'sweatpants',n:'Freedom Pants',p:68,d:'Black performance sweatpant',t:'Comfort meets ambition.'},
-
-      {c:'women',n:'Rose Current Quarter-Zip',p:76,p2:80,d:'Deep charcoal technical knit',t:'Rose + wave artwork / XS–2XL',img:'/assets/lowmode-rose-current-quarter-zip.webp'},
-      {c:'women',n:'Higher Ground Track Jacket',p:88,p2:92,d:'Black technical track jacket',t:'Ice-blue sleeve striping / XS–2XL',img:'/assets/lowmode-women-track-jacket-clean.webp'},
-      {c:'women',n:'Compass Quarter-Zip',p:72,p2:76,d:'Black structured quarter-zip',t:'Compass graphic / XS–2XL',img:'/assets/lowmode-women-compass-quarterzip-clean.webp'},
-      {c:'women',n:'Rose Discipline Hoodie',p:78,p2:82,d:'Black brushed fleece hoodie',t:'Relaxed modern fit / XS–2XL',img:'/assets/lowmode-women-rose-hoodie-clean.webp'},
-      {c:'women',n:'Wave Oversized Tee',p:42,p2:46,d:'Warm ivory heavyweight tee',t:'Oversized relaxed fit / XS–2XL',img:'/assets/lowmode-women-wave-tee-clean.webp'},
-      {c:'women',n:'Studio Cargo Pant',p:64,p2:68,d:'Structured black cargo pant',t:'Utility construction / XS–2XL',img:'/assets/lowmode-women-cargo-pant-clean.webp'},
-
-      {c:'swimwear',n:'Men’s LOWMODE Trunks',p:54,d:'LOWMODE swim trunks',t:'Sun burns. Good times.',img:'/assets/lowmode-swim-reference.jpg'},
-      {c:'swimwear',n:'Women’s LOWMODE Swim',p:54,d:'LOWMODE women’s swimwear',t:'Beach mode. Always on.',img:'/assets/lowmode-swim-reference.jpg'},
-
-      {c:'headwear',n:'Sunset Trucker Cap',p:38,d:'Steel blue / White mesh / Structured crown',t:'Raised LOWMODE embroidery',img:'/assets/lowmode-sunset-cap.webp'},
-      {c:'headwear',n:'Eagle Dream Cap',p:34,d:'Structured six-panel cap',t:'Embroidered LOWMODE mark'},
-      {c:'headwear',n:'Black Rib Beanie',p:30,d:'Dense rib knit / Fold cuff',t:'LOWMODE mark'},
-      {c:'headwear',n:'Stealth Hat',p:32,d:'Black tonal cap',t:'Low profile. High intent.'},
-      {c:'headwear',n:'Neon Hat',p:36,d:'Neon LOWMODE cap',t:'Quiet hat. Loud mindset.'},
-      {c:'headwear',n:'Racing Hat',p:36,d:'Motorsport LOWMODE cap',t:'Built for the fast lane.'},
-
-      {c:'accessories',n:'Core Crew Socks',p:18,d:'Cushioned everyday crew socks',t:'LOWMODE detail / S–XL'},
-      {c:'accessories',n:'Beach Towel',p:42,d:'LOWMODE beach towel',t:'Good people. Better places.'},
-      {c:'accessories',n:'Duffel Bag',p:64,d:'Black LOWMODE duffel',t:'Pack light. Go far.'},
-      {c:'accessories',n:'Backpack',p:64,d:'Black LOWMODE backpack',t:'Everything essential.'}
-    ];
-
-    const labels={hoodies:'Hoodies + Outerwear',tees:'Tees',polos:'Polos',shorts:'Shorts',sweatpants:'Sweatpants + Pants',women:'Women',swimwear:'Swimwear',headwear:'Headwear',accessories:'Accessories'};
-    const order=['hoodies','tees','polos','shorts','sweatpants','women','swimwear','headwear','accessories'];
-    const catalog=document.getElementById('catalog');
-    function variants(p){if(!p.p2)return '<div class="variant-row"><span class="variant"><strong>Price</strong> $'+p.p+'</span></div>';return '<div class="variant-row"><span class="variant"><strong>XS–XL</strong> $'+p.p+'</span><span class="variant"><strong>2XL</strong> $'+p.p2+'</span>'+(p.p3?'<span class="variant"><strong>3XL</strong> $'+p.p3+'</span>':'')+'</div>'}
-    function media(p,i){if(p.img)return '<div class="product-media'+(p.c==='swimwear'?' swim-media':'')+'"><img src="'+p.img+'" alt="'+p.n+'" loading="lazy"><span class="product-index">'+String(i+1).padStart(2,'0')+'</span></div>';return '<div class="product-media art" role="img" aria-label="'+p.n+'"><span class="product-index">'+String(i+1).padStart(2,'0')+'</span></div>'}
-    order.forEach(c=>{const list=products.filter(p=>p.c===c);const s=document.createElement('section');s.className='catalog-section';s.id=c;s.innerHTML='<div class="catalog-head"><h2>'+labels[c]+'</h2><p>'+list.length+' pieces</p></div><div class="product-grid">'+list.map(p=>{const i=products.indexOf(p);return '<article class="product-card">'+media(p,i)+'<div class="product-meta"><span class="category-badge">LOWMODE™ / '+labels[c]+'</span><h3>'+p.n+'</h3><span class="price">$'+p.p+'</span><p>'+p.d+'</p><span class="tag">'+p.t+'</span>'+variants(p)+'<span class="shop-chip">View piece</span></div></article>'}).join('')+'</div>';catalog.appendChild(s)});
-    if(location.hash){setTimeout(()=>{const t=document.querySelector(location.hash);if(t)t.scrollIntoView({behavior:'smooth',block:'start'})},120)}
-  </script>
+<div class="announcement">LOWMODE™ / Complete catalog / Every category together</div>
+<header class="site-header"><nav class="nav" aria-label="Main navigation"><a class="wordmark" href="/"><img class="brand-emblem" src="/assets/lowmode-eagle-lm-emblem.webp" alt="LOWMODE emblem"><span>LOWMODE<sup>™</sup></span></a><div class="nav-links"><a href="/">Home</a><a href="#hoodies">Hoodies</a><a href="#tees">Tees</a><a href="#women">Women</a><a href="#swimwear">Swim</a><a href="#headwear">Headwear</a><a href="/lookbook.html">Media</a></div><a class="nav-cta" href="#hoodies">Shop all</a></nav></header>
+<main>
+<section class="shop-hero"><p class="eyebrow">LOWMODE™ / Cars / Culture / Freedom / Lifestyle / Mindset</p><h1>Everything.<br>Organized.</h1><p>Every current LOWMODE piece is grouped on one storefront with clear product names and pricing. Apparel stays separated by category so customers can shop fast without losing the LOWMODE look.</p></section>
+<section class="hero-strip"><img src="/assets/lowmode-tattoo-art-collection.webp" alt="LOWMODE collection"></section>
+<nav class="jump" aria-label="Shop categories"><div class="jump-inner"><a href="#hoodies">Hoodies</a><a href="#tees">Tees</a><a href="#polos">Polos</a><a href="#shorts">Shorts</a><a href="#pants">Pants</a><a href="#women">Women</a><a href="#swimwear">Swimwear</a><a href="#headwear">Headwear</a><a href="#accessories">Accessories</a></div></nav>
+<div class="catalog" id="catalog"></div>
+</main>
+<footer class="site-footer"><div class="footer-inner"><strong class="footer-brand">LOWMODE™</strong><div class="footer-meta"><p>Hoodies / Tees / Polos / Shorts / Pants / Women / Swimwear / Headwear / Accessories</p><p>© 2026 LOWMODE. All rights reserved.</p></div></div></footer>
+<script>
+const categories=[
+['hoodies','Hoodies',[
+['Miami Drive Hoodie',89],['Angel Energy Hoodie',89],['Mindset Hoodie',89],['Freedom Hoodie',89],['Beaches Hoodie',89],['No Limits Hoodie',92],['Prodigy Hoodie',94],['Built Different Hoodie',92]
+]],
+['tees','Tees',[
+['Ink Drive Tee',44],['City Lights Tee',44],['Panorama Tee',44],['Tech Tee',44],['More Than Cars Tee',44],['Lion Mindset Tee',44],['Freedom Tee',44],['Beaches Tee',44]
+]],
+['polos','Polos',[
+['Stealth Polo',54],['Performance Polo',54],['Yacht Polo',54],['Miami Polo',54]
+]],
+['shorts','Shorts',[
+['Miami Shorts',48],['Racing Shorts',48],['Beaches Shorts',48],['Camo Shorts',48],['Jets Shorts',48],['Static Shorts',48]
+]],
+['pants','Sweatpants + Pants',[
+['Stealth Sweatpants',68],['Racing Pants',68],['Miami Pants',68],['Cargo Pants',68]
+]],
+['women','Women’s Apparel',[
+['Women’s Hoodie',89],['Crop Hoodie',79],['Baby Tee',44],['Crop Tank',38],['Women’s Shorts',48],['Leggings',64],['Women’s Sweatpants',68],['Bikini',54],['One Piece',58],['Women’s Cargo Pants',68],['Tote Bag',48]
+]],
+['swimwear','Swimwear',[
+['Men’s Miami Trunks',54],['Men’s Racing Trunks',54],['Men’s Blue Trunks',54],['Women’s Pink Bikini',54],['Women’s Blue Bikini',54],['Women’s Black Bikini',54],['Women’s One Piece',58]
+]],
+['headwear','Headwear',[
+['Trucker Hat',36],['Premium Hat',32],['Neon Hat',36],['Camo Hat',36],['Racing Hat',36],['Yacht Hat',32]
+]],
+['accessories','Accessories',[
+['Duffel Bag',64],['Backpack',64],['Beach Towel',42],['Can Cooler',12],['Slides',36],['Socks 3-Pack',24]
+]]
+];
+const imageMap={
+"Women’s Hoodie":"/assets/lowmode-women-rose-hoodie-clean.webp",
+"Crop Hoodie":"/assets/lowmode-women-track-jacket-clean.webp",
+"Baby Tee":"/assets/lowmode-women-wave-tee-clean.webp",
+"Women’s Cargo Pants":"/assets/lowmode-women-cargo-pant-clean.webp",
+"Trucker Hat":"/assets/lowmode-sunset-cap.webp"
+};
+const catalog=document.getElementById('catalog');
+categories.forEach(([id,label,items])=>{const s=document.createElement('section');s.className='cat';s.id=id;s.innerHTML=`<div class="cat-head"><h2>${label}</h2><span>${items.length} pieces</span></div><div class="grid">${items.map(([name,price])=>`<article class="card"><div class="media ${imageMap[name]?'':'placeholder'}">${imageMap[name]?`<img src="${imageMap[name]}" alt="${name}" loading="lazy">`:''}<span class="fb">front / back design</span></div><div class="meta"><h3>${name}</h3><span class="price">$${price}</span><p>LOWMODE™ original apparel. Clean product presentation with pricing shown up front.</p><span class="tag">LOWMODE™ / Shop piece</span></div></article>`).join('')}</div>`;catalog.appendChild(s)});
+</script>
 </body>
 </html>
