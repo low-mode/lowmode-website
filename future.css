@@ -176,3 +176,15 @@ footer,.site-footer{border-color:var(--lm-line)!important;background:rgba(2,4,7,
 .tag{font-size:.7rem;color:#a9e7ff}
 @media(max-width:760px){.nav-links{gap:14px}.nav-links a,.nav-cta{font-size:.68rem}.grid{gap:12px}.media{padding:8px}.media-swim{padding:0}.meta{padding:14px}.meta p{font-size:.875rem}}
 @media(prefers-reduced-motion:reduce){.card,.media-swim img,.nav-cta{transition:none!important}.card:hover{transform:none}}
+
+
+/* Clear, simple storefront */
+body{background:linear-gradient(180deg,#07090d,#030407)!important}
+body:before{display:none!important}
+.card:before,.product-card:before,.category-card:before,.women-card:before,.lookbook-card:before,.featured-card:before{display:none!important}
+.nav-cta,.button{background:#72e7ff!important;border-color:#72e7ff!important;box-shadow:none!important}
+.nav-cta:hover,.button:hover{background:#b9dcff!important;border-color:#b9dcff!important;box-shadow:none!important}
+.card,.product-card,.category-card,.women-card,.lookbook-card,.featured-card,.brand-panel,.collection-end{box-shadow:none!important}
+.all-products{margin:26px 0 0;text-align:center}
+.shop-hero{padding-bottom:24px}
+.price,.featured-price{text-shadow:none!important}
