@@ -188,3 +188,5 @@ body:before{display:none!important}
 .all-products{margin:26px 0 0;text-align:center}
 .shop-hero{padding-bottom:24px}
 .price,.featured-price{text-shadow:none!important}
+
+.hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
